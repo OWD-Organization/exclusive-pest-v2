@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Exclusive Pest Solutions</title>
+  <meta name="description" content="How Exclusive Pest Solutions collects, uses, shares, and protects the personal information of Phoenix Valley homeowners and website visitors.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/webp" href="images/logo-v2.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#4b4f52',
+            brand: '#5daa4c',
+            lime: '#f0bb40',
+            owl: '#f29b1d',
+            'warm-sand': '#F5F0E8',
+            cream: '#FEFAE0',
+            charcoal: '#4b4f52',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #4b4f52; background: #F5F0E8; overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F5F0E8; }
+    ::-webkit-scrollbar-thumb { background: #5daa4c; border-radius: 4px; }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in-up { opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
+
+    #navbar { background: rgba(75, 79, 82, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3); }
+    #navbar .nav-inner { height: 112px; transition: height 0.3s ease; }
+    #navbar .nav-logo { height: 96px; transition: height 0.3s ease; }
+    #navbar.scrolled .nav-inner { height: 82px; }
+    #navbar.scrolled .nav-logo { height: 66px; }
+
+    .nav-dropdown { background: rgba(75, 79, 82, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+    /* Legal document typography */
+    .legal h2 { font-size: 1.375rem; font-weight: 700; color: #4b4f52; margin-top: 2.75rem; margin-bottom: 0.875rem; scroll-margin-top: 120px; }
+    .legal h2:first-child { margin-top: 0; }
+    .legal h3 { font-size: 1.0625rem; font-weight: 700; color: #4b4f52; margin-top: 1.75rem; margin-bottom: 0.625rem; }
+    .legal p { font-size: 0.9375rem; line-height: 1.75; color: rgba(75,79,82,0.85); margin-bottom: 1rem; }
+    .legal ul { list-style: none; margin-bottom: 1.25rem; }
+    .legal ul li { position: relative; padding-left: 1.5rem; font-size: 0.9375rem; line-height: 1.7; color: rgba(75,79,82,0.85); margin-bottom: 0.625rem; }
+    .legal ul li::before { content: ''; position: absolute; left: 0; top: 0.65rem; width: 6px; height: 6px; border-radius: 9999px; background: #f0bb40; }
+    .legal strong { color: #4b4f52; font-weight: 600; }
+    .legal a { color: #5daa4c; text-decoration: underline; text-underline-offset: 2px; }
+    .legal a:hover { color: #f29b1d; }
+
+    .toc-link { display: block; font-size: 0.8125rem; line-height: 1.5; color: rgba(75,79,82,0.7); padding: 0.375rem 0 0.375rem 0.875rem; border-left: 2px solid rgba(75,79,82,0.12); transition: all 0.2s ease; }
+    .toc-link:hover { color: #4b4f52; border-left-color: #f0bb40; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="font-body">
+
+  <div class="relative z-10">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="nav-inner relative flex items-center justify-between">
+          <a href="index.html" class="flex items-center">
+            <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="nav-logo w-auto">
+          </a>
+          <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="index.html" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Home</a>
+            <a href="index.html#about" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">About</a>
+            <div class="relative group">
+              <a href="index.html#services" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors py-2">
+                Services
+                <i data-lucide="chevron-down" class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform"></i>
+              </a>
+              <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div class="nav-dropdown w-60 border border-white/10 rounded-lg shadow-xl py-2">
+                  <a href="scorpion-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="target" class="w-3.5 h-3.5 text-lime"></i>
+                    Scorpion Control
+                  </a>
+                  <a href="ant-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="git-branch" class="w-3.5 h-3.5 text-lime"></i>
+                    Ant Control
+                  </a>
+                  <a href="general-pest-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-lime"></i>
+                    General Pest Control
+                  </a>
+                  <div class="border-t border-white/10 my-1"></div>
+                  <a href="index.html#services" class="flex items-center justify-between gap-2 px-4 py-2 text-xs text-white/60 hover:text-white hover:bg-white/5 transition-colors">
+                    View all services
+                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="index.html#process" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Process</a>
+            <a href="index.html#contact" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Contact</a>
+          </div>
+          <div class="hidden lg:block">
+            <a href="index.html#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-lime text-forest font-semibold text-sm rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+              Get Your Custom Quote
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <button id="menuBtn" class="lg:hidden p-2 text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden nav-dropdown border-t border-white/10">
+        <div class="px-4 py-4 space-y-1">
+          <a href="index.html" class="block py-2 text-sm font-medium text-white mobile-link">Home</a>
+          <a href="index.html#about" class="block py-2 text-sm font-medium text-white mobile-link">About</a>
+          <details class="group">
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-white cursor-pointer list-none">
+              <span>Services</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1 border-l-2 border-lime/30">
+              <a href="scorpion-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">Scorpion Control</a>
+              <a href="ant-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">Ant Control</a>
+              <a href="general-pest-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">General Pest Control</a>
+              <a href="index.html#services" class="block py-2 text-xs text-white/60 mobile-link">View all services →</a>
+            </div>
+          </details>
+          <a href="index.html#process" class="block py-2 text-sm font-medium text-white mobile-link">Process</a>
+          <a href="index.html#contact" class="block py-2 text-sm font-medium text-white mobile-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page header -->
+    <section class="relative bg-[#0e1114] overflow-hidden">
+      <svg class="absolute top-0 right-0 w-64 h-64 opacity-[0.05]" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none"/><circle cx="50" cy="50" r="20" stroke="white" stroke-width="0.5" fill="none"/></svg>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-44 pb-16">
+        <nav aria-label="Breadcrumb" class="mb-6 animate-fade-in-up" style="animation-delay:0.1s">
+          <ol class="flex items-center gap-2 text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-lime transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></li>
+            <li class="text-lime">Privacy Policy</li>
+          </ol>
+        </nav>
+        <div class="animate-fade-in-up" style="animation-delay:0.2s">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            Legal
+          </span>
+        </div>
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl text-white mt-5 mb-4 animate-fade-in-up" style="animation-delay:0.3s">Privacy Policy</h1>
+        <p class="text-white/70 text-base max-w-2xl leading-relaxed animate-fade-in-up" style="animation-delay:0.4s">
+          How Exclusive Pest Solutions collects, uses, shares, and protects your information when you visit our website, request an estimate, or receive pest control service in the Phoenix Valley.
+        </p>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-sm text-white/50 animate-fade-in-up" style="animation-delay:0.5s">
+          <span class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-lime"></i>Effective Date: August 14, 2026</span>
+          <span class="flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4 text-lime"></i>Last Updated: August 14, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-16">
+
+          <!-- Table of contents -->
+          <aside class="hidden lg:block">
+            <div class="sticky top-28">
+              <p class="font-display font-bold text-sm uppercase tracking-wide text-forest/50 mb-4">On This Page</p>
+              <nav class="space-y-0.5">
+                <a href="#overview" class="toc-link">1. Overview</a>
+                <a href="#information-we-collect" class="toc-link">2. Information We Collect</a>
+                <a href="#how-we-collect" class="toc-link">3. How We Collect It</a>
+                <a href="#how-we-use" class="toc-link">4. How We Use Your Information</a>
+                <a href="#calls-and-texts" class="toc-link">5. Phone Calls & Text Messages</a>
+                <a href="#cookies" class="toc-link">6. Cookies & Tracking</a>
+                <a href="#how-we-share" class="toc-link">7. How We Share Information</a>
+                <a href="#retention" class="toc-link">8. Data Retention</a>
+                <a href="#security" class="toc-link">9. Data Security</a>
+                <a href="#your-choices" class="toc-link">10. Your Choices & Rights</a>
+                <a href="#arizona" class="toc-link">11. Arizona Residents</a>
+                <a href="#other-states" class="toc-link">12. Other State Residents</a>
+                <a href="#children" class="toc-link">13. Children's Privacy</a>
+                <a href="#third-party" class="toc-link">14. Third-Party Links</a>
+                <a href="#changes" class="toc-link">15. Changes to This Policy</a>
+                <a href="#contact" class="toc-link">16. Contact Us</a>
+              </nav>
+            </div>
+          </aside>
+
+          <!-- Body -->
+          <div class="legal max-w-3xl">
+
+            <div class="flex items-start gap-3 bg-owl/10 border border-owl/25 rounded-xl p-4 mb-10">
+              <i data-lucide="info" class="w-5 h-5 text-owl flex-shrink-0 mt-0.5"></i>
+              <p class="text-sm leading-relaxed text-forest/80 !mb-0">
+                This Privacy Policy is provided for general informational purposes and does not constitute legal advice. Please review it with qualified counsel before relying on it for compliance purposes.
+              </p>
+            </div>
+
+            <h2 id="overview">1. Overview</h2>
+            <p>
+              Exclusive Pest Solutions ("<strong>Exclusive Pest Solutions</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>") is a licensed pest management company serving residential and commercial properties throughout the Phoenix Valley, Arizona. We respect your privacy and are committed to protecting the personal information you share with us.
+            </p>
+            <p>
+              This Privacy Policy explains what information we collect, why we collect it, how we use and share it, and the choices available to you. It applies to our website, our online forms, phone calls and text messages with our team, and the pest control services we perform at your property.
+            </p>
+            <p>
+              By using our website or requesting our services, you acknowledge that you have read and understand this Privacy Policy. If you do not agree with it, please do not use our website or submit information to us.
+            </p>
+
+            <h2 id="information-we-collect">2. Information We Collect</h2>
+            <p>We collect only the information we need to quote, schedule, perform, and support your pest control service. The categories below describe what we may collect.</p>
+
+            <h3>Information you give us directly</h3>
+            <ul>
+              <li><strong>Contact details</strong> — your name, service address, mailing address, phone number, and email address.</li>
+              <li><strong>Property and service details</strong> — the type of property, square footage, landscaping and irrigation notes, pest history, gate codes or access instructions, and photos you send us of pest activity.</li>
+              <li><strong>Household and safety information you choose to share</strong> — the presence of children, pets, beehives, fish or reptile tanks, edible gardens, and any allergies, chemical sensitivities, or health conditions you disclose so we can select appropriate treatment methods.</li>
+              <li><strong>Scheduling and communication records</strong> — appointment requests, service preferences, notes from calls or texts, and correspondence with our office or technicians.</li>
+              <li><strong>Payment information</strong> — billing name and address, and the last four digits and expiration date of a card kept on file. Full card and bank account numbers are collected and stored by our third-party payment processor, not by us.</li>
+              <li><strong>Marketing preferences</strong> — email newsletter signups, review submissions, and referral information.</li>
+            </ul>
+
+            <h3>Information collected automatically</h3>
+            <ul>
+              <li><strong>Device and usage data</strong> — IP address, browser type and version, operating system, device type, referring website, pages viewed, links clicked, and the dates and times of your visit.</li>
+              <li><strong>Cookies and similar technologies</strong> — small files and identifiers placed on your device, as described in Section 6.</li>
+              <li><strong>Approximate location</strong> — a general geographic area (typically city or ZIP code level) derived from your IP address, used to confirm you are within our service area.</li>
+            </ul>
+
+            <h3>Information from other sources</h3>
+            <ul>
+              <li><strong>Referral sources</strong> — your name and contact information when a neighbor, property manager, real estate agent, or existing customer refers you to us.</li>
+              <li><strong>Lead and advertising platforms</strong> — inquiries submitted through directories, search engines, social media, or review sites.</li>
+              <li><strong>Publicly available records</strong> — property information used to prepare an accurate estimate.</li>
+            </ul>
+            <p>
+              We do not intentionally collect Social Security numbers, driver's license numbers, financial account numbers, precise geolocation, biometric data, or other sensitive personal information from customers, and we ask that you not send such information to us.
+            </p>
+
+            <h2 id="how-we-collect">3. How We Collect It</h2>
+            <p>We collect information when you:</p>
+            <ul>
+              <li>Complete a quote, contact, or appointment request form on our website;</li>
+              <li>Call, text, or email us, or respond to a message from us;</li>
+              <li>Schedule, receive, or pay for a pest control service;</li>
+              <li>Subscribe to our seasonal pest alerts or email newsletter;</li>
+              <li>Interact with our advertisements, social media profiles, or review listings; or</li>
+              <li>Browse our website, where cookies and analytics tools operate automatically.</li>
+            </ul>
+
+            <h2 id="how-we-use">4. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+              <li>Prepare estimates and respond to your questions and service requests;</li>
+              <li>Schedule, route, and perform pest control treatments at your property;</li>
+              <li>Select treatment materials and methods appropriate for your household, pets, pollinators, and landscaping;</li>
+              <li>Maintain service records, application logs, and other documentation required by Arizona pest management regulations;</li>
+              <li>Send appointment confirmations, technician arrival notices, service reports, follow-up reminders, and warranty or re-service notifications;</li>
+              <li>Process payments, issue invoices and receipts, and collect amounts owed;</li>
+              <li>Provide customer support and resolve complaints or service concerns;</li>
+              <li>Send seasonal pest alerts, promotions, and other marketing communications where permitted, and where you have not opted out;</li>
+              <li>Analyze website traffic and service demand to improve our website, our offerings, and our advertising;</li>
+              <li>Detect and prevent fraud, protect our property and personnel, and enforce our agreements; and</li>
+              <li>Comply with applicable federal, Arizona, and local laws, regulations, licensing requirements, subpoenas, and lawful requests.</li>
+            </ul>
+            <p>
+              We do not sell your personal information, and we do not share it with third parties for their own independent marketing purposes.
+            </p>
+
+            <h2 id="calls-and-texts">5. Phone Calls & Text Messages</h2>
+            <p>
+              When you provide your phone number, you agree that we may contact you at that number by phone call and text message regarding estimates, scheduling, technician arrival, service results, billing, and related account matters. These are transactional messages tied to the service you requested.
+            </p>
+            <p>
+              If you separately opt in to promotional or marketing text messages, you agree that we may send those messages using an automatic telephone dialing system or prerecorded voice where applicable. Consent to receive marketing messages is not a condition of purchasing any service.
+            </p>
+            <ul>
+              <li>Message and data rates may apply, depending on your mobile plan.</li>
+              <li>Message frequency varies based on your service schedule and preferences.</li>
+              <li>Reply <strong>STOP</strong> to any text message to opt out, or <strong>HELP</strong> for assistance. You may also call or email us using the details in Section 16.</li>
+              <li>Opting out of marketing messages does not stop transactional messages necessary to deliver a service you have scheduled.</li>
+            </ul>
+            <p>
+              Calls to and from our office may be recorded or monitored for quality assurance and training purposes. Where recording occurs, we will disclose it at the start of the call.
+            </p>
+
+            <h2 id="cookies">6. Cookies & Tracking Technologies</h2>
+            <p>Our website uses cookies, pixels, tags, and similar technologies for the following purposes:</p>
+            <ul>
+              <li><strong>Strictly necessary</strong> — to load pages, remember form entries, and keep the site secure and functional.</li>
+              <li><strong>Analytics</strong> — to understand how visitors find and use our site, which pages are most useful, and where the experience can be improved. This may include services such as Google Analytics.</li>
+              <li><strong>Advertising and conversion measurement</strong> — to measure the performance of our advertising and, in some cases, to show our ads to visitors who have previously visited our website. This may include tools provided by Google, Meta, or similar advertising platforms.</li>
+            </ul>
+            <p>
+              Most browsers let you refuse or delete cookies through their settings. Blocking cookies may affect how parts of our website function. You can also opt out of certain interest-based advertising through the Digital Advertising Alliance at <a href="https://optout.aboutads.info" target="_blank" rel="noopener">optout.aboutads.info</a> or the Network Advertising Initiative at <a href="https://optout.networkadvertising.org" target="_blank" rel="noopener">optout.networkadvertising.org</a>.
+            </p>
+            <p>
+              <strong>Do Not Track.</strong> Because no common industry standard for responding to browser "Do Not Track" signals has been adopted, our website does not currently respond to those signals.
+            </p>
+
+            <h2 id="how-we-share">7. How We Share Information</h2>
+            <p>We share personal information only as described below. We do not sell it.</p>
+            <ul>
+              <li><strong>Service providers.</strong> Companies that operate on our behalf under contractual confidentiality obligations, including website hosting, customer relationship and scheduling software, routing and dispatch tools, email and text messaging platforms, payment processors, accounting services, and analytics and advertising vendors.</li>
+              <li><strong>Our technicians and staff.</strong> Employees and licensed applicators who need your service address, access instructions, and safety notes to perform your treatment.</li>
+              <li><strong>Property owners, managers, or HOAs.</strong> Where service is arranged or paid for by a landlord, property manager, or homeowners association, we may share service dates, treatment records, and related documentation with that party.</li>
+              <li><strong>Regulators.</strong> The Arizona Department of Agriculture and other agencies with jurisdiction over pest management, where records, pesticide application information, or complaint responses are required by law.</li>
+              <li><strong>Legal and safety.</strong> Where we reasonably believe disclosure is necessary to comply with a law, regulation, subpoena, court order, or government request; to enforce our Terms of Service or other agreements; to collect amounts owed; or to protect the rights, property, or safety of our customers, our personnel, or the public.</li>
+              <li><strong>Business transfers.</strong> In connection with a merger, acquisition, financing, reorganization, or sale of all or part of our business, customer information may be transferred as a business asset, subject to this Policy.</li>
+              <li><strong>With your direction.</strong> Any other disclosure you request or authorize, such as sharing a service report with a real estate agent or home inspector.</li>
+            </ul>
+
+            <h2 id="retention">8. Data Retention</h2>
+            <p>
+              We keep personal information only as long as needed for the purposes described in this Policy. Service and pesticide application records are retained for at least the period required by Arizona pest management regulations and applicable federal law. Billing and tax records are retained for the periods required by accounting and tax rules. Marketing contact information is retained until you unsubscribe or ask us to delete it. When information is no longer needed, we delete it or render it de-identified.
+            </p>
+
+            <h2 id="security">9. Data Security</h2>
+            <p>
+              We use reasonable administrative, technical, and physical safeguards designed to protect personal information against loss, misuse, and unauthorized access or disclosure. These include encrypted website connections, access controls limiting employee access to what each role requires, and vetted third-party processors for payment handling.
+            </p>
+            <p>
+              No method of transmission over the internet or method of electronic storage is completely secure, and we cannot guarantee absolute security. If a breach of unencrypted, unredacted personal information occurs, we will notify affected individuals as required by Arizona's data breach notification law (A.R.S. § 18-552) and any other applicable law.
+            </p>
+
+            <h2 id="your-choices">10. Your Choices & Rights</h2>
+            <p>Regardless of where you live, you may:</p>
+            <ul>
+              <li><strong>Access or correct</strong> the contact and service information we hold about you by calling or emailing us;</li>
+              <li><strong>Unsubscribe from marketing email</strong> by using the unsubscribe link in any marketing message;</li>
+              <li><strong>Stop marketing texts</strong> by replying STOP;</li>
+              <li><strong>Ask us to delete</strong> information that is not required for an active service agreement, a warranty obligation, a regulatory record, or a legal or accounting requirement;</li>
+              <li><strong>Ask us not to call</strong> your number for marketing purposes; and</li>
+              <li><strong>Withdraw consent</strong> you previously gave, on a going-forward basis.</li>
+            </ul>
+            <p>
+              To exercise any of these choices, contact us using the details in Section 16. We may need to verify your identity and your connection to the service address before acting on a request. We will respond within a reasonable period and will not discriminate against you for exercising your privacy choices.
+            </p>
+
+            <h2 id="arizona">11. Arizona Residents</h2>
+            <p>
+              Arizona has not enacted a comprehensive consumer data privacy statute. Even so, we extend the choices described in Section 10 to all Arizona customers as a matter of practice.
+            </p>
+            <p>
+              Arizona law does govern how we handle security incidents and how we conduct business generally. We comply with Arizona's data breach notification requirements (A.R.S. § 18-552) and the Arizona Consumer Fraud Act (A.R.S. § 44-1521 <em>et seq.</em>). Records relating to pesticide applications performed at your property are maintained in accordance with the requirements of the Arizona Department of Agriculture, which regulates pest management businesses in this state, and may be produced to that agency on request or in response to a complaint.
+            </p>
+
+            <h2 id="other-states">12. Residents of Other States</h2>
+            <p>
+              Our services are performed in Arizona, but our website may be viewed from anywhere. If you are a resident of a state with a comprehensive consumer privacy law — such as California, Colorado, Connecticut, Virginia, Utah, or Texas — you may have additional rights, including the right to know what personal information is collected, the right to obtain a copy, the right to correction or deletion, and the right to opt out of the sale or sharing of personal information or of targeted advertising.
+            </p>
+            <p>
+              We do not sell personal information and do not knowingly process sensitive personal information for profiling. To submit a request under any applicable state privacy law, contact us using the details in Section 16 and identify the state in which you reside. An authorized agent may submit a request on your behalf with proof of authorization.
+            </p>
+
+            <h2 id="children">13. Children's Privacy</h2>
+            <p>
+              Our website and services are directed to adults. We do not knowingly collect personal information from children under 13, and we do not knowingly sell or share the personal information of anyone under 16. If you believe a child has provided us with personal information, contact us and we will delete it promptly.
+            </p>
+
+            <h2 id="third-party">14. Third-Party Links & Services</h2>
+            <p>
+              Our website may link to third-party sites, including review platforms, social media profiles, mapping services, and payment pages. Those sites operate under their own privacy policies, and we are not responsible for their content or practices. We encourage you to review the privacy policy of any site you visit before providing information to it.
+            </p>
+
+            <h2 id="changes">15. Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time to reflect changes to our practices, our technology, or applicable law. When we do, we will revise the "Last Updated" date at the top of this page and post the revised version here. Material changes will be communicated more prominently where required by law. Your continued use of our website or services after an update takes effect constitutes acceptance of the revised Policy.
+            </p>
+
+            <h2 id="contact">16. Contact Us</h2>
+            <p>
+              If you have questions about this Privacy Policy, want to exercise a privacy choice, or would like to request a copy of the information we hold about you, contact us:
+            </p>
+
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-[0_2px_20px_rgba(0,0,0,0.05)] mt-6">
+              <p class="font-display font-bold text-lg text-forest !mb-4">Exclusive Pest Solutions</p>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full bg-lime flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="phone" class="w-4 h-4 text-forest"></i>
+                  </span>
+                  <div>
+                    <p class="text-xs text-forest/50 !mb-0">Phone</p>
+                    <a href="tel:+16026006746" class="text-forest font-semibold text-sm !no-underline hover:!text-brand">(602) 600-6746</a>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="mail" class="w-4 h-4 text-white"></i>
+                  </span>
+                  <div>
+                    <p class="text-xs text-forest/50 !mb-0">Email</p>
+                    <a href="mailto:hello@exclusivepest.co" class="text-forest font-semibold text-sm !no-underline hover:!text-brand">hello@exclusivepest.co</a>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full bg-owl flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                  </span>
+                  <div>
+                    <p class="text-xs text-forest/50 !mb-0">Service Area</p>
+                    <p class="text-forest font-semibold text-sm !mb-0">Phoenix Valley, Arizona</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-full bg-forest flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="badge-check" class="w-4 h-4 text-lime"></i>
+                  </span>
+                  <div>
+                    <p class="text-xs text-forest/50 !mb-0">License</p>
+                    <p class="text-forest font-semibold text-sm !mb-0">AZ Dept. of Agriculture License #10150</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-forest/10">
+              <a href="terms-of-service.html" class="inline-flex items-center gap-2 text-sm font-semibold text-brand !no-underline hover:gap-3 transition-all">
+                Read our Terms of Service
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0e1114] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-6 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="h-14 w-auto">
+              <span class="font-display font-bold text-lg text-white leading-tight">Exclusive<br><span class="text-xs font-medium text-lime">Pest Solutions</span></span>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-6">
+              Phoenix Valley's premier pest control — built around your home, your family, and the desert we share.
+            </p>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+            <p class="text-white/50 text-xs mt-5">AZ Dept. of Agriculture License #10150</p>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Home</a></li>
+              <li><a href="index.html#about" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>About</a></li>
+              <li><a href="index.html#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Services</a></li>
+              <li><a href="index.html#process" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Our Process</a></li>
+              <li><a href="index.html#contact" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Our Services</h4>
+            <ul class="space-y-3">
+              <li><a href="scorpion-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Scorpion Control</a></li>
+              <li><a href="ant-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Ant Control</a></li>
+              <li><a href="general-pest-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>General Pest Control</a></li>
+              <li><a href="index.html#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Garden-Safe Treatments</a></li>
+              <li><a href="index.html#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>IPM Programs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Working Hours</h4>
+            <ul class="space-y-3 text-white/70 text-sm mb-6">
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Monday – Saturday: 7:00 AM – 6:00 PM</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Sunday: Emergency Service Available</li>
+            </ul>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5 text-forest"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Call Us</p>
+                <a href="tel:+16026006746" class="text-white font-semibold text-sm hover:text-lime transition-colors">(602) 600-6746</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Email Us</p>
+                <a href="mailto:hello@exclusivepest.co" class="text-white font-semibold text-sm hover:text-lime transition-colors">hello@exclusivepest.co</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-white/50 text-sm text-center sm:text-left">© 2026 Exclusive Pest Solutions. All Rights Reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="privacy-policy.html" class="text-lime text-sm font-medium">Privacy Policy</a>
+            <span class="w-1 h-1 rounded-full bg-white/20"></span>
+            <a href="terms-of-service.html" class="text-white/50 text-sm hover:text-lime transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        <div class="pt-5 text-center">
+          <a href="https://outworkemdigital.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-white/40 text-xs hover:text-lime transition-colors">
+            <i data-lucide="code-2" class="w-3.5 h-3.5"></i>
+            Made by <span class="font-semibold">Outwork’em Digital</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+  </script>
+</body>
+</html>

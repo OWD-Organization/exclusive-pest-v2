@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cockroach">
+<g fill="none" stroke="#f1a328" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M52 28 L34 12 L20 10"/><path d="M68 28 L86 12 L100 10"/>
+<path d="M47 48 L23 38"/><path d="M46 60 L21 62"/><path d="M47 72 L25 86"/>
+<path d="M73 48 L97 38"/><path d="M74 60 L99 62"/><path d="M73 72 L95 86"/>
+<ellipse cx="60" cy="30" rx="12" ry="9"/>
+<path d="M60 39 C44 39 40 52 40 68 C40 86 49 98 60 98 C71 98 80 86 80 68 C80 52 76 39 60 39 Z"/>
+<path d="M60 44 L60 92"/>
+</g></svg>

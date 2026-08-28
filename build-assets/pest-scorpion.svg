@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Arizona bark scorpion">
+<g fill="none" stroke="#f1a328" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- tail arcing up and over, hooking forward into the stinger -->
+  <path d="M60 62 C60 40 66 24 82 22 C97 20 104 32 98 43 C94 51 85 52 80 47"/>
+  <path d="M80 47 L72 53"/>
+  <!-- body -->
+  <rect x="50" y="60" width="20" height="26" rx="9"/>
+  <!-- head -->
+  <circle cx="60" cy="92" r="7"/>
+  <!-- pincer arms and open claws -->
+  <path d="M53 94 L38 102"/><path d="M38 102 L26 98"/><path d="M38 102 L28 110"/>
+  <path d="M67 94 L82 102"/><path d="M82 102 L94 98"/><path d="M82 102 L92 110"/>
+  <!-- walking legs -->
+  <path d="M50 65 L32 60"/><path d="M50 72 L30 72"/><path d="M50 79 L32 86"/>
+  <path d="M70 65 L88 60"/><path d="M70 72 L90 72"/><path d="M70 79 L88 86"/>
+</g></svg>

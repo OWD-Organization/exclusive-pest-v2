@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Black widow spider">
+<g fill="none" stroke="#f1a328" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M48 34 L28 22 L14 28"/><path d="M46 44 L22 40 L8 50"/>
+  <path d="M46 54 L22 58 L10 72"/><path d="M48 64 L28 76 L20 92"/>
+  <path d="M72 34 L92 22 L106 28"/><path d="M74 44 L98 40 L112 50"/>
+  <path d="M74 54 L98 58 L110 72"/><path d="M72 64 L92 76 L100 92"/>
+  <ellipse cx="60" cy="36" rx="11" ry="9"/>
+  <circle cx="60" cy="70" r="22"/>
+</g>
+<g fill="#e18518" stroke="none">
+  <path d="M52 58 L68 58 L60 70 Z"/>
+  <path d="M52 82 L68 82 L60 70 Z"/>
+</g></svg>

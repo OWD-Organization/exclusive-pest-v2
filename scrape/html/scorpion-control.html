@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scorpion Control Phoenix AZ | Arizona Bark Scorpion Specialists | Exclusive Pest Solutions</title>
+  <meta name="description" content="Expert scorpion exterminator serving Phoenix, Scottsdale, Gilbert & the entire valley. Custom IPM-driven scorpion control safe for families, pets & gardens. Get your evaluation today.">
+  <link rel="icon" type="image/webp" href="images/logo-v2.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#4b4f52',
+            brand: '#5daa4c',
+            lime: '#f0bb40',
+            owl: '#f29b1d',
+            'warm-sand': '#F5F0E8',
+            cream: '#FEFAE0',
+            charcoal: '#4b4f52',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #4b4f52; background: #F5F0E8; overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F5F0E8; }
+    ::-webkit-scrollbar-thumb { background: #5daa4c; border-radius: 4px; }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-fade-in-up { opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(8,14,10,0.92) 0%, rgba(8,14,10,0.78) 50%, rgba(8,14,10,0.45) 100%);
+    }
+    @media (min-width: 1024px) {
+      .hero-overlay {
+        background: linear-gradient(to right, rgba(8,14,10,0.88) 0%, rgba(8,14,10,0.72) 35%, rgba(8,14,10,0.50) 60%, rgba(8,14,10,0.30) 100%);
+      }
+    }
+
+    #navbar { background: transparent; transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: rgba(75, 79, 82, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3); }
+    #navbar .nav-inner { height: 112px; transition: height 0.3s ease; }
+    #navbar .nav-logo { height: 96px; transition: height 0.3s ease; }
+    #navbar.scrolled .nav-inner { height: 82px; }
+    #navbar.scrolled .nav-logo { height: 66px; }
+
+    .nav-dropdown { background: rgba(75, 79, 82, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+    .faq-item summary { list-style: none; cursor: pointer; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary .chevron { transition: transform 0.3s ease; }
+    .faq-item[open] summary .chevron { transform: rotate(180deg); }
+    .faq-item[open] summary .q-mark { background: #f0bb40; color: #4b4f52; }
+  </style>
+</head>
+<body class="font-body">
+
+  <div class="relative z-10">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 scrolled">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="nav-inner relative flex items-center justify-between">
+          <a href="index.html" class="flex items-center">
+            <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="nav-logo w-auto">
+          </a>
+          <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="index.html" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Home</a>
+            <a href="index.html#about" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">About</a>
+            <div class="relative group">
+              <a href="index.html#services" class="flex items-center gap-1 text-sm font-medium text-lime transition-colors py-2">
+                Services
+                <i data-lucide="chevron-down" class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform"></i>
+              </a>
+              <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div class="nav-dropdown w-60 border border-white/10 rounded-lg shadow-xl py-2">
+                  <a href="scorpion-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm bg-white/10 text-lime transition-colors">
+                    <i data-lucide="target" class="w-3.5 h-3.5 text-lime"></i>
+                    Scorpion Control
+                  </a>
+                  <a href="ant-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="git-branch" class="w-3.5 h-3.5 text-lime"></i>
+                    Ant Control
+                  </a>
+                  <a href="general-pest-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-lime"></i>
+                    General Pest Control
+                  </a>
+                  <div class="border-t border-white/10 my-1"></div>
+                  <a href="index.html#services" class="flex items-center justify-between gap-2 px-4 py-2 text-xs text-white/60 hover:text-white hover:bg-white/5 transition-colors">
+                    View all services
+                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="index.html#process" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Process</a>
+            <a href="index.html#contact" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Contact</a>
+          </div>
+          <div class="hidden lg:block">
+            <a href="index.html#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-lime text-forest font-semibold text-sm rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+              Get Your Custom Quote
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <button id="menuBtn" class="lg:hidden p-2 text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden nav-dropdown border-t border-white/10">
+        <div class="px-4 py-4 space-y-1">
+          <a href="index.html" class="block py-2 text-sm font-medium text-white mobile-link">Home</a>
+          <a href="index.html#about" class="block py-2 text-sm font-medium text-white mobile-link">About</a>
+          <details class="group" open>
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-lime cursor-pointer list-none">
+              <span>Services</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1 border-l-2 border-lime/30">
+              <a href="scorpion-control.html" class="block py-2 text-sm text-lime mobile-link">Scorpion Control</a>
+              <a href="ant-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">Ant Control</a>
+              <a href="general-pest-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">General Pest Control</a>
+              <a href="index.html#services" class="block py-2 text-xs text-white/60 mobile-link">View all services →</a>
+            </div>
+          </details>
+          <a href="index.html#process" class="block py-2 text-sm font-medium text-white mobile-link">Process</a>
+          <a href="index.html#contact" class="block py-2 text-sm font-medium text-white mobile-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+      <img src="images/service-scorpion.jpg" alt="Bait stations placed at a modern Phoenix Valley desert home" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-44 w-full">
+        <nav aria-label="Breadcrumb" class="mb-6 animate-fade-in-up" style="animation-delay:0.1s">
+          <ol class="flex items-center gap-2 text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-lime transition-colors">Home</a></li>
+            <li><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></li>
+            <li><a href="index.html#services" class="hover:text-lime transition-colors">Services</a></li>
+            <li><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></li>
+            <li class="text-lime">Scorpion Control</li>
+          </ol>
+        </nav>
+        <div class="max-w-2xl">
+          <div class="animate-fade-in-up" style="animation-delay:0.2s">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+              Arizona Bark Scorpion Specialists
+            </span>
+          </div>
+          <h1 class="font-display font-extrabold text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mt-6 mb-5 animate-fade-in-up" style="animation-delay:0.4s">
+            Scorpion Control in Phoenix, AZ <span class="text-lime">— Targeted Treatment That Lasts</span>
+          </h1>
+          <p class="text-white text-base sm:text-lg leading-relaxed mb-4 max-w-xl animate-fade-in-up" style="animation-delay:0.6s">
+            The Arizona bark scorpion is the most venomous scorpion in North America — and one of the most common uninvited guests in Phoenix Valley homes. A generic pest spray won't solve the problem.
+          </p>
+          <p class="text-white/85 text-base leading-relaxed mb-8 max-w-xl animate-fade-in-up" style="animation-delay:0.7s">
+            Scorpion control is our signature specialty. For over a decade, we've protected Phoenix Valley homeowners with an Integrated Pest Management approach that targets scorpion biology, behavior, and harborage patterns — not just the ones you can see.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 animate-fade-in-up" style="animation-delay:0.9s">
+            <a href="#contact" class="inline-flex items-center gap-2 px-7 py-4 bg-lime text-forest font-semibold rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+              Schedule My Scorpion Evaluation
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Scorpions Are a Serious Problem -->
+    <section class="bg-warm-sand py-20 lg:py-28 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal-left order-2 lg:order-1 flex justify-center">
+            <div class="relative inline-block">
+              <img src="images/about-main.jpg" alt="Exclusive Pest Solutions truck in the Arizona desert" class="w-full max-w-md rounded-2xl border-4 border-warm-sand shadow-lg object-cover aspect-[4/5]">
+              <div class="absolute -bottom-6 -right-4 lg:-right-8 bg-lime rounded-2xl px-5 py-4 shadow-lg max-w-xs">
+                <p class="font-display font-bold text-forest text-sm leading-tight">Most venomous scorpion in North America</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right order-1 lg:order-2" data-delay="200">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-owl/15 text-owl border border-owl/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-owl"></span>
+              The Threat
+            </span>
+            <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-5 leading-tight">
+              Why scorpions are a serious problem in the Phoenix Valley
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              The Arizona bark scorpion thrives in the desert climate of Maricopa and Pinal County. Unlike most pests, scorpions are uniquely equipped to invade homes — and uniquely difficult to remove without a targeted strategy.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center"><i data-lucide="moon" class="w-5 h-5"></i></span>
+                <div>
+                  <h3 class="font-display font-semibold text-forest mb-1">Nocturnal</h3>
+                  <p class="text-sm text-gray-600">Active at night, making infestations easy to miss.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center"><i data-lucide="trending-up" class="w-5 h-5"></i></span>
+                <div>
+                  <h3 class="font-display font-semibold text-forest mb-1">Excellent climbers</h3>
+                  <p class="text-sm text-gray-600">Capable of scaling stucco walls and slipping through gaps as thin as a credit card.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-owl text-white flex items-center justify-center"><i data-lucide="alert-triangle" class="w-5 h-5"></i></span>
+                <div>
+                  <h3 class="font-display font-semibold text-forest mb-1">Highly venomous</h3>
+                  <p class="text-sm text-gray-600">The only U.S. scorpion species whose venom can cause severe medical reactions.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="flex-shrink-0 w-10 h-10 rounded-full bg-brand text-white flex items-center justify-center"><i data-lucide="droplets" class="w-5 h-5"></i></span>
+                <div>
+                  <h3 class="font-display font-semibold text-forest mb-1">Drawn to moisture</h3>
+                  <p class="text-sm text-gray-600">Kitchens, bathrooms, and garages are common entry points.</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-500 italic border-l-4 border-lime pl-4">
+              Homes near desert washes, open lots, or block wall fencing are particularly vulnerable — but scorpions can enter any property in the valley.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 max-w-3xl mx-auto">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+            How We Work
+          </span>
+          <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-4 leading-tight">
+            Our scorpion control process
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            Four stages. Each grounded in scorpion biology and Arizona-specific harborage patterns — not a generic spray schedule.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="reveal bg-warm-sand rounded-2xl p-6 lg:p-7 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all" data-delay="0">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-lime text-forest font-display font-extrabold text-lg mb-5">01</span>
+            <h3 class="font-display font-semibold text-forest text-lg mb-2">Property Evaluation</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Thorough inspection of your home's exterior, perimeter, and entry points. We identify harborage zones and the specific conditions attracting scorpions.</p>
+          </div>
+          <div class="reveal bg-warm-sand rounded-2xl p-6 lg:p-7 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all" data-delay="120">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-lime text-forest font-display font-extrabold text-lg mb-5">02</span>
+            <h3 class="font-display font-semibold text-forest text-lg mb-2">Custom Treatment Plan</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Using targeted knowledge of bark scorpion biology, we build a plan specific to your property — addressing the scorpions present and the conditions attracting more.</p>
+          </div>
+          <div class="reveal bg-warm-sand rounded-2xl p-6 lg:p-7 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all" data-delay="240">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand text-white font-display font-extrabold text-lg mb-5">03</span>
+            <h3 class="font-display font-semibold text-forest text-lg mb-2">Exclusion &amp; Treatment</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">We seal key entry points and treat your home's perimeter, block walls, and harborage zones with products designed to disrupt scorpion biology — not just repel temporarily.</p>
+          </div>
+          <div class="reveal bg-warm-sand rounded-2xl p-6 lg:p-7 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all" data-delay="360">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand text-white font-display font-extrabold text-lg mb-5">04</span>
+            <h3 class="font-display font-semibold text-forest text-lg mb-2">Follow-Up &amp; Monitoring</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Lasting scorpion control requires ongoing vigilance. We track treatment performance and adjust through every season to keep your home protected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="bg-warm-sand py-20 lg:py-24">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-brand/15 text-brand border border-brand/30">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          Service Areas
+        </span>
+        <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-5 mb-4 leading-tight">
+          Scorpion control across the Phoenix Valley
+        </h2>
+        <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-10">
+          We provide scorpion elimination and prevention services throughout Maricopa and Pinal County.
+        </p>
+        <div class="flex flex-wrap justify-center gap-2 lg:gap-3">
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Phoenix</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Scottsdale</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Mesa</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Chandler</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Gilbert</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Glendale</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Peoria</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Surprise</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Tempe</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Fountain Hills</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Cave Creek</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Goodyear</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Buckeye</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Queen Creek</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">San Tan Valley</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Maricopa</span>
+          <span class="px-4 py-2 bg-white rounded-full text-sm font-medium text-forest border border-forest/10">Casa Grande</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+            FAQ
+          </span>
+          <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-3 leading-tight">
+            Frequently asked questions
+          </h2>
+          <p class="text-gray-600">Everything Phoenix Valley homeowners ask about scorpion control.</p>
+        </div>
+        <div class="space-y-3">
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">How do I know if I have a scorpion infestation?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              The most common signs are direct sightings — typically at night near baseboards, in closets, under furniture, or along exterior walls. A UV blacklight flashlight will cause scorpions to glow a bright green in the dark, making nighttime inspections more effective. If you're finding scorpions regularly inside your home, it's a sign the problem needs professional treatment.
+            </div>
+          </details>
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">Are Arizona bark scorpions really dangerous?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              Yes. The Arizona bark scorpion is the only scorpion in the U.S. whose sting can cause severe symptoms — including intense pain, numbness, and in vulnerable individuals (children, the elderly, or those with allergies), potentially serious reactions. Prompt professional treatment is strongly recommended if you find them inside your home.
+            </div>
+          </details>
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">Why do I keep finding scorpions even after spraying myself?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              Scorpions have a unique biology that makes over-the-counter sprays largely ineffective. Their metabolism is slow, they absorb little product through their exoskeleton, and they rarely come into contact with treated surfaces long enough for a general spray to work. Effective scorpion control requires targeted application methods and products specifically chosen for scorpion biology.
+            </div>
+          </details>
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">How long does scorpion treatment take to work?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              Most clients notice a significant reduction in scorpion activity within the first 2 to 4 weeks following an initial treatment. Complete elimination of an infestation typically requires consistent follow-up treatment cycles, as new scorpions can move in from surrounding areas or neighboring properties.
+            </div>
+          </details>
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">Is your scorpion treatment safe for my kids and pets?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              Yes. We select every product with family and pet safety as a primary consideration. We'll walk you through what's being applied, how long to stay off treated surfaces, and what precautions to take — so you always know exactly what's happening in your home.
+            </div>
+          </details>
+
+          <details class="faq-item bg-warm-sand rounded-xl border border-forest/10 overflow-hidden group">
+            <summary class="flex items-start gap-4 p-5 lg:p-6">
+              <span class="q-mark flex-shrink-0 w-8 h-8 rounded-full bg-forest/10 text-forest flex items-center justify-center font-display font-bold text-sm transition-all">Q</span>
+              <span class="flex-1 font-display font-semibold text-forest text-base lg:text-lg leading-snug">Do you offer scorpion control near Scottsdale and Cave Creek?</span>
+              <i data-lucide="chevron-down" class="chevron w-5 h-5 text-forest flex-shrink-0 mt-1"></i>
+            </summary>
+            <div class="px-5 lg:px-6 pb-5 lg:pb-6 pl-16 lg:pl-[5.25rem] text-gray-600 leading-relaxed">
+              Yes — we serve the entire Phoenix Valley, including Scottsdale, Cave Creek, Fountain Hills, and all surrounding communities. These areas are among the highest-activity scorpion zones in the valley, and we have significant experience treating properties throughout the north and east valley.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="relative py-20 lg:py-28 overflow-hidden">
+      <img src="images/hero-david-truck.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(8,14,10,0.92) 0%, rgba(8,14,10,0.85) 60%, rgba(8,14,10,0.65) 100%);"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-white/15 text-white backdrop-blur-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-lime"></span>
+          Ready to start
+        </span>
+        <h2 class="font-display font-extrabold text-white text-3xl sm:text-4xl lg:text-5xl mt-5 mb-5 leading-[1.1]">
+          Get a scorpion plan built for <span class="text-lime">your</span> property.
+        </h2>
+        <p class="text-white/85 text-base lg:text-lg max-w-2xl mx-auto mb-9 leading-relaxed">
+          Every evaluation is on-site, no obligation, and tailored to your home. Phoenix Valley, Maricopa and Pinal County.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+16026006746" class="inline-flex items-center gap-2 px-7 py-4 bg-lime text-forest font-semibold rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            (602) 600-6746
+          </a>
+          <a href="mailto:hello@exclusivepest.co" class="inline-flex items-center gap-2 px-7 py-4 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-semibold rounded-lg hover:bg-white/20 transition-all">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            Request Evaluation
+          </a>
+        </div>
+        <p class="text-white/60 text-xs mt-6 tracking-wide">AZ Dept. of Agriculture License #10150 · IPM Certified · Wildlife-Conscious</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0e1114] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-6 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="h-14 w-auto">
+              <span class="font-display font-bold text-lg text-white leading-tight">Exclusive<br><span class="text-xs font-medium text-lime">Pest Solutions</span></span>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-6">
+              Phoenix Valley's premier pest control — built around your home, your family, and the desert we share.
+            </p>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+            <p class="text-white/50 text-xs mt-5">AZ Dept. of Agriculture License #10150</p>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Home</a></li>
+              <li><a href="index.html#about" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>About</a></li>
+              <li><a href="index.html#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Services</a></li>
+              <li><a href="index.html#process" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Our Process</a></li>
+              <li><a href="index.html#contact" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Services</h4>
+            <ul class="space-y-3">
+              <li><a href="scorpion-control.html" class="text-lime text-sm font-medium flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Scorpion Control</a></li>
+              <li><a href="general-pest-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>General Pest Control</a></li>
+              <li><span class="text-white/40 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Garden-Safe Treatments</span></li>
+              <li><span class="text-white/40 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>Wildlife-Conscious Solutions</span></li>
+              <li><span class="text-white/40 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20"></span>IPM Programs</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Working Hours</h4>
+            <ul class="space-y-3 text-white/70 text-sm mb-6">
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Monday – Saturday: 7:00 AM – 6:00 PM</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Sunday: Emergency Service Available</li>
+            </ul>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5 text-forest"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Call Us</p>
+                <a href="tel:+16026006746" class="text-white font-semibold text-sm hover:text-lime transition-colors">(602) 600-6746</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Email Us</p>
+                <a href="mailto:hello@exclusivepest.co" class="text-white font-semibold text-sm hover:text-lime transition-colors">hello@exclusivepest.co</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-white/50 text-sm text-center sm:text-left">© 2026 Exclusive Pest Solutions. All Rights Reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="privacy-policy.html" class="text-white/50 text-sm hover:text-lime transition-colors">Privacy Policy</a>
+            <span class="w-1 h-1 rounded-full bg-white/20"></span>
+            <a href="terms-of-service.html" class="text-white/50 text-sm hover:text-lime transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        <div class="pt-5 text-center">
+          <a href="https://outworkemdigital.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-white/40 text-xs hover:text-lime transition-colors">
+            <i data-lucide="code-2" class="w-3.5 h-3.5"></i>
+            Made by <span class="font-semibold">Outwork’em Digital</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'scrolled');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Reveal animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.dataset.delay || 0;
+          setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

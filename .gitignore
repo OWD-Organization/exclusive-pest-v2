@@ -1,0 +1,15 @@
+# Imágenes descargadas del sitio en vivo durante el crawl (12 MB).
+# Reproducibles con scrape/extract.py sobre scrape/html/.
+scrape/assets/
+
+# Documento personal que quedó suelto en build-assets, ajeno al proyecto.
+build-assets/Formulario_Cotizacion_Seguro_Vivienda_Alianza_Segura.pdf
+
+# Temporales de las sondas de medición en navegador
+_*.html
+*.bak.html
+.bak-*.html
+
+# Sistema
+.DS_Store
+Thumbs.db

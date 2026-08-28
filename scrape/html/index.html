@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Pest Control Phoenix Valley AZ | Exclusive Pest Solutions</title>
+  <meta name="description" content="Custom pest control for Phoenix Valley homes. Scorpion specialists. Wildlife-conscious treatments. Licensed by AZ Dept. of Agriculture. Built around your home.">
+  <link rel="icon" type="image/webp" href="images/logo-v2.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#4b4f52',
+            brand: '#5daa4c',
+            lime: '#f0bb40',
+            owl: '#f29b1d',
+            'warm-sand': '#F5F0E8',
+            cream: '#FEFAE0',
+            charcoal: '#4b4f52',
+          },
+          fontFamily: {
+            display: ['Manrope', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #4b4f52; background: #F5F0E8; overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F5F0E8; }
+    ::-webkit-scrollbar-thumb { background: #5daa4c; border-radius: 4px; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulseScale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes drawLine {
+      from { stroke-dashoffset: 120; }
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .animate-pulse-scale { animation: pulseScale 2s ease-in-out infinite; }
+    .animate-fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .glass-card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(8,14,10,0.92) 0%, rgba(8,14,10,0.78) 50%, rgba(8,14,10,0.45) 100%);
+    }
+    @media (min-width: 1024px) {
+      .hero-overlay {
+        background: linear-gradient(to right, rgba(8,14,10,0.88) 0%, rgba(8,14,10,0.70) 35%, rgba(8,14,10,0.45) 50%, rgba(8,14,10,0.18) 75%, rgba(8,14,10,0.05) 100%);
+      }
+    }
+
+    #navbar { background: transparent; transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: rgba(75, 79, 82, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 10px 25px -10px rgba(0,0,0,0.3); }
+    #navbar .nav-inner { height: 112px; transition: height 0.3s ease; }
+    #navbar .nav-logo { height: 96px; transition: height 0.3s ease; }
+    #navbar.scrolled .nav-inner { height: 82px; }
+    #navbar.scrolled .nav-logo { height: 66px; }
+
+    .nav-dropdown { background: rgba(75, 79, 82, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  </style>
+</head>
+<body class="font-body">
+
+  <!-- Firefly Canvas -->
+  <canvas id="fireflyCanvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:0;pointer-events:none;"></canvas>
+
+  <!-- Content Layer -->
+  <div class="relative z-10">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="nav-inner relative flex items-center justify-between">
+          <a href="#home" class="flex items-center">
+            <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="nav-logo w-auto">
+          </a>
+          <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="#home" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Home</a>
+            <a href="#about" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">About</a>
+            <div class="relative group">
+              <a href="#services" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors py-2">
+                Services
+                <i data-lucide="chevron-down" class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform"></i>
+              </a>
+              <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                <div class="nav-dropdown w-60 border border-white/10 rounded-lg shadow-xl py-2">
+                  <a href="scorpion-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="target" class="w-3.5 h-3.5 text-lime"></i>
+                    Scorpion Control
+                  </a>
+                  <a href="ant-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="git-branch" class="w-3.5 h-3.5 text-lime"></i>
+                    Ant Control
+                  </a>
+                  <a href="general-pest-control.html" class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-white hover:bg-white/10 hover:text-lime transition-colors">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-lime"></i>
+                    General Pest Control
+                  </a>
+                  <div class="border-t border-white/10 my-1"></div>
+                  <a href="#services" class="flex items-center justify-between gap-2 px-4 py-2 text-xs text-white/60 hover:text-white hover:bg-white/5 transition-colors">
+                    View all services
+                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="#process" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Process</a>
+            <a href="#contact" class="flex items-center gap-1 text-sm font-medium text-white hover:text-lime transition-colors">Contact</a>
+          </div>
+          <div class="hidden lg:block">
+            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-lime text-forest font-semibold text-sm rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+              Get Your Custom Quote
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+          <button id="menuBtn" class="lg:hidden p-2 text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="hidden lg:hidden nav-dropdown border-t border-white/10">
+        <div class="px-4 py-4 space-y-1">
+          <a href="#home" class="block py-2 text-sm font-medium text-white mobile-link">Home</a>
+          <a href="#about" class="block py-2 text-sm font-medium text-white mobile-link">About</a>
+          <details class="group">
+            <summary class="flex items-center justify-between py-2 text-sm font-medium text-white cursor-pointer list-none">
+              <span>Services</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1 border-l-2 border-white/10">
+              <a href="scorpion-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">Scorpion Control</a>
+              <a href="ant-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">Ant Control</a>
+              <a href="general-pest-control.html" class="block py-2 text-sm text-white/85 hover:text-lime mobile-link">General Pest Control</a>
+              <a href="#services" class="block py-2 text-xs text-white/60 mobile-link">View all services →</a>
+            </div>
+          </details>
+          <a href="#process" class="block py-2 text-sm font-medium text-white mobile-link">Process</a>
+          <a href="#contact" class="block py-2 text-sm font-medium text-white mobile-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[80vh] lg:min-h-screen flex items-center overflow-hidden">
+      <picture>
+        <source media="(max-width: 768px)" srcset="images/hero-david-truck-mobile.jpg">
+        <img src="images/hero-david-truck.jpg" alt="David Kaiser with the Exclusive Pest Solutions truck at sunset, Phoenix Valley" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+      </picture>
+      <div class="absolute inset-0 hero-overlay"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-32 lg:py-32 lg:pt-40 w-full">
+        <div class="max-w-2xl">
+          <div class="animate-fade-in-up" style="animation-delay:0.2s">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+              Phoenix Valley's Premier Pest Control
+            </span>
+          </div>
+          <h1 class="font-display font-extrabold text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mt-6 mb-5 animate-fade-in-up" style="animation-delay:0.4s">
+            Smarter Pest Control. <span class="text-lime">Built Around You.</span>
+          </h1>
+          <p class="text-white text-base sm:text-lg leading-relaxed mb-8 max-w-xl animate-fade-in-up" style="animation-delay:0.6s">
+            Not a spray-and-go service. Every treatment is engineered around your home, your pests, and Arizona's unique desert ecosystem.
+          </p>
+          <div class="flex flex-wrap gap-4 sm:gap-8 mb-8 animate-fade-in-up" style="animation-delay:0.8s">
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                <i data-lucide="bird" class="w-[18px] h-[18px] text-white"></i>
+              </span>
+              <span class="font-medium text-white text-sm">Wildlife-Conscious Application</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                <i data-lucide="award" class="w-[18px] h-[18px] text-white"></i>
+              </span>
+              <span class="font-medium text-white text-sm">Decade of Valley Expertise</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 animate-fade-in-up" style="animation-delay:1.0s">
+            <a href="#contact" class="inline-flex items-center gap-2 px-7 py-4 bg-lime text-forest font-semibold rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+              Get My Custom Plan
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-2">
+        <span class="w-2 h-2 rounded-full bg-lime/80"></span>
+        <span class="w-2 h-2 rounded-full bg-lime/60"></span>
+        <span class="w-2 h-2 rounded-full bg-lime/40"></span>
+        <span class="w-2 h-2 rounded-full bg-lime/20"></span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-warm-sand py-20 lg:py-28 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal-left relative flex justify-center">
+            <div class="relative inline-block">
+              <div class="relative z-10">
+                <img src="images/about-main.jpg" alt="Exclusive Pest Solutions truck in the Arizona desert" class="w-full max-w-md rounded-2xl border-4 border-warm-sand shadow-lg object-cover aspect-[4/5]">
+              </div>
+              <img src="images/about-overlay.jpg" alt="Damaged plumbing vent stack — typical pest entry point we seal" class="absolute -bottom-8 -left-4 sm:-left-8 w-48 sm:w-64 rounded-xl border-4 border-warm-sand shadow-lg object-cover aspect-video z-20">
+            </div>
+          </div>
+          <div class="lg:pl-8 pt-12 lg:pt-0 reveal" data-delay="200">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+              About Us
+            </span>
+            <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-4 leading-tight">
+              Built to protect your home — and everything around it
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-3">
+              At Exclusive Pest Solutions, we don't believe in cookie-cutter spraying. Every property is different. Every pest profile is different. So every treatment we build is engineered specifically for you.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Our brand wears the <span class="font-semibold text-owl">great horned owl</span> for a reason: as licensed agents of Arizona's Department of Agriculture, we treat the desert with the same care we give your home — pests out, ecosystem intact.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 mb-6">
+              <img src="images/about-inline.jpg" alt="Truck in the Arizona desert" class="w-full sm:w-40 rounded-xl object-cover aspect-video flex-shrink-0">
+              <div class="space-y-3">
+                <div class="flex items-center gap-3"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-lime flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-forest" stroke-width="3"></i></span><span class="text-sm text-gray-600">Licensed &amp; IPM-Certified Technicians</span></div>
+                <div class="flex items-center gap-3"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-lime flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-forest" stroke-width="3"></i></span><span class="text-sm text-gray-600">Wildlife-Safe Application Methods</span></div>
+                <div class="flex items-center gap-3"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-lime flex items-center justify-center"><i data-lucide="check" class="w-3 h-3 text-forest" stroke-width="3"></i></span><span class="text-sm text-gray-600">Transparent Process, No Surprises</span></div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-6">
+              <div>
+                <span class="font-display font-bold text-brand text-4xl">10+</span>
+                <p class="text-sm text-gray-500 mt-1">A decade of Phoenix Valley expertise —<br>from bark scorpions to backyard ecosystems.</p>
+              </div>
+              <a href="#services" class="inline-flex items-center gap-2 px-6 py-3 bg-lime text-forest font-semibold text-sm rounded-lg hover:scale-[1.02] hover:brightness-105 transition-all">
+                Meet Our Approach
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+            Our Services
+          </span>
+          <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 max-w-xl mx-auto leading-tight">
+            Premium pest control for discerning homeowners
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Service Card 1 — Scorpion -->
+          <div class="reveal group bg-warm-sand rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-delay="0">
+            <div class="relative mx-auto mb-6">
+              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden bg-forest/10 border-2 border-lime/30">
+                <img src="images/service-scorpion.jpg" alt="Scorpion control — bait stations at desert home" class="w-full h-full object-cover">
+              </div>
+              <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-lime flex items-center justify-center animate-pulse-scale">
+                <i data-lucide="target" class="w-5 h-5 text-forest"></i>
+              </span>
+            </div>
+            <h3 class="font-display font-semibold text-forest text-lg mt-6 mb-2">Scorpion Control</h3>
+            <p class="text-gray-600 text-sm mb-4 max-w-xs mx-auto">Targeted elimination of the Arizona bark scorpion — Valley-wide.</p>
+            <a href="scorpion-control.html" class="inline-flex items-center gap-1 text-brand font-medium text-sm hover:underline">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+          <!-- Service Card 2 — General Pest -->
+          <div class="reveal group bg-warm-sand rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-delay="150">
+            <div class="relative mx-auto mb-6">
+              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden bg-forest/10 border-2 border-lime/30">
+                <img src="images/service-general.jpg" alt="General pest control — wire mesh exclusion in progress" class="w-full h-full object-cover">
+              </div>
+              <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-lime flex items-center justify-center animate-pulse-scale" style="animation-delay:0.3s">
+                <i data-lucide="bug" class="w-5 h-5 text-forest"></i>
+              </span>
+            </div>
+            <h3 class="font-display font-semibold text-forest text-lg mt-6 mb-2">General Pest Control</h3>
+            <p class="text-gray-600 text-sm mb-4 max-w-xs mx-auto">Custom plans for ants, roaches, spiders, crickets, and more.</p>
+            <a href="general-pest-control.html" class="inline-flex items-center gap-1 text-brand font-medium text-sm hover:underline">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+          <!-- Service Card 3 — Garden & Pet-Safe -->
+          <div class="reveal group bg-warm-sand rounded-2xl p-6 text-center border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-delay="300">
+            <div class="relative mx-auto mb-6">
+              <div class="w-48 h-48 mx-auto rounded-full overflow-hidden bg-forest/10 border-2 border-lime/30">
+                <img src="images/service-garden.jpg" alt="Garden- and pet-safe pest control treatment" class="w-full h-full object-cover">
+              </div>
+              <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-brand flex items-center justify-center animate-pulse-scale" style="animation-delay:0.6s">
+                <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
+              </span>
+            </div>
+            <h3 class="font-display font-semibold text-forest text-lg mt-6 mb-2">Garden &amp; Pet-Safe</h3>
+            <p class="text-gray-600 text-sm mb-4 max-w-xs mx-auto">Effective treatments selected for families, pets, and home gardens.</p>
+            <a href="#contact" class="inline-flex items-center gap-1 text-brand font-medium text-sm hover:underline">Learn More <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 pt-8 border-t border-gray-100">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-full bg-lime/20 flex items-center justify-center"><i data-lucide="leaf" class="w-[18px] h-[18px] text-brand"></i></span>
+            <p class="text-sm text-gray-500">Tailored solutions designed for Arizona homes — and the desert wildlife around them.</p>
+          </div>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:opacity-80 transition-opacity" aria-label="Read our Google reviews">
+            <svg viewBox="0 0 48 48" class="w-5 h-5 flex-shrink-0" aria-hidden="true">
+              <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+              <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+              <path fill="#4CAF50" d="M24,44c5.166,0,9.860-1.977,13.409-5.192l-6.190-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+              <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.190,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+            </svg>
+            <span class="font-display font-bold text-forest text-lg">5.0</span>
+            <div class="flex gap-0.5">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+            </div>
+            <span class="text-sm text-gray-500 group-hover:text-forest">Trusted by Valley homeowners on Google</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="bg-warm-sand py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+              Why Choose Us
+            </span>
+            <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-4 leading-tight">
+              Why Phoenix homeowners choose the slower, smarter approach
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+              We charge a premium because we're responsible with the products. That means slower, more methodical work — and dramatically better, longer-lasting results.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-6 mb-8">
+              <div class="flex items-start gap-3">
+                <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center flex-shrink-0"><i data-lucide="search" class="w-5 h-5 text-forest"></i></span>
+                <div>
+                  <h4 class="font-display font-semibold text-forest mb-1">Bespoke Treatments</h4>
+                  <p class="text-sm text-gray-600">We assess every property's unique entry points and pest profile before applying a single product.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-12 h-12 rounded-full bg-owl flex items-center justify-center flex-shrink-0"><i data-lucide="bird" class="w-5 h-5 text-white"></i></span>
+                <div>
+                  <h4 class="font-display font-semibold text-forest mb-1">Wildlife-Conscious Care</h4>
+                  <p class="text-sm text-gray-600">Rodenticides that won't harm owls or hawks. Mechanical traps whenever possible.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 p-4 bg-white/70 rounded-xl border border-brand/15">
+              <img src="images/david-avatar.jpg" alt="David Kaiser" class="w-12 h-12 rounded-full object-cover border-2 border-brand/30">
+              <div>
+                <p class="font-display font-semibold text-forest text-sm">David Kaiser — Founder, Licensed QA Applicator</p>
+                <p class="text-sm text-gray-600 italic">"I don't do cookie-cutter spraying. Slow, expert work — that's the standard."</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right relative">
+            <div class="relative">
+              <img src="images/why-us-main.jpg" alt="Exclusive Pest Solutions truck with great horned owl branding in the Arizona desert" class="w-full max-w-md mx-auto rounded-2xl object-cover aspect-[3/4]">
+              <img src="images/why-us-overlay.jpg" alt="Premium Phoenix Valley home we service" class="absolute -top-6 -right-4 w-32 h-32 lg:w-40 lg:h-40 rounded-xl object-cover border-4 border-warm-sand shadow-lg">
+              <div class="absolute -bottom-6 -right-2 lg:right-4 bg-lime rounded-2xl p-5 shadow-lg">
+                <span class="font-display font-extrabold text-forest text-4xl lg:text-5xl">95%</span>
+                <p class="font-medium text-forest text-sm mt-1">First-Visit<br>Resolution Rate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="bg-forest py-20 lg:py-28 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-14">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-white/20 text-white backdrop-blur-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-lime"></span>
+            Core Standards
+          </span>
+          <h2 class="font-display font-bold text-white text-3xl lg:text-4xl mt-4 max-w-2xl mx-auto leading-tight">
+            The standards that set Exclusive Pest Solutions apart
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 — Pet & Child-Safe -->
+          <div class="reveal glass-card rounded-2xl p-6 lg:p-8 hover:-translate-y-0.5 transition-all duration-500" data-delay="0">
+            <span class="w-14 h-14 rounded-full bg-lime flex items-center justify-center mb-5">
+              <i data-lucide="shield" class="w-6 h-6 text-forest"></i>
+            </span>
+            <h3 class="font-display font-semibold text-white text-xl mb-2">Pet &amp; Child-Safe</h3>
+            <p class="text-white/70 text-sm mb-5">Every treatment selected with your family and pets in mind.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Toys and bowls moved before treatment</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Low-odor, garden-safe formulations</span></li>
+            </ul>
+          </div>
+          <!-- Card 2 — Wildlife-Conscious -->
+          <div class="reveal glass-card rounded-2xl p-6 lg:p-8 hover:-translate-y-0.5 transition-all duration-500" data-delay="120">
+            <span class="w-14 h-14 rounded-full bg-owl flex items-center justify-center mb-5">
+              <i data-lucide="bird" class="w-6 h-6 text-white"></i>
+            </span>
+            <h3 class="font-display font-semibold text-white text-xl mb-2">Wildlife-Conscious</h3>
+            <p class="text-white/70 text-sm mb-5">Pesticides applied responsibly, the desert ecosystem fully respected.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Raptor-safe rodenticides only</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Mechanical traps preferred over chemicals</span></li>
+            </ul>
+          </div>
+          <!-- Card 3 — IPM -->
+          <div class="reveal glass-card rounded-2xl p-6 lg:p-8 hover:-translate-y-0.5 transition-all duration-500" data-delay="240">
+            <span class="w-14 h-14 rounded-full bg-brand flex items-center justify-center mb-5">
+              <i data-lucide="microscope" class="w-6 h-6 text-white"></i>
+            </span>
+            <h3 class="font-display font-semibold text-white text-xl mb-2">Integrated Pest Management</h3>
+            <p class="text-white/70 text-sm mb-5">Science-backed methods that solve the root cause, not the symptom.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Biology and behavior-driven plans</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-lime flex-shrink-0"></i><span class="text-white/80 text-sm">Long-term prevention, not spray cycles</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center text-white/80 font-medium mt-10 mb-8">Certified, Licensed, and Accountable — Always.</p>
+        <div class="flex flex-wrap items-center justify-center gap-6 lg:gap-10">
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="badge-check" class="w-5 h-5 text-lime"></i><span class="font-medium text-sm">AZ Dept. of Ag #10150</span></div>
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="award" class="w-5 h-5 text-lime"></i><span class="font-medium text-sm">QA Licensed</span></div>
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="leaf" class="w-5 h-5 text-lime"></i><span class="font-medium text-sm">IPM Certified</span></div>
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="paw-print" class="w-5 h-5 text-lime"></i><span class="font-medium text-sm">Pet &amp; Garden Safe</span></div>
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="droplets" class="w-5 h-5 text-lime"></i><span class="font-medium text-sm">Label-Compliant</span></div>
+          <div class="flex items-center gap-2 text-white/80"><i data-lucide="bird" class="w-5 h-5 text-owl"></i><span class="font-medium text-sm">Wildlife-Safe</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pest Types Section -->
+    <section class="bg-warm-sand py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+            <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+            What We Treat
+          </span>
+          <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 leading-tight">
+            The pests that define Arizona living
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div class="reveal-scale text-center pest-item" data-delay="0">
+            <div class="relative w-40 h-40 lg:w-48 lg:h-48 mx-auto rounded-full bg-warm-sand border-2 border-lime flex items-center justify-center overflow-hidden">
+              <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 100 100">
+                <line class="prohibition-line" x1="20" y1="20" x2="80" y2="80" stroke="#EF4444" stroke-width="3" stroke-linecap="round" style="stroke-dasharray:120;stroke-dashoffset:120"/>
+              </svg>
+              <img src="images/pest-bedbug.png" alt="Bark Scorpions" class="w-28 h-28 lg:w-36 lg:h-36 object-contain">
+            </div>
+            <h3 class="font-display font-semibold text-forest text-base mt-4">Bark Scorpions</h3>
+            <p class="text-xs text-gray-500 mt-1">Our specialty</p>
+          </div>
+          <div class="reveal-scale text-center pest-item" data-delay="100">
+            <div class="relative w-40 h-40 lg:w-48 lg:h-48 mx-auto rounded-full bg-warm-sand border-2 border-lime flex items-center justify-center overflow-hidden">
+              <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 100 100">
+                <line class="prohibition-line" x1="20" y1="20" x2="80" y2="80" stroke="#EF4444" stroke-width="3" stroke-linecap="round" style="stroke-dasharray:120;stroke-dashoffset:120"/>
+              </svg>
+              <img src="images/pest-cockroach.png" alt="Cockroaches" class="w-28 h-28 lg:w-36 lg:h-36 object-contain">
+            </div>
+            <h3 class="font-display font-semibold text-forest text-base mt-4">Cockroaches</h3>
+          </div>
+          <div class="reveal-scale text-center pest-item" data-delay="200">
+            <div class="relative w-40 h-40 lg:w-48 lg:h-48 mx-auto rounded-full bg-warm-sand border-2 border-lime flex items-center justify-center overflow-hidden">
+              <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 100 100">
+                <line class="prohibition-line" x1="20" y1="20" x2="80" y2="80" stroke="#EF4444" stroke-width="3" stroke-linecap="round" style="stroke-dasharray:120;stroke-dashoffset:120"/>
+              </svg>
+              <img src="images/pest-spider.png" alt="Black Widow Spiders" class="w-28 h-28 lg:w-36 lg:h-36 object-contain">
+            </div>
+            <h3 class="font-display font-semibold text-forest text-base mt-4">Black Widows</h3>
+          </div>
+          <div class="reveal-scale text-center pest-item" data-delay="300">
+            <div class="relative w-40 h-40 lg:w-48 lg:h-48 mx-auto rounded-full bg-warm-sand border-2 border-lime flex items-center justify-center overflow-hidden">
+              <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 100 100">
+                <line class="prohibition-line" x1="20" y1="20" x2="80" y2="80" stroke="#EF4444" stroke-width="3" stroke-linecap="round" style="stroke-dasharray:120;stroke-dashoffset:120"/>
+              </svg>
+              <img src="images/pest-mosquito.png" alt="Ants" class="w-28 h-28 lg:w-36 lg:h-36 object-contain">
+            </div>
+            <h3 class="font-display font-semibold text-forest text-base mt-4">Ants</h3>
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-500 mt-10">Plus crickets, silverfish, bees, wasps, earwigs, and the full range of desert pests.</p>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-warm-sand py-14 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="font-display font-semibold text-forest text-xl text-center mb-10">
+          The numbers behind the standard
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="text-center stat-item" data-target="95" data-suffix="%">
+            <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="trophy" class="w-[22px] h-[22px] text-forest"></i>
+            </span>
+            <div class="font-display font-extrabold text-forest text-3xl lg:text-4xl"><span class="counter">0</span>%</div>
+            <p class="text-sm text-gray-500 mt-1">First-Visit Resolution Rate</p>
+          </div>
+          <div class="text-center stat-item" data-target="10" data-suffix="+">
+            <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="calendar-clock" class="w-[22px] h-[22px] text-white"></i>
+            </span>
+            <div class="font-display font-extrabold text-forest text-3xl lg:text-4xl"><span class="counter">0</span>+</div>
+            <p class="text-sm text-gray-500 mt-1">Years Across the Phoenix Valley</p>
+          </div>
+          <div class="text-center">
+            <span class="w-12 h-12 rounded-full bg-owl flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="moon-star" class="w-[22px] h-[22px] text-white"></i>
+            </span>
+            <div class="font-display font-extrabold text-forest text-3xl lg:text-4xl">24/7</div>
+            <p class="text-sm text-gray-500 mt-1">Bark Scorpion Activity in AZ</p>
+          </div>
+          <div class="text-center stat-item" data-target="100" data-suffix="%">
+            <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="shield-check" class="w-[22px] h-[22px] text-forest"></i>
+            </span>
+            <div class="font-display font-extrabold text-forest text-3xl lg:text-4xl"><span class="counter">0</span>%</div>
+            <p class="text-sm text-gray-500 mt-1">Label-Compliant Applications</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="reveal">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-lime text-forest">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest"></span>
+              Our Pest Control Process
+            </span>
+            <h2 class="font-display font-bold text-forest text-3xl lg:text-4xl mt-4 mb-4 leading-tight">
+              How we build a pest plan that actually works
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Every Exclusive treatment starts with what most companies skip: a real evaluation. Then we engineer a plan around what we find — not what we sell.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="bg-white rounded-xl p-4 shadow-md border border-gray-50">
+                <span class="w-8 h-8 rounded-full bg-lime flex items-center justify-center text-forest font-display font-bold text-sm mb-2">01</span>
+                <h4 class="font-display font-semibold text-forest mb-1">Inspection</h4>
+                <p class="text-xs text-gray-600">We assess entry points, harborage, and your home's environment.</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 shadow-md border border-gray-50">
+                <span class="w-8 h-8 rounded-full bg-lime flex items-center justify-center text-forest font-display font-bold text-sm mb-2">02</span>
+                <h4 class="font-display font-semibold text-forest mb-1">Custom Plan</h4>
+                <p class="text-xs text-gray-600">A targeted strategy built from pest biology and local data.</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 shadow-md border border-gray-50">
+                <span class="w-8 h-8 rounded-full bg-lime flex items-center justify-center text-forest font-display font-bold text-sm mb-2">03</span>
+                <h4 class="font-display font-semibold text-forest mb-1">Treatment</h4>
+                <p class="text-xs text-gray-600">Responsible application with your family, pets, and garden protected.</p>
+              </div>
+              <div class="bg-white rounded-xl p-4 shadow-md border border-gray-50">
+                <span class="w-8 h-8 rounded-full bg-lime flex items-center justify-center text-forest font-display font-bold text-sm mb-2">04</span>
+                <h4 class="font-display font-semibold text-forest mb-1">Prevention</h4>
+                <p class="text-xs text-gray-600">Ongoing monitoring and sealing to keep your home protected.</p>
+              </div>
+            </div>
+            <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 hover:opacity-80 transition-opacity" aria-label="Read our Google reviews">
+              <svg viewBox="0 0 48 48" class="w-5 h-5 flex-shrink-0" aria-hidden="true">
+                <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                <path fill="#4CAF50" d="M24,44c5.166,0,9.860-1.977,13.409-5.192l-6.190-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.190,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+              </svg>
+              <span class="font-display font-bold text-forest text-lg">5.0</span>
+              <div class="flex gap-0.5">
+                <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 text-lime fill-lime"></i>
+              </div>
+              <span class="text-sm text-gray-500">Valley homeowners trust the process</span>
+            </a>
+          </div>
+          <div class="reveal-right relative">
+            <img src="images/process-main.jpg" alt="Professional bait stations placed at a modern Phoenix Valley desert home" class="w-full rounded-2xl object-cover aspect-[4/3]">
+            <div class="absolute bottom-6 left-6 bg-white rounded-xl p-4 shadow-lg">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-lime/20 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="shield-check" class="w-5 h-5 text-brand"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-display font-semibold text-forest">AZ Licensed</p>
+                  <p class="text-xs text-gray-500">Dept. of Ag #10150</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-forest py-20 lg:py-28 relative overflow-hidden rounded-t-3xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-white/20 text-white backdrop-blur-sm mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-lime"></span>
+            What Clients Say
+          </span>
+          <h2 class="font-display font-bold text-white text-3xl lg:text-4xl mb-4 leading-tight">
+            What Phoenix homeowners say about our work
+          </h2>
+          <div class="flex gap-1 justify-center">
+            <i data-lucide="star" class="w-4.5 h-4.5 text-lime fill-lime"></i>
+            <i data-lucide="star" class="w-4.5 h-4.5 text-lime fill-lime"></i>
+            <i data-lucide="star" class="w-4.5 h-4.5 text-lime fill-lime"></i>
+            <i data-lucide="star" class="w-4.5 h-4.5 text-lime fill-lime"></i>
+            <i data-lucide="star" class="w-4.5 h-4.5 text-lime fill-lime"></i>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-10">
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="0">
+            <img src="images/reviews/review-01.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="50">
+            <img src="images/reviews/review-02.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="100">
+            <img src="images/reviews/review-03.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="150">
+            <img src="images/reviews/review-04.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="200">
+            <img src="images/reviews/review-05.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="250">
+            <img src="images/reviews/review-06.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="300">
+            <img src="images/reviews/review-07.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="350">
+            <img src="images/reviews/review-08.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="400">
+            <img src="images/reviews/review-09.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="450">
+            <img src="images/reviews/review-10.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="500">
+            <img src="images/reviews/review-11.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="550">
+            <img src="images/reviews/review-12.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="600">
+            <img src="images/reviews/review-13.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="650">
+            <img src="images/reviews/review-14.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="700">
+            <img src="images/reviews/review-15.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="reveal block rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-xl transition-all duration-300 border border-white/10" data-delay="750">
+            <img src="images/reviews/review-16.png" alt="Google review screenshot" class="w-full h-full object-cover aspect-square">
+          </a>
+        </div>
+        <div class="text-center pt-6 border-t border-white/10">
+          <a href="https://www.google.com/search?q=exclisuive+pest+arizona&amp;sxsrf=ANbL-n7TvgVThaX8vkv6heCIMTRETu3nag%3A1779385854751#lrd=0x6dbe011d58dcae7b:0x18cb742899336e1c,1,,,," target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 hover:border-white/30 transition-all text-sm text-white/90 hover:text-white group">
+            <svg viewBox="0 0 48 48" class="w-4 h-4 flex-shrink-0" aria-hidden="true">
+              <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+              <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+              <path fill="#4CAF50" d="M24,44c5.166,0,9.860-1.977,13.409-5.192l-6.190-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+              <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.190,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+            </svg>
+            <span class="font-medium">More reviews on Google</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#0e1114] relative overflow-hidden">
+      <svg class="absolute top-0 left-0 w-40 h-40 opacity-[0.04]" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none"/><circle cx="50" cy="50" r="20" stroke="white" stroke-width="0.5" fill="none"/></svg>
+      <svg class="absolute bottom-0 right-0 w-48 h-48 opacity-[0.04]" viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="45" ry="35" stroke="white" stroke-width="0.5" fill="none"/></svg>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-6 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="images/logo-v2.webp" alt="Exclusive Pest Solutions" class="h-14 w-auto">
+              <span class="font-display font-bold text-lg text-white leading-tight">Exclusive<br><span class="text-xs font-medium text-lime">Pest Solutions</span></span>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-6">
+              Phoenix Valley's premier pest control — built around your home, your family, and the desert we share.
+            </p>
+            <div class="flex gap-3">
+              <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 hover:bg-lime flex items-center justify-center text-white hover:text-forest transition-all">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="text-white/50 text-xs mt-5">AZ Dept. of Agriculture License #10150</p>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Quick Links</h4>
+            <ul class="space-y-3">
+              <li><a href="#home" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Home</a></li>
+              <li><a href="#about" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>About</a></li>
+              <li><a href="#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Services</a></li>
+              <li><a href="#process" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Our Process</a></li>
+              <li><a href="#contact" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Our Services</h4>
+            <ul class="space-y-3">
+              <li><a href="scorpion-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Scorpion Control</a></li>
+              <li><a href="general-pest-control.html" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>General Pest Control</a></li>
+              <li><a href="#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Garden-Safe Treatments</a></li>
+              <li><a href="#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>Wildlife-Conscious Solutions</a></li>
+              <li><a href="#services" class="text-white/70 text-sm hover:text-white transition-colors flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-lime"></span>IPM Programs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-semibold text-white mb-5">Working Hours</h4>
+            <ul class="space-y-3 text-white/70 text-sm mb-6">
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Monday – Saturday: 7:00 AM – 6:00 PM</li>
+              <li class="flex items-start gap-2"><span class="w-1 h-1 rounded-full bg-lime mt-2 flex-shrink-0"></span>Sunday: Emergency Service Available</li>
+            </ul>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="w-12 h-12 rounded-full bg-lime flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5 text-forest"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Call Us</p>
+                <a href="tel:+16026006746" class="text-white font-semibold text-sm hover:text-lime transition-colors">(602) 600-6746</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-12 h-12 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+              </span>
+              <div>
+                <p class="text-white/60 text-xs">Email Us</p>
+                <a href="mailto:hello@exclusivepest.co" class="text-white font-semibold text-sm hover:text-lime transition-colors">hello@exclusivepest.co</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center gap-4 mb-8">
+          <div class="flex items-center gap-2 flex-shrink-0">
+            <i data-lucide="bird" class="w-5 h-5 text-owl"></i>
+            <span class="font-display font-bold text-white">Valley Pest Alerts</span>
+          </div>
+          <span class="text-white/70 font-display text-sm hidden sm:block flex-shrink-0">Get seasonal tips for Phoenix Valley homes.</span>
+          <div class="flex-1 w-full sm:w-auto">
+            <div class="flex gap-2">
+              <input type="email" placeholder="Enter Email Address*" class="flex-1 bg-white/15 text-white placeholder-white/50 px-4 py-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-lime/50">
+              <button class="px-5 py-3 bg-lime text-forest font-semibold text-sm rounded-lg hover:brightness-105 transition-all flex items-center gap-2 flex-shrink-0">
+                Subscribe <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-white/50 text-sm text-center sm:text-left">© 2026 Exclusive Pest Solutions. All Rights Reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="privacy-policy.html" class="text-white/50 text-sm hover:text-lime transition-colors">Privacy Policy</a>
+            <span class="w-1 h-1 rounded-full bg-white/20"></span>
+            <a href="terms-of-service.html" class="text-white/50 text-sm hover:text-lime transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        <div class="pt-5 text-center">
+          <a href="https://outworkemdigital.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-white/40 text-xs hover:text-lime transition-colors">
+            <i data-lucide="code-2" class="w-3.5 h-3.5"></i>
+            Made by <span class="font-semibold">Outwork’em Digital</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /content layer -->
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ============ FIREFLY CANVAS ============
+    (function() {
+      const canvas = document.getElementById('fireflyCanvas');
+      const ctx = canvas.getContext('2d');
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      let w, h;
+
+      function resize() {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      resize();
+
+      const mouse = { x: -200, y: -200 };
+      const count = window.innerWidth < 768 ? 200 : 400;
+      const particles = [];
+
+      for (let i = 0; i < count; i++) {
+        const x = Math.random() * w;
+        particles.push({
+          x, y: Math.random() * h,
+          baseX: x, baseY: Math.random() * h,
+          size: 1 + Math.random() * 2,
+          sx: (Math.random() - 0.5) * 0.5,
+          sy: (Math.random() - 0.5) * 0.5,
+          op: 0.3 + Math.random() * 0.7,
+          pulse: Math.random() * Math.PI * 2,
+        });
+      }
+
+      document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+      document.addEventListener('touchmove', e => { if (e.touches[0]) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; } }, { passive: true });
+      window.addEventListener('resize', () => { resize(); });
+
+      let time = 0;
+      function animate() {
+        time++;
+        ctx.clearRect(0, 0, w, h);
+
+        let mx = mouse.x, my = mouse.y;
+        if (mx < 0 || my < 0) {
+          mx = w / 2 + Math.cos(time * 0.008) * 120;
+          my = h / 2 + Math.sin(time * 0.008) * 120;
+        }
+
+        for (const p of particles) {
+          const drift = Math.sin(time * 0.02 + p.pulse) * 0.3;
+          p.x += p.sx + drift;
+          p.y += p.sy + Math.cos(time * 0.015 + p.pulse) * 0.2;
+          const dx = p.x - mx, dy = p.y - my, dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100 && dist > 0) {
+            const force = (100 - dist) * 0.02;
+            p.x += (dx / dist) * force;
+            p.y += (dy / dist) * force;
+          }
+          p.x += (p.baseX - p.x) * 0.005;
+          p.y += (p.baseY - p.y) * 0.005;
+          if (p.x < -20) p.x = w + 20; if (p.x > w + 20) p.x = -20;
+          if (p.y < -20) p.y = h + 20; if (p.y > h + 20) p.y = -20;
+        }
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(mx, my, 150, 0, Math.PI * 2);
+        ctx.clip();
+
+        for (const p of particles) {
+          const cOp = p.op * Math.abs(Math.sin(time * 0.02 + p.pulse));
+          const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
+          g.addColorStop(0, 'rgba(240,187,64,' + cOp + ')');
+          g.addColorStop(0.5, 'rgba(240,187,64,' + (cOp * 0.3) + ')');
+          g.addColorStop(1, 'rgba(240,187,64,0)');
+          ctx.fillStyle = g;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+
+        const gg = ctx.createRadialGradient(mx, my, 140, mx, my, 170);
+        gg.addColorStop(0, 'rgba(240,187,64,0.15)');
+        gg.addColorStop(1, 'rgba(240,187,64,0)');
+        ctx.fillStyle = gg;
+        ctx.beginPath();
+        ctx.arc(mx, my, 170, 0, Math.PI * 2);
+        ctx.fill();
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+
+    // ============ NAVBAR SCROLL ============
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // ============ MOBILE MENU ============
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // ============ INTERSECTION OBSERVER FOR ANIMATIONS ============
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.dataset.delay || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, parseInt(delay));
+
+          // Counter animation for stats
+          if (entry.target.classList.contains('stat-item')) {
+            const target = parseFloat(entry.target.dataset.target);
+            const suffix = entry.target.dataset.suffix;
+            const isDecimal = entry.target.dataset.decimal === 'true';
+            const counterEl = entry.target.querySelector('.counter');
+            if (counterEl) {
+              const duration = 1500;
+              const start = Date.now();
+              const tick = () => {
+                const elapsed = Date.now() - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                counterEl.textContent = isDecimal ? (eased * target).toFixed(1) : Math.floor(eased * target);
+                if (progress < 1) requestAnimationFrame(tick);
+              };
+              requestAnimationFrame(tick);
+            }
+          }
+
+          // Prohibition line draw
+          if (entry.target.classList.contains('pest-item')) {
+            const line = entry.target.querySelector('.prohibition-line');
+            if (line) line.style.strokeDashoffset = '0';
+          }
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stat-item, .pest-item').forEach(el => observer.observe(el));
+
+    // ============ TESTIMONIAL CAROUSEL ============
+    // Grid of Google review screenshots — no JS needed
+  </script>
+</body>
+</html>

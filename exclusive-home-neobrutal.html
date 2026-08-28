@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.className="js"</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Pest Control Phoenix Valley AZ | Exclusive Pest Solutions</title>
+<meta name="description" content="Custom pest control for Phoenix Valley homes. Scorpion specialists. Wildlife-conscious treatments. Licensed by AZ Dept. of Agriculture. Built around your home.">
+<link rel="icon" type="image/webp" href="build-assets/logo-v2.webp">
+<link rel="preload" as="image" href="build-assets/hero-david-truck.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   EXCLUSIVE PEST SOLUTIONS — home page
+   Neobrutalism on a desert-night ground.
+   Palette from the official brand style guide (not the live
+   site, which has drifted). Token architecture inherited
+   from nicepest.com: 3-layer oklch, semantic tracking,
+   per-component namespaces, zero-blur offset shadows.
+   ========================================================== */
+
+/* ---- 1. PRIMITIVES ---- */
+:root{
+  --c-ink:         oklch(15.5% 0.012 250);
+  --c-ink-2:       oklch(21.5% 0.014 250);
+  --c-ink-3:       oklch(28.5% 0.014 250);
+  --c-bone:        oklch(96.5% 0.008 85);
+  --c-bone-dim:    oklch(78.0% 0.012 85);
+  --c-gold:        oklch(77.5% 0.155 72.5);
+  --c-gold-deep:   oklch(70.0% 0.155 62);
+  --c-cactus:      oklch(65.5% 0.155 142);
+  --c-cactus-deep: oklch(50.0% 0.120 145);
+  --c-sand:        oklch(83.0% 0.135 82);
+
+  /* ---- 2. SEMANTICS ---- */
+  --surface:        var(--c-ink);
+  --surface-raised: var(--c-ink-2);
+  --fg:             var(--c-bone);
+  --fg-muted:       var(--c-bone-dim);
+  --edge:           var(--c-bone);
+  --accent:         var(--c-gold);
+
+  --font-display: Archivo, "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "Public Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --tr-display:  -0.025em;
+  --tr-heading:  -0.012em;
+  --tr-register:  0.18em;
+  --tr-button:    0.06em;
+  --tr-nav:       0.02em;
+  --tr-numeral:  -0.045em;
+
+  --step--2: clamp(0.72rem, 0.70rem + 0.1vw, 0.78rem);
+  --step--1: clamp(0.86rem, 0.83rem + 0.15vw, 0.94rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-1:  clamp(1.28rem, 1.18rem + 0.5vw, 1.55rem);
+  --step-2:  clamp(1.6rem, 1.4rem + 1vw, 2.1rem);
+  --step-3:  clamp(2rem, 1.62rem + 1.9vw, 2.95rem);
+  --step-4:  clamp(2.5rem, 1.85rem + 3.2vw, 4.1rem);
+  --step-5:  clamp(3rem, 1.9rem + 5.4vw, 5.8rem);
+
+  --bd-hard: 2.5px solid var(--edge);
+  --bd-hair: 1.5px solid var(--c-ink-3);
+  --sh-x: -6px; --sh-y: 6px;
+  --gutter: clamp(1.15rem, 3vw, 3.5rem);
+  --measure: 66ch;
+  --wide: 84rem;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --btn-sh-x: -5px; --btn-sh-y: 5px;
+  --btn-x: 0px;     --btn-y: 0px;
+  --btn-lift-dur: 140ms;
+  --btn-press-dur: 70ms;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--surface);
+  color:var(--fg);
+  font-family:var(--font-body);
+  font-size:var(--step-0);
+  line-height:1.66;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c-gold);outline-offset:3px}
+
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-stretch:112%;
+  line-height:1.03;
+  letter-spacing:var(--tr-display);
+  margin:0;
+  text-wrap:balance;
+}
+h3,h4{font-weight:700;font-stretch:100%;line-height:1.15;letter-spacing:var(--tr-heading)}
+p{margin:0 0 1.1em}
+p:last-child{margin-bottom:0}
+
+.shell{max-width:var(--wide);margin-inline:auto;padding-inline:var(--gutter)}
+.prose{max-width:var(--measure);color:var(--fg-muted)}
+.stack>*+*{margin-top:var(--s,1.5rem)}
+
+section{position:relative}
+.band{border-bottom:var(--bd-hard)}
+.band--2{background:var(--c-ink-2)}
+.band--gold{background:var(--c-gold);color:var(--c-ink)}
+.pad{padding-block:clamp(3.25rem,7vw,7rem)}
+
+/* ---- SECTION REGISTER (named system carrying the source's section eyebrows) ---- */
+.reg{
+  display:inline-flex;align-items:stretch;
+  border:var(--bd-hard);
+  margin-bottom:1.5rem;
+  box-shadow:-4px 4px 0 var(--c-gold);
+}
+.reg b{
+  font-family:var(--font-display);font-weight:900;font-stretch:80%;
+  font-size:var(--step--1);letter-spacing:0;
+  background:var(--c-gold);color:var(--c-ink);
+  padding:0.5em 0.65em;
+  display:grid;place-content:center;
+}
+.reg span{
+  font-family:var(--font-display);font-weight:700;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);
+  text-transform:uppercase;
+  padding:0.75em 1em 0.75em 0.9em;
+  display:grid;place-content:center;
+}
+.reg--cactus{box-shadow:-4px 4px 0 var(--c-cactus)}
+.reg--cactus b{background:var(--c-cactus)}
+.band--gold .reg{border-color:var(--c-ink);box-shadow:-4px 4px 0 var(--c-ink)}
+.band--gold .reg b{background:var(--c-ink);color:var(--c-gold)}
+
+/* ---- BUTTONS ---- */
+.btn{
+  --btn-fill:var(--c-gold);
+  --btn-text:var(--c-ink);
+  --btn-sh:var(--c-bone);
+  position:relative;
+  display:inline-flex;align-items:center;gap:0.6em;
+  font-family:var(--font-display);
+  font-weight:800;font-stretch:100%;
+  font-size:var(--step-0);
+  letter-spacing:var(--tr-button);
+  text-transform:uppercase;
+  text-decoration:none;
+  padding:0.85em 1.5em;
+  min-height:3rem;
+  background:var(--btn-fill);
+  color:var(--btn-text);
+  border:var(--bd-hard);
+  cursor:pointer;
+  translate:var(--btn-x) var(--btn-y);
+  box-shadow:var(--btn-sh-x) var(--btn-sh-y) 0 var(--btn-sh);
+  transition:translate var(--btn-lift-dur) var(--ease-out-expo),
+             box-shadow var(--btn-lift-dur) var(--ease-out-expo),
+             background-color 160ms var(--ease-out-expo);
+}
+.btn:hover{--btn-x:1px;--btn-y:-2px;--btn-sh-x:-7px;--btn-sh-y:8px}
+.btn:active{
+  --btn-x:-4px;--btn-y:4px;--btn-sh-x:-1px;--btn-sh-y:1px;
+  transition-duration:var(--btn-press-dur);
+}
+.btn--lg{font-size:var(--step-1);padding:1em 1.75em}
+.btn--ghost{--btn-fill:transparent;--btn-text:var(--c-bone);--btn-sh:var(--c-gold)}
+.btn--ghost:hover{--btn-fill:var(--c-ink-3)}
+.btn--cactus{--btn-fill:var(--c-cactus)}
+.band--gold .btn{--btn-sh:var(--c-ink)}
+.band--gold .btn--ghost{--btn-text:var(--c-ink);border-color:var(--c-ink)}
+.btn-link{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:800;font-stretch:100%;
+  font-size:var(--step-0);
+  letter-spacing:var(--tr-button);
+  text-transform:uppercase;
+  text-decoration:none;
+  border-bottom:2.5px solid var(--c-gold);
+  padding-bottom:0.15em;
+  transition:color 160ms var(--ease-out-expo);
+}
+.btn-link:hover{color:var(--c-gold)}
+
+/* ---- BLOCK ---- */
+.blk{
+  position:relative;
+  background:var(--c-ink-2);
+  border:var(--bd-hard);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-gold);
+  padding:clamp(1.25rem,2.4vw,1.9rem);
+}
+.blk--cactus{box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-cactus)}
+.blk--sand{box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-sand)}
+.blk--flat{box-shadow:none}
+
+/* ---- FRAMED PHOTO ---- */
+.shot{position:relative}
+.shot img{border:var(--bd-hard);width:100%;object-fit:cover;
+          box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-gold)}
+.shot--cactus img{box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-cactus)}
+
+/* =========================================================
+   UTILITY BAR
+   ========================================================= */
+.util{
+  background:var(--c-ink-2);
+  border-bottom:var(--bd-hard);
+  font-size:var(--step--1);
+}
+.util .shell{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem 1.5rem;padding-block:0.6rem}
+.util a{text-decoration:none;border-bottom:1.5px solid transparent}
+.util a:hover{border-bottom-color:var(--c-gold)}
+.util-lic{
+  font-family:var(--font-display);font-weight:700;font-stretch:88%;
+  letter-spacing:var(--tr-register);text-transform:uppercase;
+  font-size:var(--step--2);
+  color:var(--c-cactus);
+}
+.util-right{margin-left:auto;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;align-items:center}
+.util-tel{font-family:var(--font-display);font-weight:800;color:var(--c-gold)}
+.stars{color:var(--c-gold);letter-spacing:0.06em}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav{position:sticky;top:0;z-index:50;background:var(--c-ink);border-bottom:var(--bd-hard)}
+.nav .shell{display:flex;align-items:center;gap:clamp(0.75rem,2vw,2rem);padding-block:0.7rem}
+.brand{display:flex;align-items:center;gap:0.7rem;text-decoration:none;flex:0 0 auto}
+.brand img{width:clamp(2.4rem,4vw,3.1rem);height:auto}
+.brand-txt{
+  font-family:var(--font-display);font-weight:900;font-stretch:100%;
+  line-height:0.98;text-transform:uppercase;
+  display:grid;
+}
+.brand-txt b{font-size:var(--step-0);letter-spacing:var(--tr-heading)}
+.brand-txt span{font-size:var(--step--2);letter-spacing:var(--tr-register);color:var(--c-gold);font-weight:700}
+.nav-links{
+  display:flex;flex-wrap:wrap;align-items:center;gap:0.25rem 1.15rem;
+  margin-left:auto;
+  font-weight:500;font-size:var(--step--1);letter-spacing:var(--tr-nav);
+}
+.nav-links a{text-decoration:none;padding:0.35em 0;border-bottom:2.5px solid transparent}
+.nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-gold)}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{border-bottom:var(--bd-hard);overflow:hidden}
+.hero .shell{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,0.92fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;
+  padding-block:clamp(3rem,6vw,6rem);
+}
+.hero h1{font-size:var(--step-5);max-width:23ch}
+.hero h1 em{font-style:normal;color:var(--c-gold);display:block}
+.hero-kick{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:700;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+  border:var(--bd-hair);border-color:var(--c-gold);
+  padding:0.5em 0.9em;color:var(--c-gold);
+}
+.hero-claims{display:flex;flex-wrap:wrap;gap:0.6rem;list-style:none;margin:0;padding:0}
+.hero-claims li{
+  font-family:var(--font-display);font-weight:700;font-stretch:92%;
+  font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.04em;
+  border:var(--bd-hair);border-color:var(--c-ink-3);
+  padding:0.45em 0.8em;color:var(--c-bone-dim);
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1.6rem 1.5rem;align-items:center}
+.hero-shot img{aspect-ratio:4/3}
+.hero-plate{
+  position:absolute;right:-0.9rem;bottom:-1.2rem;z-index:2;
+  background:var(--c-ink);border:var(--bd-hard);
+  box-shadow:-5px 5px 0 var(--c-cactus);
+  padding:0.7rem 1rem;
+  font-family:var(--font-display);font-weight:900;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+  color:var(--c-cactus);
+}
+
+/* =========================================================
+   SECTION HEAD
+   ========================================================= */
+.section-head{max-width:44ch}
+.section-head h2{font-size:var(--step-3)}
+.split{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;
+}
+.split--flip>.split-media{order:-1}
+
+.decade{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center}
+.decade b{
+  font-family:var(--font-display);font-weight:900;font-stretch:100%;
+  font-size:var(--step-4);line-height:0.85;letter-spacing:var(--tr-numeral);
+  color:var(--c-sand);
+}
+.decade p{margin:0;color:var(--fg-muted);font-size:var(--step--1)}
+
+/* ---- ABOUT: owl argument gets its own block ---- */
+.owl-note{
+  border-left:none;
+  background:var(--c-ink-2);
+  border:var(--bd-hard);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-cactus);
+  padding:clamp(1.1rem,2vw,1.5rem);
+}
+.owl-note strong{color:var(--c-cactus);font-weight:700}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:0.7rem}
+.checks li{display:grid;grid-template-columns:1.6rem 1fr;gap:0.7rem;align-items:start;color:var(--fg)}
+.checks li::before{
+  content:"✓";
+  font-family:var(--font-display);font-weight:900;
+  color:var(--c-ink);background:var(--c-cactus);
+  width:1.6rem;height:1.6rem;display:grid;place-content:center;
+  font-size:0.9rem;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+.svcs{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));
+  gap:clamp(1.5rem,3vw,2.4rem);
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.svc{display:grid;grid-template-rows:auto auto 1fr auto;gap:0}
+.svc img{border:var(--bd-hard);border-bottom:none;aspect-ratio:4/3;object-fit:cover}
+.svc-body{
+  border:var(--bd-hard);background:var(--c-ink-2);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-gold);
+  padding:clamp(1.1rem,2vw,1.5rem);
+  display:grid;gap:0.6rem;align-content:start;
+}
+.svc:nth-child(2) .svc-body{box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-cactus)}
+.svc:nth-child(3) .svc-body{box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-sand)}
+.svc h3{font-size:var(--step-1)}
+.svc p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
+.svc .btn-link{font-size:var(--step--1);justify-self:start;margin-top:0.4rem}
+
+/* =========================================================
+   STANDARDS
+   ========================================================= */
+.stds{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));
+  gap:clamp(1.5rem,3vw,2.4rem);
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.std h3{font-size:var(--step-1);margin-bottom:0.5rem}
+.std>p{color:var(--fg-muted);font-size:var(--step--1)}
+.std ul{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:0.5rem;
+        border-top:var(--bd-hair);padding-top:1rem}
+.std li{font-size:var(--step--1);display:grid;grid-template-columns:0.9rem 1fr;gap:0.7rem}
+.std li::before{content:"";width:0.9rem;height:0.9rem;background:var(--c-gold);margin-top:0.42em}
+.std:nth-child(2) li::before{background:var(--c-cactus)}
+.std:nth-child(3) li::before{background:var(--c-sand)}
+
+.creds{
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+  border:var(--bd-hard);background:var(--c-ink-2);
+  padding:clamp(1.1rem,2vw,1.5rem);
+  display:flex;flex-wrap:wrap;gap:0.7rem 0.9rem;align-items:center;
+}
+.creds-lbl{
+  font-family:var(--font-display);font-weight:900;font-stretch:100%;
+  font-size:var(--step-0);text-transform:uppercase;letter-spacing:0.03em;
+  margin-right:auto;
+}
+.cred{
+  font-family:var(--font-display);font-weight:700;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+  border:var(--bd-hair);border-color:var(--c-bone);
+  padding:0.5em 0.8em;
+}
+.cred--gold{background:var(--c-gold);color:var(--c-ink);border-color:var(--c-gold)}
+
+/* =========================================================
+   PESTS
+   ========================================================= */
+.pests{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+  gap:clamp(1.25rem,2.5vw,2rem);
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.pest{
+  border:var(--bd-hard);background:var(--c-ink-2);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-gold);
+  padding:1.2rem;text-align:center;
+  display:grid;gap:0.5rem;justify-items:center;align-content:start;
+}
+.pest img{width:clamp(6rem,10vw,8.5rem);aspect-ratio:1}
+.pest h3{font-size:var(--step-1)}
+.pest-tag{
+  font-family:var(--font-display);font-weight:900;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+  background:var(--c-gold);color:var(--c-ink);padding:0.35em 0.7em;
+}
+.pest--hero{box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-sand)}
+.pests-note{margin-top:1.75rem;color:var(--fg-muted);max-width:60ch}
+
+/* =========================================================
+   STATS — real values, never JS-initialised at zero
+   ========================================================= */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));
+  gap:0;margin-top:clamp(2rem,3.5vw,2.75rem);
+  border:var(--bd-hard);
+}
+.stat{padding:clamp(1.25rem,2.4vw,2rem);border-right:var(--bd-hard)}
+.stat:last-child{border-right:none}
+.stat b{
+  display:block;
+  font-family:var(--font-display);font-weight:900;font-stretch:100%;
+  font-size:var(--step-4);line-height:0.9;letter-spacing:var(--tr-numeral);
+  color:var(--c-gold);
+}
+.stat span{
+  display:block;margin-top:0.6rem;
+  font-family:var(--font-display);font-weight:700;font-stretch:92%;
+  font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.06em;
+  color:var(--fg-muted);
+}
+.stat:nth-child(2) b{color:var(--c-cactus)}
+.stat:nth-child(3) b{color:var(--c-sand)}
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+.steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+  gap:clamp(1.25rem,2.5vw,2rem);
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+  list-style:none;padding:0;
+}
+.step{
+  position:relative;overflow:hidden;
+  border:var(--bd-hard);background:var(--c-ink-2);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-gold);
+  padding:1.4rem 1.25rem 1.25rem;
+  min-height:11rem;
+  display:grid;align-content:end;gap:0.5rem;
+}
+.step-num{
+  position:absolute;top:-0.22em;right:0.05em;
+  font-family:var(--font-display);font-weight:900;font-stretch:88%;
+  font-size:clamp(4.5rem,8vw,6.5rem);line-height:1;
+  letter-spacing:var(--tr-numeral);
+  color:color-mix(in oklab, var(--c-bone) 10%, transparent);
+  pointer-events:none;
+}
+.step h4{font-size:var(--step-1);position:relative}
+.step p{color:var(--fg-muted);font-size:var(--step--1);margin:0;position:relative}
+.step:nth-child(2){box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-cactus)}
+.step:nth-child(3){box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-sand)}
+.step:nth-child(4){box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-gold-deep)}
+
+/* =========================================================
+   REVIEWS — real text, recovered from the PNG screenshots
+   ========================================================= */
+.reviews{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(1.5rem,3vw,2.4rem);
+  margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.review{
+  border:var(--bd-hard);background:var(--c-ink-2);
+  box-shadow:-5px 5px 0 var(--c-gold);
+  padding:clamp(1.15rem,2vw,1.7rem);
+  display:grid;gap:1rem;align-content:start;
+}
+.review:nth-child(2){box-shadow:-5px 5px 0 var(--c-cactus)}
+.review:nth-child(3){box-shadow:-5px 5px 0 var(--c-sand)}
+.review:nth-child(4){box-shadow:-5px 5px 0 var(--c-gold-deep)}
+.review blockquote{margin:0;font-size:var(--step-1);line-height:1.4;font-weight:500}
+.review--sm blockquote{font-size:var(--step-0);line-height:1.55}
+.review figcaption{
+  display:flex;flex-wrap:wrap;gap:0.5rem 0.9rem;align-items:center;
+  border-top:var(--bd-hair);padding-top:0.9rem;
+  font-family:var(--font-display);font-weight:700;font-stretch:92%;
+  font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.06em;
+}
+.review figcaption em{font-style:normal;color:var(--fg-muted);letter-spacing:var(--tr-register);font-size:var(--step--2)}
+.reviews-more{margin-top:clamp(2rem,3.5vw,2.75rem)}
+
+/* =========================================================
+   CTA BAND
+   ========================================================= */
+.cta{background:var(--c-gold);color:var(--c-ink);border-bottom:var(--bd-hard);border-color:var(--c-ink)}
+.cta h2{font-size:var(--step-4);max-width:28ch}
+.cta .prose{color:color-mix(in oklab, var(--c-ink) 78%, transparent)}
+.cta-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,0.8fr);
+          gap:clamp(2rem,4vw,4rem);align-items:center}
+.cta-facts{display:grid;gap:0.9rem}
+.cta-fact{
+  border:2.5px solid var(--c-ink);background:transparent;
+  padding:0.85rem 1rem;
+  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+  font-family:var(--font-display);font-weight:700;font-stretch:92%;
+  font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.05em;
+}
+.cta-fact b{font-weight:900;font-size:var(--step-0)}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.foot{background:var(--c-ink)}
+.foot a{text-decoration:none;border-bottom:1.5px solid transparent}
+.foot a:hover{border-bottom-color:var(--c-gold)}
+.foot-top{
+  display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,0.7fr);
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;
+  padding-block:clamp(3rem,5vw,4.5rem) clamp(2rem,4vw,3rem);
+}
+.foot-top h2{font-size:var(--step-2);max-width:22ch}
+.foot-lic{
+  margin-top:1.25rem;display:inline-block;
+  border:var(--bd-hair);border-color:var(--c-cactus);
+  padding:0.5em 0.85em;color:var(--c-cactus);
+  font-family:var(--font-display);font-weight:700;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+}
+.foot-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));
+  gap:clamp(1.75rem,3vw,2.5rem);
+  border-top:var(--bd-hair);padding-top:clamp(2rem,4vw,3rem);
+}
+.foot h3{
+  font-family:var(--font-display);font-weight:900;font-stretch:88%;
+  font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;
+  color:var(--c-gold);margin-bottom:0.9rem;
+}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:0.5rem}
+.foot li,.foot p{font-size:var(--step--1);color:var(--fg-muted);line-height:1.6}
+.foot li a,.foot p a{color:var(--fg)}
+.foot-news{display:grid;gap:0.75rem;justify-items:start;margin-top:0.5rem}
+.foot-news input{
+  font-family:var(--font-body);font-size:var(--step-0);
+  padding:0.7em 0.8em;width:100%;
+  background:var(--c-ink-2);color:var(--c-bone);
+  border:var(--bd-hard);
+  box-shadow:-4px 4px 0 var(--c-gold);
+}
+.foot-news input::placeholder{color:var(--fg-muted)}
+.foot-legal{
+  border-top:var(--bd-hair);padding-block:1.25rem;
+  display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;
+  font-size:var(--step--1);color:var(--fg-muted);
+}
+.foot-legal .sep{margin-left:auto}
+
+/* =========================================================
+   ENTRANCE MOTION
+   ========================================================= */
+.js .reveal{opacity:0;translate:0 18px}
+.js .reveal.in{
+  opacity:1;translate:0 0;
+  transition:opacity 620ms var(--ease-out-expo), translate 620ms var(--ease-out-expo);
+  transition-delay:var(--d,0ms);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:64rem){
+  .hero .shell,.split,.cta-grid,.foot-top{grid-template-columns:1fr}
+  .split--flip>.split-media{order:0}
+  .reviews{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{border-bottom:var(--bd-hard)}
+  .stat:nth-child(2n){border-right:none}
+  .stat:nth-child(n+3){border-bottom:none}
+}
+@media (max-width:48rem){
+  :root{--sh-x:-4px;--sh-y:4px;--btn-sh-x:-4px;--btn-sh-y:4px;--bd-hard:2px solid var(--edge)}
+  .nav .shell{flex-wrap:wrap}
+  .nav-links{order:3;width:100%;margin-left:0;padding-top:0.6rem;border-top:var(--bd-hair)}
+  .util-right{margin-left:0;width:100%}
+  .hero h1{max-width:none}
+  .creds-lbl{margin-right:0;width:100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
+  .js .reveal{opacity:1;translate:none}
+  .btn:hover,.btn:active{translate:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== UTILITY BAR ===================== -->
+<div class="util">
+  <div class="shell">
+    <span class="util-lic">AZ Dept. of Ag License #10150</span>
+    <div class="util-right">
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+      <span>Mon – Sat: 7:00 AM – 6:00 PM</span>
+      <a class="util-tel" href="tel:+16026006746">(602) 600-6746</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="shell">
+    <a class="brand" href="#home">
+      <img src="build-assets/logo-v2.webp" alt="Exclusive Pest Solutions" width="120" height="120">
+      <span class="brand-txt"><b>Exclusive</b><span>Pest Solutions</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#home" aria-current="page">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Get your custom quote</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="shell">
+    <div class="stack reveal" style="--s:1.6rem">
+      <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
+      <h1>Smarter Pest Control. <em>Built Around You.</em></h1>
+      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Not a spray-and-go service. Every treatment is engineered around your home, your pests, and Arizona's unique desert ecosystem.</p>
+      <ul class="hero-claims">
+        <li>Wildlife-Conscious Application</li>
+        <li>Decade of Valley Expertise</li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn--lg" href="#contact">Get my custom plan</a>
+        <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
+      </div>
+    </div>
+    <div class="shot hero-shot reveal" style="--d:120ms">
+      <img src="build-assets/hero-david-truck.jpg"
+           alt="David Kaiser with the Exclusive Pest Solutions truck at dusk in a Phoenix Valley neighborhood."
+           width="1400" height="1050" fetchpriority="high">
+      <span class="hero-plate">David Kaiser · Licensed QA Applicator</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="band band--2 pad" id="about">
+  <div class="shell split">
+    <div class="stack reveal" style="--s:1.4rem">
+      <div>
+        <span class="reg"><b>01</b><span>About Us</span></span>
+        <h2 style="font-size:var(--step-3)">Built to protect your home — and everything around it</h2>
+      </div>
+      <div class="prose">
+        <p>At Exclusive Pest Solutions, we don't believe in cookie-cutter spraying. Every property is different. Every pest profile is different. So every treatment we build is engineered specifically for you.</p>
+      </div>
+      <div class="owl-note">
+        <p>Our brand wears the <strong>great horned owl</strong> for a reason: as licensed agents of Arizona's Department of Agriculture, we treat the desert with the same care we give your home — pests out, ecosystem intact.</p>
+      </div>
+      <ul class="checks">
+        <li>Licensed &amp; IPM-Certified Technicians</li>
+        <li>Wildlife-Safe Application Methods</li>
+        <li>Transparent Process, No Surprises</li>
+      </ul>
+      <p><a class="btn btn--ghost" href="#services">Meet our approach</a></p>
+    </div>
+    <div class="split-media stack reveal" style="--d:120ms;--s:1.75rem">
+      <div class="shot shot--cactus">
+        <img src="build-assets/about-main.jpg"
+             alt="Exclusive Pest Solutions truck in the Arizona desert."
+             width="864" height="1080" loading="lazy">
+      </div>
+      <div class="blk blk--sand decade">
+        <b>10+</b>
+        <p>A decade of Phoenix Valley expertise — from bark scorpions to backyard ecosystems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="band pad" id="services">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="reg"><b>02</b><span>Our Services</span></span>
+      <h2>Premium pest control for discerning homeowners</h2>
+    </div>
+    <div class="svcs">
+      <article class="svc reveal">
+        <img src="build-assets/service-scorpion.jpg" alt="Scorpion control — bait stations at a desert home." width="600" height="450" loading="lazy">
+        <div class="svc-body">
+          <h3>Scorpion Control</h3>
+          <p>Targeted elimination of the Arizona bark scorpion — Valley-wide.</p>
+          <a class="btn-link" href="scorpion-control.html">Learn more</a>
+        </div>
+      </article>
+      <article class="svc reveal" style="--d:80ms">
+        <img src="build-assets/service-general.jpg" alt="General pest control — wire mesh exclusion in progress." width="600" height="450" loading="lazy">
+        <div class="svc-body">
+          <h3>General Pest Control</h3>
+          <p>Custom plans for ants, roaches, spiders, crickets, and more.</p>
+          <a class="btn-link" href="general-pest-control.html">Learn more</a>
+        </div>
+      </article>
+      <article class="svc reveal" style="--d:160ms">
+        <img src="build-assets/service-garden.jpg" alt="Garden- and pet-safe pest control treatment." width="600" height="450" loading="lazy">
+        <div class="svc-body">
+          <h3>Garden &amp; Pet-Safe</h3>
+          <p>Effective treatments selected for families, pets, and home gardens.</p>
+          <a class="btn-link" href="general-pest-control.html">Learn more</a>
+        </div>
+      </article>
+    </div>
+    <p class="prose reveal" style="margin-top:clamp(2rem,3.5vw,2.75rem);max-width:56ch">Tailored solutions designed for Arizona homes — and the desert wildlife around them.</p>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="band band--2 pad">
+  <div class="shell split split--flip">
+    <div class="stack reveal" style="--s:1.4rem">
+      <div>
+        <span class="reg reg--cactus"><b>03</b><span>Why Choose Us</span></span>
+        <h2 style="font-size:var(--step-3)">Why Phoenix homeowners choose the slower, smarter approach</h2>
+      </div>
+      <div class="prose">
+        <p>We charge a premium because we're responsible with the products. That means slower, more methodical work — and dramatically better, longer-lasting results.</p>
+      </div>
+      <div class="blk">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Bespoke Treatments</h3>
+        <p style="color:var(--fg-muted);font-size:var(--step--1);margin:0">We assess every property's unique entry points and pest profile before applying a single product.</p>
+      </div>
+      <div class="blk blk--cactus">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Wildlife-Conscious Care</h3>
+        <p style="color:var(--fg-muted);font-size:var(--step--1);margin:0">Rodenticides that won't harm owls or hawks. Mechanical traps whenever possible.</p>
+      </div>
+    </div>
+    <div class="split-media stack reveal" style="--d:120ms;--s:1.75rem">
+      <div class="shot">
+        <img src="build-assets/why-us-main.jpg"
+             alt="Exclusive Pest Solutions truck with the great horned owl livery."
+             width="900" height="1200" loading="lazy">
+      </div>
+      <figure class="blk blk--sand" style="margin:0">
+        <blockquote style="margin:0 0 1rem;font-size:var(--step-1);line-height:1.4;font-weight:500">"I don't do cookie-cutter spraying. Slow, expert work — that's the standard."</blockquote>
+        <figcaption style="display:flex;gap:0.8rem;align-items:center;border-top:var(--bd-hair);padding-top:0.9rem">
+          <img src="build-assets/david-avatar.jpg" alt="David Kaiser" width="48" height="48" loading="lazy" style="width:3rem;border:var(--bd-hair);border-color:var(--c-bone)">
+          <span style="font-family:var(--font-display);font-weight:700;font-stretch:92%;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.05em">David Kaiser — Founder, Licensed QA Applicator</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STANDARDS ===================== -->
+<section class="band pad">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="reg"><b>04</b><span>Core Standards</span></span>
+      <h2>The standards that set Exclusive Pest Solutions apart</h2>
+    </div>
+    <div class="stds">
+      <div class="std blk reveal">
+        <h3>Pet &amp; Child-Safe</h3>
+        <p>Every treatment selected with your family and pets in mind.</p>
+        <ul>
+          <li>Toys and bowls moved before treatment</li>
+          <li>Low-odor, garden-safe formulations</li>
+        </ul>
+      </div>
+      <div class="std blk blk--cactus reveal" style="--d:80ms">
+        <h3>Wildlife-Conscious</h3>
+        <p>Pesticides applied responsibly, the desert ecosystem fully respected.</p>
+        <ul>
+          <li>Raptor-safe rodenticides only</li>
+          <li>Mechanical traps preferred over chemicals</li>
+        </ul>
+      </div>
+      <div class="std blk blk--sand reveal" style="--d:160ms">
+        <h3>Integrated Pest Management</h3>
+        <p>Science-backed methods that solve the root cause, not the symptom.</p>
+        <ul>
+          <li>Biology and behavior-driven plans</li>
+          <li>Long-term prevention, not spray cycles</li>
+        </ul>
+      </div>
+    </div>
+    <div class="creds reveal">
+      <span class="creds-lbl">Certified, Licensed, and Accountable — Always.</span>
+      <span class="cred cred--gold">AZ Dept. of Ag #10150</span>
+      <span class="cred">QA Licensed</span>
+      <span class="cred">IPM Certified</span>
+      <span class="cred">Pet &amp; Garden Safe</span>
+      <span class="cred">Label-Compliant</span>
+      <span class="cred">Wildlife-Safe</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PESTS ===================== -->
+<section class="band band--2 pad">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="reg"><b>05</b><span>What We Treat</span></span>
+      <h2>The pests that define Arizona living</h2>
+    </div>
+    <div class="pests">
+      <article class="pest pest--hero reveal">
+        <img src="build-assets/pest-scorpion.svg" alt="Arizona bark scorpion" width="360" height="360" loading="lazy">
+        <h3>Bark Scorpions</h3>
+        <span class="pest-tag">Our specialty</span>
+      </article>
+      <article class="pest reveal" style="--d:70ms">
+        <img src="build-assets/pest-cockroach.svg" alt="Cockroach" width="360" height="360" loading="lazy">
+        <h3>Cockroaches</h3>
+      </article>
+      <article class="pest reveal" style="--d:140ms">
+        <img src="build-assets/pest-widow.svg" alt="Black widow spider" width="360" height="360" loading="lazy">
+        <h3>Black Widows</h3>
+      </article>
+      <article class="pest reveal" style="--d:210ms">
+        <img src="build-assets/pest-ant.svg" alt="Ant" width="360" height="360" loading="lazy">
+        <h3>Ants</h3>
+      </article>
+    </div>
+    <p class="pests-note reveal">Plus crickets, silverfish, bees, wasps, earwigs, and the full range of desert pests.</p>
+
+    <h3 class="reveal" style="font-size:var(--step-2);margin-top:clamp(3rem,5vw,4.5rem)">The numbers behind the standard</h3>
+    <div class="stats reveal">
+      <div class="stat"><b>95%</b><span>First-Visit Resolution Rate</span></div>
+      <div class="stat"><b>10+</b><span>Years Across the Phoenix Valley</span></div>
+      <div class="stat"><b>24/7</b><span>Bark Scorpion Activity in AZ</span></div>
+      <div class="stat"><b>100%</b><span>Label-Compliant Applications</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="band pad" id="process">
+  <div class="shell">
+    <div class="section-head reveal" style="max-width:52ch">
+      <span class="reg reg--cactus"><b>06</b><span>Our Pest Control Process</span></span>
+      <h2>How we build a pest plan that actually works</h2>
+    </div>
+    <div class="prose reveal" style="margin-top:1.5rem">
+      <p>Every Exclusive treatment starts with what most companies skip: a real evaluation. Then we engineer a plan around what we find — not what we sell.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step-num" aria-hidden="true">01</span><h4>Inspection</h4><p>We assess entry points, harborage, and your home's environment.</p></li>
+      <li class="step reveal" style="--d:70ms"><span class="step-num" aria-hidden="true">02</span><h4>Custom Plan</h4><p>A targeted strategy built from pest biology and local data.</p></li>
+      <li class="step reveal" style="--d:140ms"><span class="step-num" aria-hidden="true">03</span><h4>Treatment</h4><p>Responsible application with your family, pets, and garden protected.</p></li>
+      <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><h4>Prevention</h4><p>Ongoing monitoring and sealing to keep your home protected.</p></li>
+    </ol>
+    <div class="shot reveal" style="margin-top:clamp(2.5rem,4vw,3.5rem)">
+      <img src="build-assets/process-main.jpg"
+           alt="Professional bait stations placed at a modern Phoenix Valley home."
+           width="1500" height="1125" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="band band--2 pad" id="reviews">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="reg"><b>07</b><span>What Clients Say</span></span>
+      <h2>What Phoenix homeowners say about our work</h2>
+    </div>
+    <div class="reviews">
+      <figure class="review reveal">
+        <blockquote>"David is the man! Have been very satisfied with his services since I've moved to Gold Canyon &amp; his honest and fair pricing! I definitely recommend him if you're looking for a pest control service!"</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">★★★★★</span> PJ Cardiasmenos <em>Google review</em></figcaption>
+      </figure>
+      <figure class="review reveal" style="--d:70ms">
+        <blockquote>"David was referred to me from a friend, I highly recommend his services as he is honest, thorough and considerate!"</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">★★★★★</span> Sydney Miller <em>Google review</em></figcaption>
+      </figure>
+      <figure class="review review--sm reveal" style="--d:140ms">
+        <blockquote>"We have had a time figuring out and solving our pest problem. David has been great and so professional in dealing with it. He has been there right away to deal with all issues that have occurred. I would highly recommend exclusive pest control. Great service and solutions."</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">★★★★★</span> T O <em>Google review</em></figcaption>
+      </figure>
+      <figure class="review review--sm reveal" style="--d:210ms">
+        <blockquote>"David's customer service was great and he was very detail oriented while spraying my whole house inside and out! Immediately I noticed bugs reacting to his spray. I highly recommend his service!"</blockquote>
+        <figcaption><span class="stars" aria-hidden="true">★★★★★</span> CVBOOSE <em>Google review</em></figcaption>
+      </figure>
+    </div>
+    <p class="reviews-more reveal">
+      <a class="btn btn--ghost" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">More reviews on Google</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta pad" id="contact">
+  <div class="shell cta-grid">
+    <div class="stack reveal" style="--s:1.4rem">
+      <div>
+        <span class="reg"><b>08</b><span>Get Started</span></span>
+        <h2>Get your custom plan</h2>
+      </div>
+      <div class="prose" style="max-width:52ch">
+        <p>Tell us what you're seeing. We'll inspect, then engineer the plan around what we find.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn--lg" style="--btn-fill:var(--c-ink);--btn-text:var(--c-gold)" href="tel:+16026006746">Call (602) 600-6746</a>
+        <a class="btn-link" style="border-bottom-color:var(--c-ink)" href="mailto:hello@exclusivepest.co">hello@exclusivepest.co</a>
+      </div>
+    </div>
+    <div class="cta-facts reveal" style="--d:100ms">
+      <div class="cta-fact"><span>Working hours</span><b>Mon – Sat, 7 AM – 6 PM</b></div>
+      <div class="cta-fact"><span>Sunday</span><b>Emergency service</b></div>
+      <div class="cta-fact"><span>AZ Dept. of Ag</span><b>License #10150</b></div>
+      <div class="cta-fact"><span>Google rating</span><b>5.0 ★★★★★</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="shell foot-top">
+    <div>
+      <h2>Phoenix Valley's premier pest control — built around your home, your family, and the desert we share.</h2>
+      <span class="foot-lic">AZ Dept. of Agriculture License #10150</span>
+    </div>
+    <div>
+      <h3>Valley Pest Alerts</h3>
+      <p>Get seasonal tips for Phoenix Valley homes.</p>
+      <form class="foot-news" onsubmit="return false">
+        <label for="nl" style="font-family:var(--font-display);font-weight:700;font-stretch:88%;font-size:var(--step--2);letter-spacing:var(--tr-register);text-transform:uppercase;color:var(--c-bone)">Email</label>
+        <input id="nl" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="shell foot-grid">
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="scorpion-control.html">Scorpion Control</a></li>
+        <li><a href="general-pest-control.html">General Pest Control</a></li>
+        <li><a href="general-pest-control.html">Garden-Safe Treatments</a></li>
+        <li><a href="general-pest-control.html">Wildlife-Conscious Solutions</a></li>
+        <li><a href="general-pest-control.html">IPM Programs</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Working Hours</h3>
+      <ul>
+        <li>Monday – Saturday: 7:00 AM – 6:00 PM</li>
+        <li>Sunday: Emergency Service Available</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>Call Us<br><a href="tel:+16026006746">(602) 600-6746</a></li>
+        <li>Email Us<br><a href="mailto:hello@exclusivepest.co">hello@exclusivepest.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="shell foot-legal">
+    <span>© 2026 Exclusive Pest Solutions. All Rights Reserved.</span>
+    <span class="sep"><a href="privacy-policy.html">Privacy Policy</a></span>
+    <span><a href="terms-of-service.html">Terms of Service</a></span>
+    <span>Made by <a href="https://outworkemdigital.com/" target="_blank" rel="noopener noreferrer">Outwork'em Digital</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -40px 0px', threshold: 0.01 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
