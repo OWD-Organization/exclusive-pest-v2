@@ -13,3 +13,4 @@ _*.html
 # Sistema
 .DS_Store
 Thumbs.db
+build/__pycache__/

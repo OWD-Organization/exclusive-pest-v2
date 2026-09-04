@@ -1,0 +1,265 @@
+
+/* =========================================================
+   PAGINAS INTERNAS , componentes compartidos
+   ========================================================= */
+
+/* ---- hero de subpagina: sin el titular gigante del home ---- */
+.hero--page h1{font-size:var(--step-4);max-width:26ch}
+/* mas aire respecto al nav sticky: antes el H1 arrancaba pegado al borde */
+.hero--page{margin-top:clamp(1.75rem,4vw,3.25rem)}
+.hero--page .shell{padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem)}
+/* el hero de servicio no lleva sol: solo lo llevan los de texto */
+.hero--page .sun{display:none}
+.hero--legal .sun{display:block;top:-3rem;right:-4.5rem;width:clamp(11rem,20vw,19rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);
+           gap:clamp(2rem,4vw,3.5rem);align-items:center}
+.hero-plate{
+  display:inline-block;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:-5px 5px 0 var(--c-ink);
+  padding:0.7rem 1.05rem;
+  font-weight:900;font-size:var(--step--1);line-height:1.3;
+  text-transform:uppercase;letter-spacing:0.04em;
+}
+
+/* ---- MIGAS ---- */
+.crumbs{border-bottom:var(--bd-hair);background:var(--c-paper)}
+.crumbs ol{
+  list-style:none;margin:0;padding-block:0.7rem;
+  display:flex;flex-wrap:wrap;gap:0.35rem 0.55rem;align-items:center;
+  font-weight:800;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
+}
+.crumbs a{text-decoration:none;border-bottom:2px solid transparent}
+.crumbs a:hover{border-bottom-color:var(--c-orange)}
+.crumbs li+li::before{content:"/";margin-right:0.55rem;color:var(--c-orange-deep)}
+.crumbs [aria-current]{color:var(--fg)}
+
+/* ---- TARJETAS DE FICHA (rasgos, especies, plagas, metodo) ---- */
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(16.5rem,100%),1fr));
+  gap:clamp(1.25rem,2.5vw,2rem);margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.cards--tight{grid-template-columns:repeat(auto-fit,minmax(min(13.5rem,100%),1fr))}
+.card{
+  position:relative;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.15rem,2.2vw,1.6rem);
+  align-content:start;display:grid;gap:0.55rem;
+}
+.card h3{font-size:var(--step-1)}
+.card p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
+.card--gold{background:var(--c-gold-pale)}
+/* --c-sky-2 es el fondo de las bandas band--2, asi que ahi la ficha quedaba
+   sin relleno visible: se usa el cielo claro, que contrasta en las dos bandas */
+.card--sky{background:var(--c-sky)}
+.card--cactus{background:var(--c-cactus)}
+.card--cactus p,.card--gold p{color:var(--fg)}
+.card-tag{
+  justify-self:start;
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;
+  background:var(--c-gold);color:var(--c-ink);
+  border:var(--bd-hair);border-radius:var(--r-pill);
+  padding:0.4em 0.85em;
+}
+.card-tag--orange{background:var(--c-orange)}
+.card-icon{width:clamp(3.25rem,5vw,4.25rem);aspect-ratio:1;justify-self:start}
+.cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
+
+/* ---- PLACA DE FRASE: una linea que el original usa como remate ---- */
+.slab{
+  margin-top:clamp(2rem,3.5vw,2.75rem);
+  background:var(--c-ink);color:var(--c-sky);
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-orange);
+  padding:clamp(1.1rem,2.2vw,1.7rem) clamp(1.25rem,2.5vw,2rem);
+  font-family:var(--font-display);font-weight:400;
+  font-size:var(--step-2);line-height:1.15;letter-spacing:var(--tr-display);
+}
+
+/* ---- ZONAS DE SERVICIO ---- */
+.areas{
+  list-style:none;margin:clamp(2rem,3.5vw,2.75rem) 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:0.65rem 0.7rem;
+}
+.areas li{
+  font-weight:800;font-size:var(--step--1);
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r-pill);
+  box-shadow:-3px 3px 0 var(--c-ink);
+  padding:0.5em 1em;
+}
+.areas li:nth-child(4n+2){background:var(--c-gold-pale)}
+.areas li:nth-child(6n+5){background:var(--c-sky-2)}
+
+/* ---- FAQ: details nativo, sin JS ---- */
+.faq{margin-top:clamp(2.25rem,4vw,3.25rem);display:grid;gap:clamp(0.85rem,1.6vw,1.15rem)}
+.faq details{
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+}
+.faq details[open]{background:var(--c-gold-pale)}
+.faq summary{
+  display:flex;gap:1rem;align-items:flex-start;justify-content:space-between;
+  cursor:pointer;list-style:none;
+  padding:clamp(1rem,1.9vw,1.35rem) clamp(1.1rem,2.1vw,1.6rem);
+  font-family:var(--font-body);font-weight:900;
+  font-size:var(--step-1);line-height:1.25;letter-spacing:var(--tr-heading);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";flex:0 0 auto;
+  width:1.35rem;height:1.35rem;margin-top:0.15em;
+  background:var(--c-orange);border:var(--bd-hair);border-radius:4px;
+  clip-path:polygon(42% 12%,58% 12%,58% 42%,88% 42%,88% 58%,58% 58%,58% 88%,42% 88%,42% 58%,12% 58%,12% 42%,42% 42%);
+  transition:rotate 200ms var(--ease-out-expo);
+}
+.faq details[open] summary::after{rotate:45deg}
+.faq summary:focus-visible{outline:3px solid var(--c-orange-deep);outline-offset:-3px}
+.faq-a{
+  padding:0 clamp(1.1rem,2.1vw,1.6rem) clamp(1.1rem,2.1vw,1.5rem);
+  border-top:var(--bd-hair);margin-top:0;
+}
+.faq-a p{margin:0.9rem 0 0;color:var(--fg-muted)}
+.faq details[open] .faq-a p{color:var(--fg)}
+
+/* =========================================================
+   PAGINAS LEGALES
+   ========================================================= */
+.legal-grid{
+  display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);
+  gap:clamp(2rem,4vw,4rem);align-items:start;
+}
+.toc{
+  position:sticky;top:calc(4.5rem + 1rem);
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.5rem);
+}
+.toc h2{
+  font-family:var(--font-body);font-weight:900;
+  font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase;
+  margin-bottom:0.9rem;
+}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:0.15rem;counter-reset:toc}
+.toc li{counter-increment:toc}
+.toc a{
+  display:grid;grid-template-columns:1.8rem 1fr;gap:0.3rem;
+  text-decoration:none;padding:0.4em 0;
+  font-size:var(--step--1);line-height:1.35;
+  border-bottom:2px solid transparent;
+}
+.toc a::before{content:counter(toc) ".";font-weight:900;color:var(--c-orange-deep)}
+.toc a:hover{border-bottom-color:var(--c-orange)}
+
+.legal{max-width:70ch}
+.legal h2{
+  font-size:var(--step-2);margin-top:clamp(2.5rem,4.5vw,3.5rem);
+  scroll-margin-top:5.5rem;
+}
+.legal > h2:first-child{margin-top:0}
+.legal h3{
+  font-size:var(--step-1);margin-top:clamp(1.6rem,2.6vw,2rem);
+}
+.legal p{margin:0.9rem 0 0;color:var(--fg-muted)}
+.legal ul{margin:0.9rem 0 0;padding-left:0;list-style:none;display:grid;gap:0.5rem}
+.legal ul li{
+  position:relative;padding-left:1.6rem;
+  color:var(--fg-muted);line-height:1.6;
+}
+.legal ul li::before{
+  content:"";position:absolute;left:0;top:0.55em;
+  width:0.65rem;height:0.65rem;
+  background:var(--c-orange);border:var(--bd-hair);border-radius:2px;
+}
+.legal h2 + p,.legal h3 + p{margin-top:0.7rem}
+.legal-rule{border:0;border-top:var(--bd-hair);margin:clamp(2.5rem,4.5vw,3.5rem) 0 0}
+
+.legal-meta{
+  display:flex;flex-wrap:wrap;gap:0.65rem 0.7rem;
+  margin-top:1.5rem;list-style:none;padding:0;
+}
+.legal-meta li{
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r-pill);
+  box-shadow:-3px 3px 0 var(--c-ink);
+  padding:0.5em 1em;
+}
+.legal-note{
+  margin-top:clamp(2rem,3.5vw,2.75rem);
+  background:var(--c-gold-pale);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.5rem);
+  font-size:var(--step--1);line-height:1.55;
+}
+.legal-note b{display:block;margin-bottom:0.35rem;
+  font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase}
+
+@media (max-width:64rem){
+  .hero-grid{grid-template-columns:1fr}
+  .legal-grid{grid-template-columns:1fr}
+  .toc{position:static}
+  .toc ol{grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));gap:0 1rem}
+}
+@media (max-width:48rem){
+  .hero--page h1{font-size:var(--step-3);max-width:none}
+  .cactus--seam{display:none}
+  /* a 320px el sol cruzaba el H1 de las legales: fuera, como en el home */
+  .hero--legal .sun{display:none}
+  .faq summary{font-size:var(--step-0)}
+  .slab{font-size:var(--step-1)}
+}
+
+/* ---- pasos de pagina de servicio: el numero es la unica numeracion visible,
+        asi que va solido y en flujo, no como marca de agua del home ---- */
+.steps .step{align-content:start}
+.steps .step-num{
+  position:static;
+  font-size:clamp(2.4rem,4vw,3.3rem);
+  line-height:0.95;
+  color:var(--c-orange-deep);
+  margin-bottom:0.15rem;
+}
+
+/* ---- tarjeta de contacto al pie del texto legal ---- */
+.contact-card{
+  margin-top:1.25rem;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.6rem);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));
+  gap:1.1rem clamp(1.25rem,2.5vw,2rem);
+}
+.contact-card span{
+  display:block;
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
+}
+.contact-card b{display:block;margin-top:0.2rem;font-weight:800;font-size:var(--step-0);line-height:1.35}
+.contact-card a{text-decoration:none;border-bottom:3px solid var(--c-orange)}
+.contact-card a:hover{color:var(--c-orange-deep)}
+
+/* ---- FAQ: buho a la derecha, cactus a la izquierda. La banda gana alto
+        propio para alojarlos sin pisar el acordeon ---- */
+.faq-host{position:relative;overflow:hidden;padding-bottom:clamp(6.5rem,12vw,10.5rem)}
+.faq-host > .shell{position:relative;z-index:1}
+.faq-owl{
+  position:absolute;z-index:0;pointer-events:none;
+  right:clamp(1.25rem,6vw,6rem);
+  bottom:0;
+  width:clamp(8rem,13vw,12rem);height:auto;
+  filter:drop-shadow(-5px 5px 0 var(--c-ink));
+}
+.faq-cactus{
+  position:absolute;z-index:0;pointer-events:none;
+  left:clamp(-2.25rem,-4vw,-1rem);
+  bottom:0;
+  height:clamp(9rem,15vw,13.5rem);
+}
+@media (max-width:48rem){
+  .faq-host{padding-bottom:clamp(4.5rem,11vw,6.5rem)}
+  .faq-owl{width:clamp(5.5rem,17vw,7rem);right:0.85rem;bottom:0}
+  .faq-cactus{height:clamp(6.5rem,19vw,8.5rem);left:-1.25rem}
+}
