@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Inserta en index.html y about.html el CSS, el JS y el marcado del submenu
-de Services. Las paginas generadas lo heredan porque chrome.head() copia la
-hoja de index.html y chrome.scripts() copia sus scripts."""
+"""Inserts the Services submenu CSS, JS and markup into index.html and
+about.html. Generated pages inherit it because chrome.head() copies the
+index.html stylesheet and chrome.scripts() copies its scripts."""
 import re, sys, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CSS = """
 /* NAV-SUB:CSS:START */
 /* =========================================================
-   NAV , submenú de Services
+   NAV , Services submenu
    ========================================================= */
 .nav-sub-wrap{position:relative;display:flex;align-items:center}
 .nav-sub-toggle{
@@ -48,17 +48,17 @@ CSS = """
 .nav-sub a[aria-current]{background:var(--c-gold)}
 .nav-sub a svg{width:1.45rem;height:1.45rem;color:var(--c-orange-deep)}
 .nav-sub a[aria-current] svg{color:var(--c-ink)}
-/* con JS el panel arranca plegado; sin JS queda a la vista y sigue siendo usable */
+/* with JS the panel starts collapsed; without JS it stays visible and usable */
 .js .nav-sub{display:none}
 .js .nav-sub-wrap[data-open="true"] .nav-sub{display:grid}
 
-/* en escritorio abre con el simple hover, sin necesidad de clic; el clic
-   (mas abajo) se mantiene solo como refuerzo para teclado y pantallas
-   tactiles hibridas, donde :hover no dispara */
+/* on desktop it opens on plain hover, no click needed; the click handler
+   (further down) stays only as a fallback for keyboards and hybrid
+   touch screens, where :hover doesn't fire */
 @media (min-width:48.0625rem){
-  /* puente invisible sobre el hueco entre el boton y el panel: sin esto,
-     el cursor pierde el hover al cruzar ese espacio y el panel se cierra
-     antes de llegar a el */
+  /* invisible bridge over the gap between the button and the panel: without it,
+     the pointer loses hover while crossing that gap and the panel closes
+     before it gets there */
   .nav-sub-wrap::after{
     content:"";position:absolute;left:0;right:0;top:100%;height:0.9rem;
   }
@@ -71,7 +71,7 @@ CSS = """
 }
 
 @media (max-width:48rem){
-  /* en la columna móvil el submenú vive dentro del propio menú */
+  /* in the mobile column the submenu lives inside the menu itself */
   .nav-sub-wrap{width:100%;display:block}
   .nav-sub-toggle{
     width:100%;justify-content:space-between;
@@ -92,8 +92,8 @@ CSS = """
 
 JS = """
 <script data-nav-sub="1">
-/* submenú de Services: botón real, teclado incluido. Sin JS el panel
-   queda visible y los enlaces siguen alcanzables */
+/* Services submenu: a real button, keyboard included. Without JS the panel
+   stays visible and the links remain reachable */
 (function(){
   var wrap = document.querySelector('.nav-sub-wrap');
   if (!wrap) return;
@@ -174,22 +174,22 @@ def patch(fn, current, home_anchors):
     p = os.path.join(ROOT, fn)
     s = open(p, encoding="utf-8").read()
     css_block = CSS.strip("\n") + "\n"
-    # CSS: si ya existe un bloque marcado (de una ejecucion anterior) se
-    # reemplaza entero, para que los cambios en CSS lleguen a paginas ya
-    # parcheadas; si no existe, se inserta antes de cerrar la hoja
+    # CSS: if a marked block already exists (from an earlier run) it's
+    # replaced whole, so CSS changes reach pages that were already patched;
+    # otherwise it's inserted before the stylesheet closes
     if CSS_RE.search(s):
         s = CSS_RE.sub(css_block, s, count=1)
     else:
         i = s.rindex("</style>")
         s = s[:i] + CSS + s[i:]
-    # JS: mismo criterio, marcado por el atributo data-nav-sub
+    # JS: same rule, marked by the data-nav-sub attribute
     js_block = JS.strip("\n") + "\n"
     if JS_RE.search(s):
         s = JS_RE.sub(js_block, s, count=1)
     else:
         i = s.rindex("</body>")
         s = s[:i] + js_block + s[i:]
-    # marcado del nav
+    # nav markup
     s = re.sub(r' *<nav class="nav-links".*?</nav>', nav_links(current, home_anchors), s, count=1, flags=re.S)
     open(p, "w", encoding="utf-8").write(s)
     return fn

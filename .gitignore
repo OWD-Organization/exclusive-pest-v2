@@ -1,11 +1,11 @@
-# Imágenes descargadas del sitio en vivo durante el crawl (12 MB).
-# Reproducibles con scrape/extract.py sobre scrape/html/.
+# Images downloaded from the live site during the crawl (12 MB).
+# Reproducible with scrape/extract.py over scrape/html/.
 scrape/assets/
 
-# Documento personal que quedó suelto en build-assets, ajeno al proyecto.
+# Personal document left in build-assets, unrelated to the project.
 build-assets/Formulario_Cotizacion_Seguro_Vivienda_Alianza_Segura.pdf
 
-# Temporales de las sondas de medición en navegador
+# Temp files from the in-browser measurement probes
 _*.html
 *.bak.html
 .bak-*.html

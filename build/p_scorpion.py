@@ -21,7 +21,7 @@ hero(
   alt="An Arizona bark scorpion on desert gravel, tail raised.", w=800, h=600)
 + C.ACTIONBAR +
 f'''
-<!-- ===================== LA AMENAZA ===================== -->
+<!-- ===================== THE THREAT ===================== -->
 <section class="band band--2 pad seam-host">
   <div class="shell">
 {head_block("The threat", "Why scorpions are a serious problem in the Phoenix Valley",
@@ -39,7 +39,7 @@ f'''
   </div>
 {C.cactus('seam')}</section>
 
-<!-- ===================== PROCESO ===================== -->
+<!-- ===================== PROCESS ===================== -->
 <section class="band pad">
   <div class="shell">
 {head_block("How we work", "Our scorpion control process",
@@ -62,7 +62,7 @@ f'''
   </div>
 </section>
 
-<!-- ===================== ZONAS ===================== -->
+<!-- ===================== SERVICE AREAS ===================== -->
 <section class="band band--paper pad">
   <div class="shell">
 {head_block("Service areas", "Scorpion control across the Phoenix Valley",

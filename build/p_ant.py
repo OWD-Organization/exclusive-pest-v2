@@ -44,7 +44,7 @@ hero(
   w=600, h=600)
 + C.ACTIONBAR +
 f'''
-<!-- ===================== ESPECIES ===================== -->
+<!-- ===================== SPECIES ===================== -->
 <section class="band band--2 pad seam-host" id="species">
   <div class="shell">
 {head_block("Know your invader", "Common ant species in the Phoenix Valley",
@@ -54,7 +54,7 @@ f'''
   </div>
 {C.cactus('seam')}</section>
 
-<!-- ===================== ENFOQUE ===================== -->
+<!-- ===================== APPROACH ===================== -->
 <section class="band pad" id="method">
   <div class="shell split">
     <div class="stack reveal" style="--s:1.35rem">
@@ -84,7 +84,7 @@ f'''
   </div>
 </section>
 
-<!-- ===================== ZONAS ===================== -->
+<!-- ===================== SERVICE AREAS ===================== -->
 <section class="band band--paper pad">
   <div class="shell">
 {head_block("Service areas", "Ant control across the Phoenix Valley",

@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <script>document.documentElement.className="js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Pest Control Phoenix Valley AZ | Exclusive Pest Solutions</title>
-<meta name="description" content="Custom pest control for Phoenix Valley homes. Scorpion specialists. Wildlife-conscious treatments. Licensed by AZ Dept. of Agriculture. Built around your home.">
+<title>Bark Scorpions in Phoenix, AZ | Bug Guide | Exclusive Pest Solutions</title>
+<meta name="description" content="How Arizona bark scorpions get into Phoenix Valley homes, what draws them in, and what homeowners can do to keep them out.">
+<!-- placeholder content: remove noindex once David's copy arrives -->
+<meta name="robots" content="noindex, follow">
 <link rel="icon" type="image/webp" href="build-assets/logo-v2.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -508,16 +510,34 @@ section{position:relative}
   padding:0.4em 0.85em;
 }
 .pest--hero{background:var(--c-gold-pale)}
-/* the whole card is clickable: the heading link stretches over it */
-.pest{position:relative}
-.pest-link{color:inherit;text-decoration:none}
-.pest-link::after{content:"";position:absolute;inset:0;border-radius:inherit}
-/* no offset: the staggered .reveal entrance owns the card's translate */
-.pest:hover{box-shadow:calc(var(--sh-x) - 2px) calc(var(--sh-y) + 2px) 0 var(--c-ink)}
-.pest:hover .pest-link{color:var(--c-orange-deep)}
-.pest:has(.pest-link:focus-visible){outline:3px solid var(--c-orange-deep);outline-offset:3px}
-.pest-link:focus-visible{outline:none}
 .pests-note{margin-top:1.75rem;color:var(--fg-muted);max-width:58ch}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(12rem,100%),1fr));
+       gap:clamp(1.25rem,2.5vw,1.75rem);margin-top:clamp(2rem,3.5vw,2.75rem)}
+.stat{
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.25rem,2.4vw,1.85rem);
+  background:var(--c-paper);
+}
+.stat b{
+  display:block;font-family:var(--font-display);font-weight:400;
+  font-size:var(--step-4);line-height:0.92;letter-spacing:var(--tr-numeral);
+  color:var(--c-orange-deep);
+}
+.stat span{display:block;margin-top:0.6rem;font-weight:800;font-size:var(--step--1);
+           text-transform:uppercase;letter-spacing:0.05em;color:var(--fg-muted)}
+.stat:nth-child(1){background:var(--c-gold)}
+.stat:nth-child(2){background:var(--c-cactus)}
+/* on gold and cactus, the deep orange and the label gray miss AA
+   (2.82, 4.49 and 3.10 measured): on those two backgrounds everything is ink */
+.stat:nth-child(1) b,.stat:nth-child(2) b{color:var(--c-ink)}
+.stat:nth-child(1) span,.stat:nth-child(2) span{color:var(--c-ink)}
+.stat:nth-child(3){background:var(--c-gold-pale)}
+.stat:nth-child(4){background:var(--c-sky-2)}
 
 /* =========================================================
    PROCESS
@@ -548,31 +568,24 @@ section{position:relative}
 /* =========================================================
    REVIEWS
    ========================================================= */
-.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+.reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
          gap:clamp(1.5rem,3vw,2.4rem);margin-top:clamp(2.25rem,4vw,3.25rem)}
 .review{
   border:var(--bd-hard);border-radius:var(--r);background:var(--c-paper);
   box-shadow:-5px 5px 0 var(--c-ink);
   padding:clamp(1.15rem,2vw,1.7rem);
   display:grid;gap:1rem;align-content:start;
-  text-decoration:none;color:inherit;
-  transition:translate 160ms var(--ease-out-expo), box-shadow 160ms var(--ease-out-expo);
 }
-/* each review links to the Google profile: same "lift" language as
-   the buttons, so it's clear the whole card is clickable */
-.review:hover{translate:1px -2px;box-shadow:-7px 7px 0 var(--c-ink)}
-.review:active{translate:-2px 2px;box-shadow:-2px 2px 0 var(--c-ink);transition-duration:70ms}
-/* repeats every 3, so each column keeps its color on every row */
-.review:nth-child(3n+2){background:var(--c-gold-pale)}
-.review:nth-child(3n){background:var(--c-sky-2)}
+.review:nth-child(2){background:var(--c-gold-pale)}
+.review:nth-child(3){background:var(--c-sky-2)}
 .review blockquote{margin:0;font-size:var(--step-1);line-height:1.42;font-weight:500}
 .review--sm blockquote{font-size:var(--step-0);line-height:1.55}
-.review-cite{
+.review figcaption{
   display:flex;flex-wrap:wrap;gap:0.5rem 0.9rem;align-items:center;
   border-top:var(--bd-hair);padding-top:0.9rem;
   font-weight:900;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.05em;
 }
-.review-cite em{font-style:normal;color:var(--fg-muted);letter-spacing:var(--tr-label);
+.review figcaption em{font-style:normal;color:var(--fg-muted);letter-spacing:var(--tr-label);
                       font-size:var(--step--2);font-weight:800}
 .reviews-more{margin-top:clamp(2rem,3.5vw,2.75rem)}
 
@@ -738,17 +751,6 @@ section{position:relative}
   .truckband-owl{width:min(30%,7rem)}
 }
 
-/* --- mobile: the cacti form a group on the left that balances Olly on the
-   right; all three rest on the dune ridge. Desktop is unchanged. --- */
-@media (max-width:48rem){
-  .cactus--hero{display:block;height:5.4rem;left:1.1rem;right:auto;bottom:0.95rem}
-  .cactus--hero-b{display:block;height:3.3rem;left:4.55rem;right:auto;bottom:0.9rem}
-}
-@media (max-width:23rem){
-  .cactus--hero{height:4.6rem;left:0.8rem;bottom:0.9rem}
-  .cactus--hero-b{height:2.8rem;left:3.8rem;bottom:0.85rem}
-}
-
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:0.01ms !important;
@@ -761,7 +763,7 @@ section{position:relative}
 }
 
 /* =========================================================
-   NAV , Services submenu
+   NAV, Services submenu
    ========================================================= */
 .nav-sub-wrap{position:relative;display:flex;align-items:center}
 .nav-sub-toggle{
@@ -825,7 +827,7 @@ section{position:relative}
 
 /* NAV-SUB:CSS:START */
 /* =========================================================
-   NAV , Services submenu
+   NAV, Services submenu
    ========================================================= */
 .nav-sub-wrap{position:relative;display:flex;align-items:center}
 .nav-sub-toggle{
@@ -935,6 +937,33 @@ section{position:relative}
 /* NAV-DARK:CSS:END */
 
 
+/* BUG-GUIDE:CSS:START */
+/* pest card in the hero: the icon on a paper plate */
+.bug-plate{
+  display:grid;place-items:center;aspect-ratio:1;max-width:26rem;
+  background:var(--c-paper);
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
+}
+.bug-plate img{width:62%;height:auto}
+/* closer: heading and button in one row */
+.bug-next{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
+.bug-next h2{max-width:24ch}
+/* square-bullet lists, same as on About */
+.ticks{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:0.55rem}
+.ticks li{
+  position:relative;padding-left:1.6rem;
+  font-size:var(--step--1);line-height:1.45;color:var(--fg-muted);
+}
+.ticks li::before{
+  content:"";position:absolute;left:0;top:0.42em;
+  width:0.7rem;height:0.7rem;
+  background:var(--c-orange);border:var(--bd-hair);border-radius:2px;
+}
+.blk--cactus .ticks li,.blk--gold .ticks li{color:var(--fg)}
+.ticks--cactus li::before{background:var(--c-cactus)}
+/* BUG-GUIDE:CSS:END */
+
 /* OLLY-FORM:CSS:START */
 /* =========================================================
    TELL OLLY , CTA button + form popup
@@ -1006,6 +1035,273 @@ html:has(.olly-dialog[open]){overflow:hidden}
 }
 /* OLLY-FORM:CSS:END */
 
+
+
+
+/* =========================================================
+   INNER PAGES, shared components
+   ========================================================= */
+
+/* ---- subpage hero: without the home page's giant headline ---- */
+.hero--page h1{font-size:var(--step-4);max-width:26ch}
+/* more room below the sticky nav: the H1 used to start flush against the edge */
+.hero--page{margin-top:clamp(1.75rem,4vw,3.25rem)}
+.hero--page .shell{padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem)}
+/* service heroes have no sun: only the text pages do */
+.hero--page .sun{display:none}
+.hero--legal .sun{display:block;top:-3rem;right:-4.5rem;width:clamp(11rem,20vw,19rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);
+           gap:clamp(2rem,4vw,3.5rem);align-items:center}
+.hero-plate{
+  display:inline-block;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:-5px 5px 0 var(--c-ink);
+  padding:0.7rem 1.05rem;
+  font-weight:900;font-size:var(--step--1);line-height:1.3;
+  text-transform:uppercase;letter-spacing:0.04em;
+}
+
+/* ---- BREADCRUMBS ---- */
+.crumbs{border-bottom:var(--bd-hair);background:var(--c-paper)}
+.crumbs ol{
+  list-style:none;margin:0;padding-block:0.7rem;
+  display:flex;flex-wrap:wrap;gap:0.35rem 0.55rem;align-items:center;
+  font-weight:800;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
+}
+.crumbs a{text-decoration:none;border-bottom:2px solid transparent}
+.crumbs a:hover{border-bottom-color:var(--c-orange)}
+.crumbs li+li::before{content:"/";margin-right:0.55rem;color:var(--c-orange-deep)}
+.crumbs [aria-current]{color:var(--fg)}
+
+/* ---- INFO CARDS (traits, species, pests, method) ---- */
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(16.5rem,100%),1fr));
+  gap:clamp(1.25rem,2.5vw,2rem);margin-top:clamp(2.25rem,4vw,3.25rem);
+}
+.cards--tight{grid-template-columns:repeat(auto-fit,minmax(min(13.5rem,100%),1fr))}
+.card{
+  position:relative;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.15rem,2.2vw,1.6rem);
+  align-content:start;display:grid;gap:0.55rem;
+}
+.card h3{font-size:var(--step-1)}
+.card p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
+.card--gold{background:var(--c-gold-pale)}
+/* --c-sky-2 is the band--2 background, so the card had no visible fill
+   there: the light sky is used instead, which contrasts on both bands */
+.card--sky{background:var(--c-sky)}
+.card--cactus{background:var(--c-cactus)}
+.card--cactus p,.card--gold p{color:var(--fg)}
+.card-tag{
+  justify-self:start;
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;
+  background:var(--c-gold);color:var(--c-ink);
+  border:var(--bd-hair);border-radius:var(--r-pill);
+  padding:0.4em 0.85em;
+}
+.card-tag--orange{background:var(--c-orange)}
+.card-icon{width:clamp(3.25rem,5vw,4.25rem);aspect-ratio:1;justify-self:start}
+.cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
+
+/* ---- PHRASE PLATE: a one-liner the original uses as a closer ---- */
+.slab{
+  margin-top:clamp(2rem,3.5vw,2.75rem);
+  background:var(--c-ink);color:var(--c-sky);
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-orange);
+  padding:clamp(1.1rem,2.2vw,1.7rem) clamp(1.25rem,2.5vw,2rem);
+  font-family:var(--font-display);font-weight:400;
+  font-size:var(--step-2);line-height:1.15;letter-spacing:var(--tr-display);
+}
+
+/* ---- SERVICE AREAS ---- */
+.areas{
+  list-style:none;margin:clamp(2rem,3.5vw,2.75rem) 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:0.65rem 0.7rem;
+}
+.areas li{
+  font-weight:800;font-size:var(--step--1);
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r-pill);
+  box-shadow:-3px 3px 0 var(--c-ink);
+  padding:0.5em 1em;
+}
+.areas li:nth-child(4n+2){background:var(--c-gold-pale)}
+.areas li:nth-child(6n+5){background:var(--c-sky-2)}
+
+/* ---- FAQ: native details, no JS ---- */
+.faq{margin-top:clamp(2.25rem,4vw,3.25rem);display:grid;gap:clamp(0.85rem,1.6vw,1.15rem)}
+.faq details{
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+}
+.faq details[open]{background:var(--c-gold-pale)}
+.faq summary{
+  display:flex;gap:1rem;align-items:flex-start;justify-content:space-between;
+  cursor:pointer;list-style:none;
+  padding:clamp(1rem,1.9vw,1.35rem) clamp(1.1rem,2.1vw,1.6rem);
+  font-family:var(--font-body);font-weight:900;
+  font-size:var(--step-1);line-height:1.25;letter-spacing:var(--tr-heading);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";flex:0 0 auto;
+  width:1.35rem;height:1.35rem;margin-top:0.15em;
+  background:var(--c-orange);border:var(--bd-hair);border-radius:4px;
+  clip-path:polygon(42% 12%,58% 12%,58% 42%,88% 42%,88% 58%,58% 58%,58% 88%,42% 88%,42% 58%,12% 58%,12% 42%,42% 42%);
+  transition:rotate 200ms var(--ease-out-expo);
+}
+.faq details[open] summary::after{rotate:45deg}
+.faq summary:focus-visible{outline:3px solid var(--c-orange-deep);outline-offset:-3px}
+.faq-a{
+  padding:0 clamp(1.1rem,2.1vw,1.6rem) clamp(1.1rem,2.1vw,1.5rem);
+  border-top:var(--bd-hair);margin-top:0;
+}
+.faq-a p{margin:0.9rem 0 0;color:var(--fg-muted)}
+.faq details[open] .faq-a p{color:var(--fg)}
+
+/* =========================================================
+   LEGAL PAGES
+   ========================================================= */
+.legal-grid{
+  display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);
+  gap:clamp(2rem,4vw,4rem);align-items:start;
+}
+.toc{
+  position:sticky;top:calc(4.5rem + 1rem);
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.5rem);
+}
+.toc h2{
+  font-family:var(--font-body);font-weight:900;
+  font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase;
+  margin-bottom:0.9rem;
+}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:0.15rem;counter-reset:toc}
+.toc li{counter-increment:toc}
+.toc a{
+  display:grid;grid-template-columns:1.8rem 1fr;gap:0.3rem;
+  text-decoration:none;padding:0.4em 0;
+  font-size:var(--step--1);line-height:1.35;
+  border-bottom:2px solid transparent;
+}
+.toc a::before{content:counter(toc) ".";font-weight:900;color:var(--c-orange-deep)}
+.toc a:hover{border-bottom-color:var(--c-orange)}
+
+.legal{max-width:70ch}
+.legal h2{
+  font-size:var(--step-2);margin-top:clamp(2.5rem,4.5vw,3.5rem);
+  scroll-margin-top:5.5rem;
+}
+.legal > h2:first-child{margin-top:0}
+.legal h3{
+  font-size:var(--step-1);margin-top:clamp(1.6rem,2.6vw,2rem);
+}
+.legal p{margin:0.9rem 0 0;color:var(--fg-muted)}
+.legal ul{margin:0.9rem 0 0;padding-left:0;list-style:none;display:grid;gap:0.5rem}
+.legal ul li{
+  position:relative;padding-left:1.6rem;
+  color:var(--fg-muted);line-height:1.6;
+}
+.legal ul li::before{
+  content:"";position:absolute;left:0;top:0.55em;
+  width:0.65rem;height:0.65rem;
+  background:var(--c-orange);border:var(--bd-hair);border-radius:2px;
+}
+.legal h2 + p,.legal h3 + p{margin-top:0.7rem}
+.legal-rule{border:0;border-top:var(--bd-hair);margin:clamp(2.5rem,4.5vw,3.5rem) 0 0}
+
+.legal-meta{
+  display:flex;flex-wrap:wrap;gap:0.65rem 0.7rem;
+  margin-top:1.5rem;list-style:none;padding:0;
+}
+.legal-meta li{
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r-pill);
+  box-shadow:-3px 3px 0 var(--c-ink);
+  padding:0.5em 1em;
+}
+.legal-note{
+  margin-top:clamp(2rem,3.5vw,2.75rem);
+  background:var(--c-gold-pale);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.5rem);
+  font-size:var(--step--1);line-height:1.55;
+}
+.legal-note b{display:block;margin-bottom:0.35rem;
+  font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase}
+
+@media (max-width:64rem){
+  .hero-grid{grid-template-columns:1fr}
+  .legal-grid{grid-template-columns:1fr}
+  .toc{position:static}
+  .toc ol{grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));gap:0 1rem}
+}
+@media (max-width:48rem){
+  .hero--page h1{font-size:var(--step-3);max-width:none}
+  .cactus--seam{display:none}
+  /* at 320px the sun crossed the legal pages' H1: removed, as on the home page */
+  .hero--legal .sun{display:none}
+  .faq summary{font-size:var(--step-0)}
+  .slab{font-size:var(--step-1)}
+}
+
+/* ---- service page steps: the number is the only visible numbering,
+        so it's solid and in the flow, not a watermark like on the home page ---- */
+.steps .step{align-content:start}
+.steps .step-num{
+  position:static;
+  font-size:clamp(2.4rem,4vw,3.3rem);
+  line-height:0.95;
+  color:var(--c-orange-deep);
+  margin-bottom:0.15rem;
+}
+
+/* ---- contact card at the end of the legal text ---- */
+.contact-card{
+  margin-top:1.25rem;
+  background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:var(--sh-x) var(--sh-y) 0 var(--c-ink);
+  padding:clamp(1.1rem,2vw,1.6rem);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));
+  gap:1.1rem clamp(1.25rem,2.5vw,2rem);
+}
+.contact-card span{
+  display:block;
+  font-weight:900;font-size:var(--step--2);
+  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
+}
+.contact-card b{display:block;margin-top:0.2rem;font-weight:800;font-size:var(--step-0);line-height:1.35}
+.contact-card a{text-decoration:none;border-bottom:3px solid var(--c-orange)}
+.contact-card a:hover{color:var(--c-orange-deep)}
+
+/* ---- FAQ: owl on the right, cactus on the left. The band gets its own
+        height to hold them without overlapping the accordion ---- */
+.faq-host{position:relative;overflow:hidden;padding-bottom:clamp(6.5rem,12vw,10.5rem)}
+.faq-host > .shell{position:relative;z-index:1}
+.faq-owl{
+  position:absolute;z-index:0;pointer-events:none;
+  right:clamp(1.25rem,6vw,6rem);
+  bottom:0;
+  width:clamp(8rem,13vw,12rem);height:auto;
+  filter:drop-shadow(-5px 5px 0 var(--c-ink));
+}
+.faq-cactus{
+  position:absolute;z-index:0;pointer-events:none;
+  left:clamp(-2.25rem,-4vw,-1rem);
+  bottom:0;
+  height:clamp(9rem,15vw,13.5rem);
+}
+@media (max-width:48rem){
+  .faq-host{padding-bottom:clamp(4.5rem,11vw,6.5rem)}
+  .faq-owl{width:clamp(5.5rem,17vw,7rem);right:0.85rem;bottom:0}
+  .faq-cactus{height:clamp(6.5rem,19vw,8.5rem);left:-1.25rem}
+}
 </style>
 <!-- Feedbucket: visual feedback collection on staging.
      Remove before going to production. -->
@@ -1033,7 +1329,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="shell">
-    <a class="brand" href="#home" aria-label="Exclusive Pest Solutions, home">
+    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, home">
       <picture>
         <source media="(max-width: 48rem)" srcset="build-assets/logo-word-dark.webp" type="image/webp">
         <source srcset="build-assets/logo-word.webp" type="image/webp">
@@ -1044,7 +1340,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
     <nav class="nav-links" id="nav-links" aria-label="Main">
-      <a href="#home" aria-current="page">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <div class="nav-sub-wrap">
         <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-sub">
@@ -1063,46 +1359,35 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.4 21 7l-9 4.6L3 7l9-4.6Z"/><path d="M3 12.2l9 4.6 9-4.6"/><path d="M3 17.2l9 4.6 9-4.6"/></svg><span>General Pest Control</span></a>
         </div>
       </div>
-      <a href="#process">Process</a>
-      <a href="#reviews">Reviews</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn" href="#contact">Sign me up!</a>
   </div>
 </header>
-
 <!-- ===================== HERO ===================== -->
-<section class="hero" id="home">
-  <svg class="sun" viewBox="0 0 200 200" aria-hidden="true">
-    <g fill="none" stroke="#2d1c10" stroke-width="5" stroke-linecap="round">
-      <path d="M100 8 V30"/><path d="M100 170 V192"/>
-      <path d="M8 100 H30"/><path d="M170 100 H192"/>
-      <path d="M35 35 L50 50"/><path d="M150 150 L165 165"/>
-      <path d="M165 35 L150 50"/><path d="M50 150 L35 165"/>
-    </g>
-    <circle cx="100" cy="100" r="58" fill="#ffbf40" stroke="#2d1c10" stroke-width="5"/>
-  </svg>
+<section class="hero hero--page" id="top">
   <div class="shell">
-    <div class="stack reveal" style="--s:1.5rem">
-      <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
-      <h1>The desert stays. <em>The scorpions don't.</em></h1>
-      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home, not a spray-and-go route.</p>
-      <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
-      <div class="hero-actions">
-        <a class="btn btn--lg" href="#contact">Get my custom plan</a>
-        <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
+    <div class="hero-grid">
+      <div class="stack reveal" style="--s:1.35rem">
+        <p style="margin:0"><span class="hero-kick">Bug guide</span></p>
+        <h1>Bark scorpions: know what you're dealing with.</h1>
+        <!-- PLACEHOLDER CONTENT: replace with David's copy -->
+        <p class="prose" style="font-size:var(--step-1);line-height:1.5">The Arizona bark scorpion is the most venomous scorpion in North America and a year-round neighbor in the Phoenix Valley. Here is how they get in, what draws them to your home, and what you can do about it.</p>
+        <div class="hero-actions">
+          <a class="btn btn--lg" href="#q1">Read the guide</a>
+          <a class="btn-link" href="scorpion-control.html">Our Scorpion Control service</a>
+        </div>
+      </div>
+      <div class="stack reveal" style="--d:120ms;--s:1.25rem">
+        <div class="bug-plate">
+          <img src="build-assets/pest-scorpion.svg" alt="Arizona bark scorpion" width="360" height="360">
+        </div>
+        <p style="margin:0"><span class="hero-plate">Most venomous scorpion in North America</span></p>
       </div>
     </div>
   </div>
-  <img class="hero-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
-  <picture class="cactus cactus--hero">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
-  <picture class="cactus cactus--hero-b">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
   <svg class="dunes" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
     <path d="M0 84 C180 30 300 108 480 72 C660 36 760 100 960 62 C1140 28 1290 84 1440 56 V150 H0 Z" fill="#ffbf40"/>
     <path d="M0 108 C200 68 340 126 540 98 C740 70 880 130 1080 92 C1250 62 1350 108 1440 88 V150 H0 Z" fill="#f67c16"/>
@@ -1121,260 +1406,108 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <a class="btn actionbar-cta" href="#contact">Sign me up!</a>
 </div>
 
-<!-- ===================== SERVICES ===================== -->
-<section class="band band--2 pad seam-host" id="services">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag tag--cactus">What we do</span>
-      <h2>Premium pest control, three ways.</h2>
-    </div>
-    <div class="svcs">
-      <article class="svc reveal">
-        <picture>
-          <source srcset="build-assets/service-scorpion-stock.webp" type="image/webp">
-          <img src="build-assets/service-scorpion-stock.jpg" alt="An Arizona bark scorpion on desert gravel, tail raised." width="800" height="600" loading="lazy">
-        </picture>
-        <div class="svc-body">
-          <h3>Scorpion Control</h3>
-          <p>The Arizona bark scorpion, Valley-wide. Our specialty.</p>
-          <a class="btn-link" href="scorpion-control.html">Learn more</a>
-        </div>
-      </article>
-      <article class="svc reveal" style="--d:80ms">
-        <picture>
-          <source srcset="build-assets/service-general-pests.webp" type="image/webp">
-          <img src="build-assets/service-general-pests.jpg" alt="A cricket, a cockroach and a trail of ants on a sunlit Arizona patio slab." width="800" height="600" loading="lazy">
-        </picture>
-        <div class="svc-body">
-          <h3>General Pest Control</h3>
-          <p>Custom plans for ants, roaches, spiders, crickets, and more.</p>
-          <a class="btn-link" href="general-pest-control.html">Learn more</a>
-        </div>
-      </article>
-      <article class="svc reveal" style="--d:160ms">
-        <picture>
-          <source srcset="build-assets/service-mosquito.webp" type="image/webp">
-          <img src="build-assets/service-mosquito.jpg" alt="An In2Care mosquito trap station set on desert gravel beside a prickly pear and a flowering shrub." width="800" height="600" loading="lazy">
-        </picture>
-        <div class="svc-body">
-          <h3>Eco-Friendly Mosquito Control</h3>
-          <p>Larvicide trap stations that cut Arizona mosquitoes off at the source.</p>
-          <a class="btn-link" href="general-pest-control.html">Learn more</a>
-        </div>
-      </article>
-    </div>
-  </div>
-  <picture class="cactus cactus--seam">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
-</section>
-
-<!-- ===================== PROCESS ===================== -->
-<section class="band pad proc" id="process">
-  <div class="shell proc-grid">
-    <figure class="proc-portrait reveal">
-      <picture>
-        <source srcset="build-assets/owner-tall.webp" type="image/webp">
-        <img src="build-assets/owner-tall.png"
-             alt="David Kiser, founder and licensed QA applicator, in an Exclusive Pest Solutions cap and shirt."
-             width="760" height="1116" loading="lazy">
-      </picture>
-    </figure>
-    <div class="proc-body">
-      <div class="section-head reveal">
-        <span class="tag tag--cactus">How it works</span>
-        <h2>Four steps, no guesswork.</h2>
-      </div>
-      <div class="prose reveal" style="margin-top:1.25rem">
-        <p>Every Exclusive treatment starts with what most companies skip: a real evaluation. Then we engineer a plan around what we find, not what we sell.</p>
-      </div>
-      <ol class="steps steps--stack">
-        <li class="step reveal"><span class="step-num" aria-hidden="true">01</span><div><h4>Inspection</h4><p>We walk your property and find how they're getting in.</p></div></li>
-        <li class="step reveal" style="--d:70ms"><span class="step-num" aria-hidden="true">02</span><div><h4>Custom Plan</h4><p>You get a plan built from what we found, not a package.</p></div></li>
-        <li class="step reveal" style="--d:140ms"><span class="step-num" aria-hidden="true">03</span><div><h4>Treatment</h4><p>We treat with your kids, dogs and garden in mind.</p></div></li>
-        <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><div><h4>Prevention</h4><p>We come back, watch it, and seal what opens up.</p></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== WHY US ===================== -->
-<section class="band band--2 pad">
-  <div class="shell split split--flip">
-    <div class="stack reveal" style="--s:1.4rem">
+<!-- ===================== QUESTION 1 ===================== -->
+<section class="band band--2 pad" id="q1">
+  <div class="shell split">
+    <div class="stack reveal" style="--s:1.35rem">
       <div>
-        <span class="tag">Slow on purpose</span>
-        <h2 style="font-size:var(--step-3)">Slower work. Results that last.</h2>
+        <span class="tag tag--cactus">Entry points</span>
+        <h2 style="font-size:var(--step-3)">How do they get in?</h2>
       </div>
+      <!-- PLACEHOLDER CONTENT: replace with David's answer -->
       <div class="prose">
-        <p>We charge a premium because we're responsible with the products. That means slower, more methodical work, and dramatically better, longer-lasting results.</p>
+        <p>They slip through gaps you would never notice. Bark scorpions can flatten themselves to fit through openings about the thickness of a credit card, so gaps under doors, weep holes in block walls, and openings around pipes and vents are all easy ways inside.</p>
       </div>
+    </div>
+    <div class="split-media reveal" style="--d:120ms">
       <div class="blk">
-        <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Bespoke Treatments</h3>
-        <p style="color:var(--fg-muted);font-size:var(--step--1);margin:0">We assess every property's unique entry points and pest profile before applying a single product.</p>
+        <h3 style="font-size:var(--step-1);margin-bottom:0.3rem">Watch for</h3>
+        <ul class="ticks">
+          <li>Gaps under exterior and garage doors</li>
+          <li>Weep holes and cracks in block walls</li>
+          <li>Openings around plumbing, vents and utility lines</li>
+          <li>Worn or missing window screens</li>
+        </ul>
       </div>
-      <div class="blk blk--orange">
-        <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Document &amp; Report</h3>
-        <p style="font-size:var(--step--1);margin:0">We take the time to document our findings and provide images and suggestions to help keep your home pest free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUESTION 2 ===================== -->
+<section class="band pad" id="q2">
+  <div class="shell split split--flip">
+    <div class="stack reveal" style="--s:1.35rem">
+      <div>
+        <span class="tag tag--orange">What draws them</span>
+        <h2 style="font-size:var(--step-3)">What attracts them to the yard/home?</h2>
+      </div>
+      <!-- PLACEHOLDER CONTENT: replace with David's answer -->
+      <div class="prose">
+        <p>Food, water and shelter. Scorpions hunt the insects that gather around your home, look for moisture, and hide during the day under rocks, wood piles, landscaping and clutter.</p>
       </div>
     </div>
-    <div class="split-media stack reveal" style="--d:120ms;--s:1.75rem">
-      <div class="shot">
-        <picture>
-          <source srcset="build-assets/why-us-main.webp" type="image/webp">
-          <img src="build-assets/why-us-main.jpg"
-             alt="Exclusive Pest Solutions truck with the great horned owl livery."
-             width="900" height="1200" loading="lazy">
-        </picture>
+    <div class="split-media reveal" style="--d:120ms">
+      <div class="blk blk--gold">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.3rem">Watch for</h3>
+        <ul class="ticks">
+          <li>Other insects, their main food source</li>
+          <li>Irrigation, leaks and standing moisture</li>
+          <li>Rock, wood and debris piles</li>
+          <li>Dense ground cover next to the house</li>
+        </ul>
       </div>
-      <figure class="blk blk--gold" style="margin:0">
-        <blockquote style="margin:0 0 1rem;font-size:var(--step-1);line-height:1.4;font-weight:500">"I don't do cookie-cutter spraying. Slow, expert work, that's the standard."</blockquote>
-        <figcaption style="display:flex;gap:0.8rem;align-items:center;border-top:var(--bd-hair);padding-top:0.9rem">
-          <img src="build-assets/david-avatar.jpg" alt="David Kiser" width="48" height="48" loading="lazy" style="width:3rem;border:var(--bd-hair);border-radius:var(--r-pill)">
-          <span style="font-weight:900;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.04em">David Kiser, Founder, Licensed QA Applicator</span>
-        </figcaption>
-      </figure>
     </div>
   </div>
 </section>
 
-<!-- ===================== STANDARDS ===================== -->
-<section class="band pad">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag tag--orange">House rules</span>
-      <h2>Six rules for your house.</h2>
+<!-- ===================== QUESTION 3 ===================== -->
+<section class="band band--paper pad" id="q3">
+  <div class="shell split">
+    <div class="stack reveal" style="--s:1.35rem">
+      <div>
+        <span class="tag">Prevention tips</span>
+        <h2 style="font-size:var(--step-3)">What can I do as the homeowner to keep them out?</h2>
+      </div>
+      <!-- PLACEHOLDER CONTENT: replace with David's answer -->
+      <div class="prose">
+        <p>Make your home harder to enter and less inviting. Sealing entry points, reducing clutter and cutting back on the insects scorpions feed on all lower the chance of an encounter.</p>
+      </div>
     </div>
-    <ul class="rules">
-      <li class="rule reveal">Raptor-safe rodenticides only.</li>
-      <li class="rule reveal" style="--d:60ms">Traps before chemicals.</li>
-      <li class="rule reveal" style="--d:120ms">Your toys and bowls moved first.</li>
-      <li class="rule reveal" style="--d:180ms">Low-odor around your garden.</li>
-      <li class="rule reveal" style="--d:240ms">Licensed, QA and IPM certified.</li>
-      <li class="rule reveal" style="--d:300ms">Label-compliant, every visit.</li>
-    </ul>
-    <div class="creds reveal">
-      <span class="creds-lbl">Certified, Licensed, and Accountable. Always.</span>
-      <span class="cred cred--gold">AZ Dept. of Ag #10150</span>
-      <span class="cred">Licensed &amp; Insured</span>
-      <span class="cred">IPM Certified</span>
-      <span class="cred cred--cactus">Pet &amp; Garden Friendly</span>
-      <span class="cred">Label-Compliant</span>
-      <span class="cred">Wildlife-Conscious</span>
+    <div class="split-media reveal" style="--d:120ms">
+      <div class="blk">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.3rem">Your checklist</h3>
+        <ul class="ticks ticks--cactus">
+          <li>Install door sweeps and weatherstripping</li>
+          <li>Seal cracks and gaps around pipes and walls</li>
+          <li>Keep wood, rocks and clutter away from the foundation</li>
+          <li>Shake out shoes, bedding and towels before use</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PESTS ===================== -->
-<section class="band band--paper pad">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag">Who we're after</span>
-      <h2>The pests that define Arizona living</h2>
+<!-- ===================== SERVICE ===================== -->
+<section class="band band--2 pad">
+  <div class="shell bug-next reveal">
+    <div>
+      <span class="tag">Want them gone for good?</span>
+      <h2 style="font-size:var(--step-3)">Prevention helps. A plan built for your home finishes the job.</h2>
     </div>
-    <div class="pests">
-      <article class="pest pest--hero reveal">
-        <img src="build-assets/pest-scorpion.svg" alt="Arizona bark scorpion" width="360" height="360" loading="lazy">
-        <h3><a class="pest-link" href="bark-scorpions.html">Bark Scorpions</a></h3>
-        <p class="pest-line">The one you actually called about.</p>
-        <span class="pest-tag">Our specialty</span>
-      </article>
-      <article class="pest reveal" style="--d:70ms">
-        <img src="build-assets/pest-cockroach.svg" alt="Cockroach" width="360" height="360" loading="lazy">
-        <h3><a class="pest-link" href="cockroaches.html">Cockroaches</a></h3>
-        <p class="pest-line">Drains, voids, and under the sink.</p>
-      </article>
-      <article class="pest reveal" style="--d:140ms">
-        <img src="build-assets/pest-widow.svg" alt="Black widow spider" width="360" height="360" loading="lazy">
-        <h3><a class="pest-link" href="black-widows.html">Black Widows</a></h3>
-        <p class="pest-line">Garage corners and block walls.</p>
-      </article>
-      <article class="pest reveal" style="--d:210ms">
-        <img src="build-assets/pest-ant.svg" alt="Ant" width="360" height="360" loading="lazy">
-        <h3><a class="pest-link" href="ants.html">Ants</a></h3>
-        <p class="pest-line">One trail, a thousand followers.</p>
-      </article>
-    </div>
-    <p class="pests-note reveal">Plus crickets, silverfish, bees, wasps, earwigs, and the full range of desert pests.</p>
+    <a class="btn btn--lg" href="scorpion-control.html">See Scorpion Control</a>
   </div>
 </section>
-
-<!-- ===================== REVIEWS ===================== -->
-<section class="pad" id="reviews">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag">In their words</span>
-      <h2>What your neighbors say.</h2>
-    </div>
-    <div class="reviews">
-      <a class="review review--sm reveal" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"We tried multiple different pest companies trying to get rid of our scorpion problem. These guys do &quot;scorpion dusting&quot; and we have not had a problem since they've been treating our house and yard. Highly recommend!!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Brittany Holm <em>Google review</em></div>
-      </a>
-      <a class="review reveal" style="--d:70ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"On time. Prices fair. Pet and kid friendly product. Very thorough. Pays attention to detail. I will have him back anytime."</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Debra Wallace <em>Google review</em></div>
-      </a>
-      <a class="review reveal" style="--d:140ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"The service was thorough, effective and affordable. David was punctual and polite. 10/10 would definitely recommend to anyone with pest needs."</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Johan <em>Google review</em></div>
-      </a>
-      <a class="review reveal" style="--d:210ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"Super great service, fast and went the extra step to get rid of an ant hole we didn't know about. 10/10 service and communication!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Leslie Villa <em>Google review</em></div>
-      </a>
-      <a class="review reveal" style="--d:280ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"David was referred to me from a friend, I highly recommend his services as he is honest, thorough and considerate!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Sydney Miller <em>Google review</em></div>
-      </a>
-      <a class="review reveal" style="--d:350ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"David is super knowledgeable and informative and passionate about what he does! Highly recommend!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Kori Brede <em>Google review</em></div>
-      </a>
-      <a class="review review--sm reveal" style="--d:420ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"Ive used EPS for a while now after a bad scorpion problem. They were in my house, one climbed up my arm in the backyard, I'd HAD it. These guys have completely erradicated the issue to the point where I see zero pests and more importantly, just dead scorpions. They're my go to for the future!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> M Brandon <em>Google review</em></div>
-      </a>
-      <a class="review review--sm reveal" style="--d:490ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
-        <blockquote>"If you're having issues with pests and are trying to find the right company, look no further! I have had Exclusive Pest Solutions out many times to take care of all sorts of critters that show face around my home, and will continue to do so. Their services work phenomenally and are very well priced! Do not hesitate to reach out, EPS will take care of you!"</blockquote>
-        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Ben Kocarnik <em>Google review</em></div>
-      </a>
-    </div>
-    <p class="reviews-more reveal">
-      <a class="btn btn--gold" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">More reviews on Google</a>
-    </p>
-  </div>
-</section>
-
-<!-- ===================== TRUCK BAND ===================== -->
-<div class="truckband">
-  <img class="truckband-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" loading="lazy" aria-hidden="true">
-  <picture class="cactus cactus--ridge" style="left:clamp(1.5rem,9vw,11rem)">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
-  <picture class="cactus cactus--ridge-b" style="left:clamp(7rem,20vw,24rem)">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
-  <svg class="truckband-dunes" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-    <path d="M0 118 C200 92 360 140 560 122 C760 104 900 146 1100 126 C1260 110 1360 138 1440 124 V150 H0 Z" fill="#ffbf40"/>
-    <path d="M0 146 C240 128 420 166 660 150 C900 134 1080 170 1440 148 V150 H0 Z" fill="#f67c16"/>
-    <path d="M0 172 C300 160 520 186 820 174 C1100 163 1250 184 1440 170 V150 H0 Z" fill="#2d1c10"/>
-  </svg>
-</div>
 
 <!-- ===================== CTA ===================== -->
 <section class="cta pad" id="contact">
   <div class="shell cta-grid">
     <div class="stack reveal" style="--s:1.4rem">
       <div>
-        <span class="tag tag--paper">Get Started</span>
-        <h2>Get your custom plan</h2>
+        <span class="tag tag--paper">Ready to start</span>
+        <h2>Seeing bark scorpions? Let's talk.</h2>
       </div>
-      <div class="prose" style="max-width:50ch">
-        <p>Tell us what you're seeing. We'll inspect, then engineer the plan around what we find.</p>
+      <div class="prose" style="max-width:52ch">
+        <p>Every evaluation is on-site, no obligation, and tailored to the species invading your home.</p>
       </div>
       <div class="hero-actions">
         <a class="btn btn--lg btn--paper" href="tel:+16026006746">Call (602) 600-6746</a>
@@ -1412,10 +1545,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div>
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Our Process</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Our Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -1424,9 +1557,9 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <ul>
         <li><a href="scorpion-control.html">Scorpion Control</a></li>
         <li><a href="general-pest-control.html">General Pest Control</a></li>
-        <li><a href="general-pest-control.html">Garden-Friendly Treatments</a></li>
-        <li><a href="general-pest-control.html">Wildlife-Conscious Solutions</a></li>
-        <li><a href="general-pest-control.html">IPM Programs</a></li>
+        <li><a href="ant-control.html">Ant Control</a></li>
+        <li><a href="general-pest-control.html#safe">Garden-Friendly Treatments</a></li>
+        <li><a href="general-pest-control.html#method">IPM Programs</a></li>
       </ul>
     </div>
     <div>
@@ -1518,6 +1651,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   });
 })();
 </script>
+
 <!-- OLLY-FORM:HTML:START -->
 <dialog class="olly-dialog" id="olly-dialog" aria-labelledby="olly-title">
   <img class="olly-dialog-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
@@ -1621,5 +1755,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
   });
 })();
 </script>
+
 </body>
 </html>

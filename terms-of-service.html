@@ -249,8 +249,8 @@ section{position:relative}
 }
 .truckband-dunes{display:block;width:100%;height:auto;margin-bottom:-1px}
 .cactus img{height:100%;width:auto;display:block}
-/* el buho reemplaza al carro: mismo idioma visual que el del hero,
-   sombra plana en vez de la sombra fotografica que llevaba el camion */
+/* the owl replaces the truck: same visual language as the hero owl,
+   a flat shadow instead of the truck's photographic shadow */
 .truckband-owl{
   position:absolute;z-index:1;
   right:clamp(2rem,10vw,12rem);
@@ -259,21 +259,21 @@ section{position:relative}
   filter:drop-shadow(-5px 5px 0 var(--c-ink));
 }
 
-/* ---- CACTUS: acento de paisaje ---- */
+/* ---- CACTUS: landscape accent ---- */
 .cactus{
   position:absolute;z-index:0;pointer-events:none;
   width:auto;height:auto;
 }
-/* a caballo sobre la costura entre bandas: la base se apoya en el borde */
+/* straddles the seam between bands: the base rests on the border */
 .cactus--seam{
   right:clamp(-3.5rem,-5vw,-2rem);
   bottom:0;
   height:clamp(11rem,19vw,17.5rem);
 }
-/* el contenido va por encima, el cactus queda detrás */
+/* content sits on top, the cactus stays behind */
 .seam-host{position:relative;overflow:hidden}
 .seam-host > .shell{position:relative;z-index:1}
-/* en la banda de la camioneta se apoyan en la cresta dorada */
+/* in the truck band they rest on the gold ridge */
 .cactus--ridge{
   bottom:clamp(0.55rem,1.4vw,1.4rem);
   height:clamp(8rem,15vw,14rem);
@@ -282,7 +282,7 @@ section{position:relative}
   bottom:clamp(0.5rem,1.3vw,1.3rem);
   height:clamp(5.5rem,10vw,9.5rem);
 }
-/* en el hero se apoyan en la cresta de la duna, a la misma altura que el búho */
+/* in the hero they rest on the dune ridge, level with the owl */
 .cactus--hero{
   right:clamp(6rem,17vw,20rem);
   bottom:clamp(3rem,5.9vw,6.1rem);
@@ -301,7 +301,7 @@ section{position:relative}
   top:2rem;right:-2.5rem;
 }
 .dunes{display:block;width:100%;height:auto;margin-bottom:-1px}
-/* ---- PROCESS: retrato a sangre + pasos en columna ---- */
+/* ---- PROCESS: full-bleed portrait + stacked steps ---- */
 .proc{overflow:hidden}
 .proc-grid{
   display:grid;
@@ -312,7 +312,7 @@ section{position:relative}
 .proc-portrait{margin:0;align-self:end}
 .proc-portrait img{
   width:min(100%,32rem);
-  /* anula el padding inferior de .pad para que el corte coincida con el borde */
+  /* cancels .pad's bottom padding so the cut lines up with the border */
   margin-bottom:calc(-1 * clamp(3.25rem,6.5vw,6.5rem));
   filter:drop-shadow(0 8px 14px color-mix(in oklab, var(--c-ink) 20%, transparent));
 }
@@ -333,7 +333,7 @@ section{position:relative}
 .steps.steps--stack .step-num{
   position:static;
   font-size:clamp(2.1rem,3.4vw,2.9rem);
-  /* el naranja claro daba 2.34 sobre papel en texto grande: se usa el profundo */
+  /* light orange measured 2.34 on paper for large text: the deep orange is used */
   color:var(--c-orange-deep);
   line-height:0.9;
 }
@@ -365,17 +365,17 @@ section{position:relative}
 .nav-links a{text-decoration:none;padding:0.35em 0;border-bottom:3px solid transparent}
 .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
 
-/* ---- 4.9 de Google en el hero (aparece solo en móvil) ---- */
+/* ---- Google 4.9 in the hero (shown on mobile only) ---- */
 .hero-rating{
   display:none;
   margin:0;font-weight:800;font-size:var(--step--1);
   color:var(--fg-muted);
 }
 
-/* ---- BARRA DE ACCIÓN FIJA (solo móvil) ---- */
+/* ---- STICKY ACTION BAR (mobile only) ---- */
 .actionbar{display:none}
 
-/* ---- HAMBURGUESA (solo móvil) ---- */
+/* ---- HAMBURGER (mobile only) ---- */
 .nav-toggle{
   display:none;
   align-items:center;justify-content:center;
@@ -422,9 +422,9 @@ section{position:relative}
   will-change:translate, rotate;
 }
 
-/* ---- SCROLL-DRIVEN: el búho se rezaga y se ladea al pasar el hero ----
-   CSS puro, sin JS. Progressive enhancement: si el navegador no soporta
-   animation-timeline, el búho simplemente se queda quieto. ---- */
+/* ---- SCROLL-DRIVEN: the owl lags and tilts as the hero scrolls past ----
+   Pure CSS, no JS. Progressive enhancement: if the browser doesn't support
+   animation-timeline, the owl simply stays still. ---- */
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     .hero-owl{
@@ -530,8 +530,8 @@ section{position:relative}
            text-transform:uppercase;letter-spacing:0.05em;color:var(--fg-muted)}
 .stat:nth-child(1){background:var(--c-gold)}
 .stat:nth-child(2){background:var(--c-cactus)}
-/* sobre dorado y cactus el naranja profundo y el gris de etiqueta no llegan a
-   AA (2.82, 4.49 y 3.10 medidos): sobre esos dos fondos todo va en tinta */
+/* on gold and cactus, the deep orange and the label gray miss AA
+   (2.82, 4.49 and 3.10 measured): on those two backgrounds everything is ink */
 .stat:nth-child(1) b,.stat:nth-child(2) b{color:var(--c-ink)}
 .stat:nth-child(1) span,.stat:nth-child(2) span{color:var(--c-ink)}
 .stat:nth-child(3){background:var(--c-gold-pale)}
@@ -642,6 +642,7 @@ section{position:relative}
 .foot-news input::placeholder{color:var(--fg-muted)}
 .foot-legal{
   border-top:1.5px solid color-mix(in oklab, var(--c-sky) 22%, transparent);
+  margin-top:clamp(2rem,4vw,3rem); /* same air as the divider above .foot-grid */
   padding-block:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;
   font-size:var(--step--1);color:color-mix(in oklab, var(--c-sky) 72%, transparent);
 }
@@ -674,19 +675,19 @@ section{position:relative}
   .hero h1{max-width:none}
   .creds-lbl{margin-right:0;width:100%}
 
-  /* --- cabecera: de 4 filas a 2 --- */
+  /* --- header: from 4 rows down to 2 --- */
   .util .shell{padding-block:0.45rem}
-  .util-hours{display:none}            /* el horario ya está en el CTA y el footer */
+  .util-hours{display:none}            /* the hours already appear in the CTA and the footer */
   .util-right{margin-left:auto;width:auto}
   .nav .shell{flex-wrap:wrap;padding-block:0.6rem;gap:0.5rem 0.6rem}
   .nav .btn{font-size:var(--step--1);padding:0.6em 0.9em;min-height:0}
   .nav-toggle{display:inline-flex}
 
-  /* la barra superior se queda sin contenido propio: el 4.9 pasa al hero
-     y el teléfono a la barra de acción */
+  /* the top bar has nothing left of its own: the 4.9 moves to the hero
+     and the phone moves to the action bar */
   .util{display:none}
   .hero-rating{display:block}
-  /* el CTA sale del nav: vive en la barra de acción */
+  /* the CTA leaves the nav: it lives in the action bar */
   .nav > .shell > .btn{display:none}
 
   .actionbar{
@@ -711,7 +712,7 @@ section{position:relative}
     font-size:var(--step--1);padding:0.7em 0.8em;
     white-space:nowrap;
   }
-  /* que la barra no tape el final de la página */
+  /* keep the bar from covering the end of the page */
   body{padding-bottom:calc(5.2rem + env(safe-area-inset-bottom,0px))}
   .nav-links{
     order:3;width:100%;margin-left:0;
@@ -724,16 +725,16 @@ section{position:relative}
   }
   .nav-links a:first-child{border-top:var(--bd-hair)}
   .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-ink)}
-  /* con JS los enlaces arrancan plegados; sin JS quedan visibles */
+  /* with JS the links start collapsed; without JS they stay visible */
   .js .nav-links{display:none}
   .js .nav[data-open="true"] .nav-links{display:flex}
 
-  /* --- escenografía: el sol chocaba con el H1; los cactus con el búho --- */
+  /* --- scenery: the sun collided with the H1, the cacti with the owl --- */
   .sun{display:none}
   .cactus--hero-b,.cactus--ridge-b{display:none}
-  /* banda propia para los adornos: sin esto el cactus quedaba pegado al botón */
+  /* a band of its own for the ornaments: without it the cactus sat right against the button */
   .hero .shell{padding-bottom:6.5rem}
-  /* la cresta dorada está a ~21% del alto de la duna desde abajo; 0.5rem los apoya */
+  /* the gold ridge sits ~21% of the dune height from the bottom; 0.5rem rests them on it */
   .hero-owl{width:5.6rem;right:1.25rem;bottom:1.3rem}
   .cactus--hero{height:5.2rem;right:11.5rem;bottom:1.3rem}
   .truckband{padding-top:2.5rem}
@@ -741,7 +742,7 @@ section{position:relative}
   .cactus--ridge{height:4.75rem;left:0.9rem;bottom:0.45rem}
 }
 
-/* --- pantallas estrechas: el cactus del hero se cruzaba sobre el telefono --- */
+/* --- narrow screens: the hero cactus crossed over the phone link --- */
 @media (max-width:23rem){
   .cactus--hero{display:none}
   .hero-owl{width:4.75rem;right:0.75rem;bottom:1.2rem}
@@ -760,7 +761,7 @@ section{position:relative}
 }
 
 /* =========================================================
-   NAV, submenú de Services
+   NAV, Services submenu
    ========================================================= */
 .nav-sub-wrap{position:relative;display:flex;align-items:center}
 .nav-sub-toggle{
@@ -800,12 +801,12 @@ section{position:relative}
 .nav-sub a[aria-current]{background:var(--c-gold)}
 .nav-sub a svg{width:1.45rem;height:1.45rem;color:var(--c-orange-deep)}
 .nav-sub a[aria-current] svg{color:var(--c-ink)}
-/* con JS el panel arranca plegado; sin JS queda a la vista y sigue siendo usable */
+/* with JS the panel starts collapsed; without JS it stays visible and usable */
 .js .nav-sub{display:none}
 .js .nav-sub-wrap[data-open="true"] .nav-sub{display:grid}
 
 @media (max-width:48rem){
-  /* en la columna móvil el submenú vive dentro del propio menú */
+  /* in the mobile column the submenu lives inside the menu itself */
   .nav-sub-wrap{width:100%;display:block}
   .nav-sub-toggle{
     width:100%;justify-content:space-between;
@@ -824,7 +825,7 @@ section{position:relative}
 
 /* NAV-SUB:CSS:START */
 /* =========================================================
-   NAV, submenú de Services
+   NAV, Services submenu
    ========================================================= */
 .nav-sub-wrap{position:relative;display:flex;align-items:center}
 .nav-sub-toggle{
@@ -864,17 +865,17 @@ section{position:relative}
 .nav-sub a[aria-current]{background:var(--c-gold)}
 .nav-sub a svg{width:1.45rem;height:1.45rem;color:var(--c-orange-deep)}
 .nav-sub a[aria-current] svg{color:var(--c-ink)}
-/* con JS el panel arranca plegado; sin JS queda a la vista y sigue siendo usable */
+/* with JS the panel starts collapsed; without JS it stays visible and usable */
 .js .nav-sub{display:none}
 .js .nav-sub-wrap[data-open="true"] .nav-sub{display:grid}
 
-/* en escritorio abre con el simple hover, sin necesidad de clic; el clic
-   (mas abajo) se mantiene solo como refuerzo para teclado y pantallas
-   tactiles hibridas, donde :hover no dispara */
+/* on desktop it opens on plain hover, no click needed; the click handler
+   (further down) stays only as a fallback for keyboards and hybrid
+   touch screens, where :hover doesn't fire */
 @media (min-width:48.0625rem){
-  /* puente invisible sobre el hueco entre el boton y el panel: sin esto,
-     el cursor pierde el hover al cruzar ese espacio y el panel se cierra
-     antes de llegar a el */
+  /* invisible bridge over the gap between the button and the panel: without it,
+     the pointer loses hover while crossing that gap and the panel closes
+     before it gets there */
   .nav-sub-wrap::after{
     content:"";position:absolute;left:0;right:0;top:100%;height:0.9rem;
   }
@@ -887,7 +888,7 @@ section{position:relative}
 }
 
 @media (max-width:48rem){
-  /* en la columna móvil el submenú vive dentro del propio menú */
+  /* in the mobile column the submenu lives inside the menu itself */
   .nav-sub-wrap{width:100%;display:block}
   .nav-sub-toggle{
     width:100%;justify-content:space-between;
@@ -907,21 +908,21 @@ section{position:relative}
 
 /* NAV-DARK:CSS:START */
 /* =========================================================
-   HEADER MÓVIL en café de marca: el logo cambia a logo-word-dark
-   (PEST SOLUTIONS en blanco, líneas en verde). En escritorio no cambia.
+   MOBILE HEADER in brand brown: the logo switches to logo-word-dark
+   (PEST SOLUTIONS in white, lines in green). Desktop is unchanged.
    ========================================================= */
 @media (max-width:48rem){
   .nav{--nav-line:color-mix(in oklab, var(--c-sky) 24%, transparent);
        background:var(--c-ink);color:var(--c-sky);border-bottom-color:var(--c-ink)}
-  /* sobre café la sombra en tinta no se ve: los botones del header la llevan en naranja profundo */
+  /* an ink shadow disappears on brown: header buttons use a deep-orange shadow */
   .nav .btn{box-shadow:var(--btn-sh-x) var(--btn-sh-y) 0 var(--c-orange-deep);border-color:var(--c-orange-deep)}
   .nav-toggle{box-shadow:-4px 4px 0 var(--c-orange-deep)}
   .nav-toggle:active{box-shadow:-1px 1px 0 var(--c-orange-deep)}
-  /* el menú desplegado vive sobre el café: líneas finas claras */
+  /* the open menu sits on brown: thin light dividers */
   .nav-links a,.nav-sub-toggle{border-bottom-color:var(--nav-line)}
   .nav-links a:first-child{border-top-color:var(--nav-line)}
   .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
-  /* el naranja profundo no llega sobre café: el estado abierto usa el naranja de marca */
+  /* deep orange lacks contrast on brown: the open state uses the brand orange */
   .nav-sub-toggle[aria-expanded="true"],
   .js .nav-sub-wrap:hover .nav-sub-toggle,
   .js .nav-sub-wrap:focus-within .nav-sub-toggle{color:var(--c-orange)}
@@ -936,9 +937,9 @@ section{position:relative}
 
 /* OLLY-FORM:CSS:START */
 /* =========================================================
-   TELL OLLY , botón del CTA + popup con formulario
+   TELL OLLY , CTA button + form popup
    ========================================================= */
-.olly-open img{width:2.9rem;height:auto;margin:-1rem 0 -0.85rem -1.25rem} /* crece sin agrandar el botón: los márgenes negativos absorben el tamaño extra */
+.olly-open img{width:2.9rem;height:auto;margin:-1rem 0 -0.85rem -1.25rem} /* grows without enlarging the button: negative margins absorb the extra size */
 .olly-note{margin-bottom:0;font-weight:700;font-size:var(--step--1);line-height:1.45;max-width:46ch;color:var(--c-ink)}
 
 html:has(.olly-dialog[open]){overflow:hidden}
@@ -948,7 +949,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   background:var(--c-paper);color:var(--fg);
   border:var(--bd-hard);border-radius:var(--r);
   box-shadow:-8px 8px 0 var(--c-ink);
-  translate:0 2.25rem; /* compensa a Olly, que sobresale por arriba */
+  translate:0 2.25rem; /* offsets Olly, who sticks out above */
 }
 .olly-dialog::backdrop{background:color-mix(in oklab, var(--c-ink) 62%, transparent)}
 .olly-dialog[open]{animation:olly-in 380ms var(--ease-out-expo)}
@@ -1007,15 +1008,15 @@ html:has(.olly-dialog[open]){overflow:hidden}
 
 
 /* =========================================================
-   PAGINAS INTERNAS, componentes compartidos
+   INNER PAGES, shared components
    ========================================================= */
 
-/* ---- hero de subpagina: sin el titular gigante del home ---- */
+/* ---- subpage hero: without the home page's giant headline ---- */
 .hero--page h1{font-size:var(--step-4);max-width:26ch}
-/* mas aire respecto al nav sticky: antes el H1 arrancaba pegado al borde */
+/* more room below the sticky nav: the H1 used to start flush against the edge */
 .hero--page{margin-top:clamp(1.75rem,4vw,3.25rem)}
 .hero--page .shell{padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem)}
-/* el hero de servicio no lleva sol: solo lo llevan los de texto */
+/* service heroes have no sun: only the text pages do */
 .hero--page .sun{display:none}
 .hero--legal .sun{display:block;top:-3rem;right:-4.5rem;width:clamp(11rem,20vw,19rem)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);
@@ -1029,7 +1030,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   text-transform:uppercase;letter-spacing:0.04em;
 }
 
-/* ---- MIGAS ---- */
+/* ---- BREADCRUMBS ---- */
 .crumbs{border-bottom:var(--bd-hair);background:var(--c-paper)}
 .crumbs ol{
   list-style:none;margin:0;padding-block:0.7rem;
@@ -1042,7 +1043,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .crumbs li+li::before{content:"/";margin-right:0.55rem;color:var(--c-orange-deep)}
 .crumbs [aria-current]{color:var(--fg)}
 
-/* ---- TARJETAS DE FICHA (rasgos, especies, plagas, metodo) ---- */
+/* ---- INFO CARDS (traits, species, pests, method) ---- */
 .cards{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(min(16.5rem,100%),1fr));
   gap:clamp(1.25rem,2.5vw,2rem);margin-top:clamp(2.25rem,4vw,3.25rem);
@@ -1058,8 +1059,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .card h3{font-size:var(--step-1)}
 .card p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
 .card--gold{background:var(--c-gold-pale)}
-/* --c-sky-2 es el fondo de las bandas band--2, asi que ahi la ficha quedaba
-   sin relleno visible: se usa el cielo claro, que contrasta en las dos bandas */
+/* --c-sky-2 is the band--2 background, so the card had no visible fill
+   there: the light sky is used instead, which contrasts on both bands */
 .card--sky{background:var(--c-sky)}
 .card--cactus{background:var(--c-cactus)}
 .card--cactus p,.card--gold p{color:var(--fg)}
@@ -1075,7 +1076,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .card-icon{width:clamp(3.25rem,5vw,4.25rem);aspect-ratio:1;justify-self:start}
 .cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
 
-/* ---- PLACA DE FRASE: una linea que el original usa como remate ---- */
+/* ---- PHRASE PLATE: a one-liner the original uses as a closer ---- */
 .slab{
   margin-top:clamp(2rem,3.5vw,2.75rem);
   background:var(--c-ink);color:var(--c-sky);
@@ -1086,7 +1087,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   font-size:var(--step-2);line-height:1.15;letter-spacing:var(--tr-display);
 }
 
-/* ---- ZONAS DE SERVICIO ---- */
+/* ---- SERVICE AREAS ---- */
 .areas{
   list-style:none;margin:clamp(2rem,3.5vw,2.75rem) 0 0;padding:0;
   display:flex;flex-wrap:wrap;gap:0.65rem 0.7rem;
@@ -1100,7 +1101,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .areas li:nth-child(4n+2){background:var(--c-gold-pale)}
 .areas li:nth-child(6n+5){background:var(--c-sky-2)}
 
-/* ---- FAQ: details nativo, sin JS ---- */
+/* ---- FAQ: native details, no JS ---- */
 .faq{margin-top:clamp(2.25rem,4vw,3.25rem);display:grid;gap:clamp(0.85rem,1.6vw,1.15rem)}
 .faq details{
   background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
@@ -1132,7 +1133,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .faq details[open] .faq-a p{color:var(--fg)}
 
 /* =========================================================
-   PAGINAS LEGALES
+   LEGAL PAGES
    ========================================================= */
 .legal-grid{
   display:grid;grid-template-columns:minmax(0,17rem) minmax(0,1fr);
@@ -1213,14 +1214,14 @@ html:has(.olly-dialog[open]){overflow:hidden}
 @media (max-width:48rem){
   .hero--page h1{font-size:var(--step-3);max-width:none}
   .cactus--seam{display:none}
-  /* a 320px el sol cruzaba el H1 de las legales: fuera, como en el home */
+  /* at 320px the sun crossed the legal pages' H1: removed, as on the home page */
   .hero--legal .sun{display:none}
   .faq summary{font-size:var(--step-0)}
   .slab{font-size:var(--step-1)}
 }
 
-/* ---- pasos de pagina de servicio: el numero es la unica numeracion visible,
-        asi que va solido y en flujo, no como marca de agua del home ---- */
+/* ---- service page steps: the number is the only visible numbering,
+        so it's solid and in the flow, not a watermark like on the home page ---- */
 .steps .step{align-content:start}
 .steps .step-num{
   position:static;
@@ -1230,7 +1231,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   margin-bottom:0.15rem;
 }
 
-/* ---- tarjeta de contacto al pie del texto legal ---- */
+/* ---- contact card at the end of the legal text ---- */
 .contact-card{
   margin-top:1.25rem;
   background:var(--c-paper);border:var(--bd-hard);border-radius:var(--r);
@@ -1248,8 +1249,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .contact-card a{text-decoration:none;border-bottom:3px solid var(--c-orange)}
 .contact-card a:hover{color:var(--c-orange-deep)}
 </style>
-<!-- Feedbucket: recogida de feedback visual sobre el staging.
-     Quitar antes de pasar a producción. -->
+<!-- Feedbucket: visual feedback collection on staging.
+     Remove before going to production. -->
 <script type="text/javascript">
     (function(k) {
         let s=document.createElement('script');s.defer=true;
@@ -1265,7 +1266,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="util-right">
       <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
-      <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
+      <span class="util-hours">Mon to Sat: 7:00 AM to 3:00 PM</span>
       <a class="util-tel" href="tel:+16026006746">(602) 600-6746</a>
     </div>
   </div>
@@ -1274,14 +1275,14 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="shell">
-    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, inicio">
+    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, home">
       <picture>
         <source media="(max-width: 48rem)" srcset="build-assets/logo-word-dark.webp" type="image/webp">
         <source srcset="build-assets/logo-word.webp" type="image/webp">
         <img src="build-assets/logo-word.png" alt="Exclusive Pest Solutions" width="560" height="127">
       </picture>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
     <nav class="nav-links" id="nav-links" aria-label="Main">
@@ -1340,9 +1341,9 @@ html:has(.olly-dialog[open]){overflow:hidden}
   </svg>
 </section>
 
-<!-- ===================== BARRA DE ACCIÓN (solo móvil) ===================== -->
-<div class="actionbar" role="group" aria-label="Acciones rápidas">
-  <a class="actionbar-tel" href="tel:+16026006746" aria-label="Llamar al (602) 600-6746">
+<!-- ===================== ACTION BAR (mobile only) ===================== -->
+<div class="actionbar" role="group" aria-label="Quick actions">
+  <a class="actionbar-tel" href="tel:+16026006746" aria-label="Call (602) 600-6746">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none"
          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/>
@@ -1351,7 +1352,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <a class="btn actionbar-cta" href="#contact">Sign me up!</a>
 </div>
 
-<!-- ===================== TEXTO LEGAL ===================== -->
+<!-- ===================== LEGAL TEXT ===================== -->
 <section class="band band--paper pad">
   <div class="shell legal-grid">
     <nav class="toc reveal" aria-label="On this page">
@@ -1607,7 +1608,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <p class="olly-note">No time for a phone call? Tell Olly, and we'll get back to you ASAP via text.</p>
     </div>
     <div class="cta-facts reveal" style="--d:100ms">
-      <div class="cta-fact"><span>Working hours</span><b>Mon to Sat, 7 AM to 6 PM</b></div>
+      <div class="cta-fact"><span>Working hours</span><b>Mon to Sat, 7 AM to 3 PM</b></div>
       <div class="cta-fact"><span>Sunday</span><b>Emergency service</b></div>
       <div class="cta-fact"><span>AZ Dept. of Ag</span><b>License #10150</b></div>
       <div class="cta-fact"><span>Google rating</span><b>4.9 <span class="stars" aria-hidden="true">★★★★★</span></b></div>
@@ -1649,21 +1650,21 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <li><a href="scorpion-control.html">Scorpion Control</a></li>
         <li><a href="general-pest-control.html">General Pest Control</a></li>
         <li><a href="ant-control.html">Ant Control</a></li>
-        <li><a href="general-pest-control.html#safe">Garden-Safe Treatments</a></li>
+        <li><a href="general-pest-control.html#safe">Garden-Friendly Treatments</a></li>
         <li><a href="general-pest-control.html#method">IPM Programs</a></li>
       </ul>
     </div>
     <div>
       <h3>Working Hours</h3>
       <ul>
-        <li>Monday to Saturday: 7:00 AM to 6:00 PM</li>
+        <li>Monday to Saturday: 7:00 AM to 3:00 PM</li>
         <li>Sunday: Emergency Service Available</li>
       </ul>
     </div>
     <div>
       <h3>Contact</h3>
       <ul>
-        <li>Call Us<br><a href="tel:+16026006746">(602) 600-6746</a></li>
+        <li>Call Us, available 24/7<br><a href="tel:+16026006746">(602) 600-6746</a></li>
         <li>Email Us<br><a href="mailto:hello@exclusivepest.co">hello@exclusivepest.co</a></li>
       </ul>
     </div>
@@ -1677,7 +1678,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 </footer>
 
 <script>
-/* menú móvil: progressive enhancement, sin JS los enlaces quedan a la vista */
+/* mobile menu: progressive enhancement, without JS the links stay visible */
 (function(){
   var nav = document.querySelector('.nav');
   var btn = document.querySelector('.nav-toggle');
@@ -1685,7 +1686,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   function set(open){
     nav.setAttribute('data-open', open ? 'true' : 'false');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   }
   set(false);
   btn.addEventListener('click', function(){
@@ -1716,8 +1717,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
 </script>
 
 <script data-nav-sub="1">
-/* submenú de Services: botón real, teclado incluido. Sin JS el panel
-   queda visible y los enlaces siguen alcanzables */
+/* Services submenu: a real button, keyboard included. Without JS the panel
+   stays visible and the links remain reachable */
 (function(){
   var wrap = document.querySelector('.nav-sub-wrap');
   if (!wrap) return;
@@ -1753,7 +1754,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <span class="tag tag--cactus">Quick request</span>
       <h2 id="olly-title" tabindex="-1" autofocus>Tell Olly what's bugging you.</h2>
       <p>No time for a phone call? Leave Olly a note and we'll get back to you ASAP via text.</p>
-      <!-- data-endpoint: URL que recibe el POST (GorillaDesk u otro). Vacío = modo demo, no envía nada. -->
+      <!-- data-endpoint: URL that receives the POST (GorillaDesk or other). Empty = demo mode, nothing is sent. -->
       <form class="olly-form" data-endpoint="">
         <div class="olly-field">
           <label for="olly-first">First name</label>
@@ -1797,7 +1798,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- OLLY-FORM:HTML:END -->
 
 <script data-olly-form="1">
-/* Tell Olly: popup con formulario. Sin JS el botón abre un SMS al negocio. */
+/* Tell Olly: form popup. Without JS the button opens an SMS to the business. */
 (function(){
   var dlg = document.getElementById('olly-dialog');
   if (!dlg || typeof dlg.showModal !== 'function') return;
@@ -1821,7 +1822,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   dlg.querySelectorAll('[data-olly-close]').forEach(function(b){
     b.addEventListener('click', function(){ dlg.close(); });
   });
-  /* clic en el fondo oscuro cierra */
+  /* clicking the dark backdrop closes it */
   dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
   dlg.addEventListener('close', function(){
     if (!dlg.querySelector('[data-olly-view="done"]').hidden){ form.reset(); show('form'); }
@@ -1834,7 +1835,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     var send = endpoint
       ? fetch(endpoint, { method:'POST', body:new FormData(form), headers:{ Accept:'application/json' } })
           .then(function(r){ if (!r.ok) throw new Error(r.status); })
-      : (console.warn('Tell Olly: sin data-endpoint, el formulario no envía datos (modo demo).'), Promise.resolve());
+      : (console.warn('Tell Olly: no data-endpoint set, the form does not send data (demo mode).'), Promise.resolve());
     send.then(function(){
       show('done');
       dlg.querySelector('[data-olly-view="done"] h2').focus();

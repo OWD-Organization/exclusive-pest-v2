@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Genera las dos paginas legales leyendo el contenido del scrape, para que el
-texto sea literal. Solo se cambia el envoltorio por el sistema neobrutalista."""
+"""Builds the two legal pages from the scraped content, so the text stays
+verbatim. Only the wrapper changes to the neobrutalist system."""
 import os, re, sys, html as H
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import chrome as C
@@ -9,26 +9,26 @@ from services import INNER, page as _page
 ROOT = C.ROOT
 
 def parse(src):
-    """Devuelve (toc, bloques). toc: [(id, etiqueta)]. bloques: [(tipo, contenido)]."""
+    """Returns (toc, blocks). toc: [(id, label)]. blocks: [(type, content)]."""
     s = open(os.path.join(ROOT, "scrape", "html", src), encoding="utf-8").read()
     s = re.sub(r"<(script|style|svg)\b[^>]*>.*?</\1>", "", s, flags=re.S)
     s = re.sub(r"<!--.*?-->", "", s, flags=re.S)
 
-    # el contador de la lista pone el numero, asi que se quita del texto
+    # the list counter adds the number, so it's stripped from the text
     toc = [(m.group(1),
             re.sub(r"^\d+\.\s*", "",
                    " ".join(H.unescape(re.sub(r"<[^>]+>", "", m.group(2))).split())))
            for m in re.finditer(r'<a href="#([^"]+)" class="toc-link">(.*?)</a>', s, re.S)]
 
-    # el cuerpo empieza en la primera h2 con id y termina antes del footer
+    # the body starts at the first h2 with an id and ends before the footer
     i = s.index('<h2 id="')
     j = s.rfind("<footer")
     body = s[i:j if j > i else len(s)]
 
-    # el bloque de contacto son <a> y <p> sueltos dentro de divs, no los captura
-    # el barrido general: se extrae aparte para no perder telefono ni correo
+    # the contact block is loose <a> and <p> inside divs that the general sweep
+    # misses: it's extracted separately so the phone and email aren't lost
     contact = []
-    ci = body.rfind('<h2 id="contact"')   # el parrafo de entrada no es igual en las dos
+    ci = body.rfind('<h2 id="contact"')   # the intro paragraph differs between the two
     if ci > 0:
         seg = body[ci:]
         for m in re.finditer(r'<p class="text-xs[^"]*"[^>]*>(.*?)</p>\s*(?:<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>|<p[^>]*>(.*?)</p>)',
@@ -49,7 +49,7 @@ def parse(src):
             if items:
                 blocks.append(("ul", items))
             continue
-        # conservar <strong>/<b>/<a> como marcado utilizable
+        # keep <strong>/<b>/<a> as usable markup
         t = re.sub(r"</?(strong|b)>", lambda x: "<b>" if not x.group(0).startswith("</") else "</b>", inner)
         t = re.sub(r'<a\s+href="(mailto:[^"]+|tel:[^"]+|https?://[^"]+)"[^>]*>(.*?)</a>',
                    r'<a href="\1">\2</a>', t, flags=re.S)
@@ -60,8 +60,8 @@ def parse(src):
         if contact and tag == "p" and t in [c[0] for c in contact] + [c[1] for c in contact]:
             continue
         hid = re.search(r'id="([^"]+)"', attrs)
-        # los ids del original chocan con los del cromo (por ejemplo #contact
-        # es tambien el CTA), asi que se prefijan
+        # the original's ids collide with the chrome's (e.g. #contact is also
+        # the CTA), so they get a prefix
         hid = "sec-" + hid.group(1) if hid else None
         blocks.append((tag, (hid, t)))
     if contact:
@@ -112,7 +112,7 @@ def build(src, fn, title, meta_desc, h1, kick, intro, dates, note, crumb):
   </div>
 {C.DUNES}</section>
 {C.ACTIONBAR}
-<!-- ===================== TEXTO LEGAL ===================== -->
+<!-- ===================== LEGAL TEXT ===================== -->
 <section class="band band--paper pad">
   <div class="shell legal-grid">
     <nav class="toc reveal" aria-label="On this page">

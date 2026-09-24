@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Cromo compartido por todas las paginas: head, barra de utilidad, nav,
-barra de accion movil, CTA y footer. Una sola fuente para los 6 archivos."""
+"""Chrome shared by every page: head, utility bar, nav, mobile action bar,
+CTA and footer. A single source for all 6 files."""
 import re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -9,8 +9,8 @@ TELD  = "(602) 600-6746"
 MAIL  = "hello@exclusivepest.co"
 
 def head(title, desc, extra_css=""):
-    """Reutiliza literalmente la hoja de estilos del home y le anade la de
-    paginas internas, para que el sistema no pueda divergir."""
+    """Reuses the home page's stylesheet verbatim and appends the inner-page
+    one, so the system can't drift apart."""
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     h = src[:src.index("</head>")]
     h = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", h, count=1, flags=re.S)
@@ -18,7 +18,7 @@ def head(title, desc, extra_css=""):
                lambda m: m.group(1) + desc + m.group(2), h, count=1)
     h = h.replace('EXCLUSIVE PEST SOLUTIONS , about page', 'EXCLUSIVE PEST SOLUTIONS')
     h = h.replace('EXCLUSIVE PEST SOLUTIONS , home, v2 "desert daylight"',
-                  'EXCLUSIVE PEST SOLUTIONS\n   Sistema heredado del home v2 "desert daylight".')
+                  'EXCLUSIVE PEST SOLUTIONS\n   System inherited from home v2 "desert daylight".')
     if extra_css:
         i = h.rindex("</style>")
         h = h[:i] + extra_css + h[i:]
@@ -34,7 +34,7 @@ def chrome_top(current=None):
   <div class="shell">
     <div class="util-right">
       <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
-      <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
+      <span class="util-hours">Mon to Sat: 7:00 AM to 3:00 PM</span>
       <a class="util-tel" href="tel:{TEL}">{TELD}</a>
     </div>
   </div>
@@ -43,13 +43,13 @@ def chrome_top(current=None):
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="shell">
-    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, inicio">
+    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, home">
       <picture>
         <source srcset="build-assets/logo-word.webp" type="image/webp">
         <img src="build-assets/logo-word.png" alt="Exclusive Pest Solutions" width="560" height="127">
       </picture>
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
 {links}
@@ -59,7 +59,7 @@ def chrome_top(current=None):
 '''
 
 def crumbs(trail):
-    """trail: lista de (texto, href o None). El ultimo es la pagina actual."""
+    """trail: list of (text, href or None). The last one is the current page."""
     out = []
     for i, (label, href) in enumerate(trail):
         last = i == len(trail) - 1
@@ -67,14 +67,14 @@ def crumbs(trail):
             out.append(f'      <li aria-current="page">{label}</li>')
         else:
             out.append(f'      <li><a href="{href}">{label}</a></li>')
-    return ('<!-- ===================== MIGAS ===================== -->\n'
+    return ('<!-- ===================== BREADCRUMBS ===================== -->\n'
             '<nav class="crumbs" aria-label="Breadcrumb">\n  <div class="shell">\n'
             '    <ol>\n' + "\n".join(out) + '\n    </ol>\n  </div>\n</nav>\n')
 
 ACTIONBAR = f'''
-<!-- ===================== BARRA DE ACCIÓN (solo móvil) ===================== -->
-<div class="actionbar" role="group" aria-label="Acciones rápidas">
-  <a class="actionbar-tel" href="tel:{TEL}" aria-label="Llamar al {TELD}">
+<!-- ===================== ACTION BAR (mobile only) ===================== -->
+<div class="actionbar" role="group" aria-label="Quick actions">
+  <a class="actionbar-tel" href="tel:{TEL}" aria-label="Call {TELD}">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none"
          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/>
@@ -112,7 +112,7 @@ DUNES = '''  <svg class="dunes" viewBox="0 0 1440 150" preserveAspectRatio="none
 '''
 
 def cta(heading, body, facts=None, creds=False):
-    facts = facts or [("Working hours", "Mon to Sat, 7 AM to 6 PM"),
+    facts = facts or [("Working hours", "Mon to Sat, 7 AM to 3 PM"),
                       ("Sunday", "Emergency service"),
                       ("AZ Dept. of Ag", "License #10150"),
                       ("Google rating", '4.9 <span class="stars" aria-hidden="true">★★★★★</span>')]
@@ -177,21 +177,21 @@ FOOTER = f'''
         <li><a href="scorpion-control.html">Scorpion Control</a></li>
         <li><a href="general-pest-control.html">General Pest Control</a></li>
         <li><a href="ant-control.html">Ant Control</a></li>
-        <li><a href="general-pest-control.html#safe">Garden-Safe Treatments</a></li>
+        <li><a href="general-pest-control.html#safe">Garden-Friendly Treatments</a></li>
         <li><a href="general-pest-control.html#method">IPM Programs</a></li>
       </ul>
     </div>
     <div>
       <h3>Working Hours</h3>
       <ul>
-        <li>Monday to Saturday: 7:00 AM to 6:00 PM</li>
+        <li>Monday to Saturday: 7:00 AM to 3:00 PM</li>
         <li>Sunday: Emergency Service Available</li>
       </ul>
     </div>
     <div>
       <h3>Contact</h3>
       <ul>
-        <li>Call Us<br><a href="tel:{TEL}">{TELD}</a></li>
+        <li>Call Us, available 24/7<br><a href="tel:{TEL}">{TELD}</a></li>
         <li>Email Us<br><a href="mailto:{MAIL}">{MAIL}</a></li>
       </ul>
     </div>
@@ -206,8 +206,8 @@ FOOTER = f'''
 '''
 
 def scripts():
-    """Todos los scripts de cierre del home, no solo el ultimo: rindex dejaba
-    fuera el menu movil y el observador de reveals."""
+    """Every closing script from the home page, not just the last one: rindex
+    left out the mobile menu and the reveal observer."""
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     i = src.index("</footer>")
     return src[src.index("<script>", i):]

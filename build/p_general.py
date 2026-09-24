@@ -39,7 +39,7 @@ hero(
   w=600, h=600)
 + C.ACTIONBAR +
 f'''
-<!-- ===================== COBERTURA ===================== -->
+<!-- ===================== COVERAGE ===================== -->
 <section class="band band--2 pad seam-host" id="coverage">
   <div class="shell">
 {head_block("What we cover", "Complete Valley pest coverage",
@@ -49,7 +49,7 @@ f'''
   </div>
 {C.cactus('seam')}</section>
 
-<!-- ===================== METODO ===================== -->
+<!-- ===================== METHOD ===================== -->
 <section class="band pad" id="method">
   <div class="shell">
 {head_block("Our method", "Why Integrated Pest Management delivers better results",
@@ -70,7 +70,7 @@ f'''
   </div>
 </section>
 
-<!-- ===================== SEGURIDAD ===================== -->
+<!-- ===================== SAFETY ===================== -->
 <section class="band band--paper pad" id="safe">
   <div class="shell split">
     <div class="stack reveal" style="--s:1.35rem">
@@ -96,7 +96,7 @@ f'''
   </div>
 </section>
 
-<!-- ===================== ZONAS ===================== -->
+<!-- ===================== SERVICE AREAS ===================== -->
 <section class="band band--2 pad">
   <div class="shell">
 {head_block("Service areas", "Serving the greater Phoenix Valley",

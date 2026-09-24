@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Genera las tres paginas de servicio. Todo el copy es literal del sitio
-original; los guiones largos se sustituyen por coma o punto."""
+"""Builds the three service pages. All copy is verbatim from the original
+site; em dashes are replaced with a comma or a period."""
 import os, sys, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import chrome as C
