@@ -728,6 +728,17 @@ section{position:relative}
   .truckband-owl{width:min(30%,7rem)}
 }
 
+/* --- móvil: los cactus forman un grupo a la izquierda que equilibra a Olly a la
+   derecha; los tres se apoyan en la cresta de la duna. En escritorio no cambia. --- */
+@media (max-width:48rem){
+  .cactus--hero{display:block;height:5.4rem;left:1.1rem;right:auto;bottom:0.95rem}
+  .cactus--hero-b{display:block;height:3.3rem;left:4.55rem;right:auto;bottom:0.9rem}
+}
+@media (max-width:23rem){
+  .cactus--hero{height:4.6rem;left:0.8rem;bottom:0.9rem}
+  .cactus--hero-b{height:2.8rem;left:3.8rem;bottom:0.85rem}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:0.01ms !important;
@@ -885,6 +896,35 @@ section{position:relative}
 }
 /* NAV-SUB:CSS:END */
 
+/* NAV-DARK:CSS:START */
+/* =========================================================
+   HEADER MÓVIL en café de marca: el logo cambia a logo-word-dark
+   (PEST SOLUTIONS en blanco, líneas en verde). En escritorio no cambia.
+   ========================================================= */
+@media (max-width:48rem){
+  .nav{--nav-line:color-mix(in oklab, var(--c-sky) 24%, transparent);
+       background:var(--c-ink);color:var(--c-sky);border-bottom-color:var(--c-ink)}
+  /* sobre café la sombra en tinta no se ve: los botones del header la llevan en naranja profundo */
+  .nav .btn{box-shadow:var(--btn-sh-x) var(--btn-sh-y) 0 var(--c-orange-deep);border-color:var(--c-orange-deep)}
+  .nav-toggle{box-shadow:-4px 4px 0 var(--c-orange-deep)}
+  .nav-toggle:active{box-shadow:-1px 1px 0 var(--c-orange-deep)}
+  /* el menú desplegado vive sobre el café: líneas finas claras */
+  .nav-links a,.nav-sub-toggle{border-bottom-color:var(--nav-line)}
+  .nav-links a:first-child{border-top-color:var(--nav-line)}
+  .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
+  /* el naranja profundo no llega sobre café: el estado abierto usa el naranja de marca */
+  .nav-sub-toggle[aria-expanded="true"],
+  .js .nav-sub-wrap:hover .nav-sub-toggle,
+  .js .nav-sub-wrap:focus-within .nav-sub-toggle{color:var(--c-orange)}
+  .nav-sub{border-bottom-color:var(--nav-line)}
+  .nav-sub a:hover,.nav-sub a:focus-visible{background:color-mix(in oklab, var(--c-sky) 12%, transparent)}
+  .nav-sub a[aria-current]{background:var(--c-gold);color:var(--c-ink)}
+  .nav-sub a svg{color:var(--c-orange)}
+  .nav-sub a[aria-current] svg{color:var(--c-ink)}
+}
+/* NAV-DARK:CSS:END */
+
+
 /* OLLY-FORM:CSS:START */
 /* =========================================================
    TELL OLLY , botón del CTA + popup con formulario
@@ -985,6 +1025,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <a class="brand" href="#home" aria-label="Exclusive Pest Solutions, inicio">
       <picture>
+        <source media="(max-width: 48rem)" srcset="build-assets/logo-word-dark.webp" type="image/webp">
         <source srcset="build-assets/logo-word.webp" type="image/webp">
         <img src="build-assets/logo-word.png" alt="Exclusive Pest Solutions" width="560" height="127">
       </picture>
