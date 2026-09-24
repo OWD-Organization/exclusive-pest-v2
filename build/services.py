@@ -67,7 +67,7 @@ def hero(kick, h1, paras, cta_label, plate, img, alt, w, h):
         <p style="margin:0"><span class="hero-kick">{kick}</span></p>
         <h1>{h1}</h1>
 {ps}
-        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</p>
+        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
         <div class="hero-actions">
           <a class="btn btn--lg" href="#contact">{cta_label}</a>
           <a class="btn-link" href="tel:{C.TEL}">Call {C.TELD}</a>

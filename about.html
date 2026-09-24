@@ -5,7 +5,7 @@
 <script>document.documentElement.className="js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Exclusive Pest Solutions, Phoenix Valley AZ</title>
-<meta name="description" content="Who we are: licensed agents of Arizona's Department of Agriculture, wildlife-conscious pest control built around your home. Meet founder David Kaiser.">
+<meta name="description" content="Who we are: licensed agents of Arizona's Department of Agriculture, wildlife-conscious pest control built around your home. Meet founder David Kiser.">
 <link rel="icon" type="image/webp" href="build-assets/logo-v2.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,7 @@
   --c-orange:      oklch(71.5% 0.178 52);
   --c-orange-deep: oklch(57.5% 0.150 48);
   --c-gold:        oklch(84.5% 0.155 80);
+  --c-gold-deep:   oklch(62% 0.165 74);
   --c-gold-pale:   oklch(95.5% 0.062 84);
   --c-cactus:      oklch(71.5% 0.170 143);
   --c-cactus-deep: oklch(50.5% 0.130 146);
@@ -198,6 +199,7 @@ section{position:relative}
 }
 .blk--gold{background:var(--c-gold-pale)}
 .blk--cactus{background:var(--c-cactus)}
+.blk--orange{background:var(--c-orange)}
 
 /* ---- FRAMED PHOTO ---- */
 .shot{position:relative}
@@ -390,7 +392,8 @@ section{position:relative}
 .util a:hover{border-bottom-color:var(--c-gold)}
 .util-right{margin-left:auto;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;align-items:center}
 .util-tel{font-weight:900;color:var(--c-gold)}
-.stars{color:var(--c-gold);letter-spacing:0.06em}
+.stars{color:var(--c-gold-deep);letter-spacing:0.06em}
+.util .stars{color:var(--c-gold)}
 
 /* =========================================================
    NAV
@@ -404,15 +407,12 @@ section{position:relative}
 .nav-links a{text-decoration:none;padding:0.35em 0;border-bottom:3px solid transparent}
 .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
 
-/* ---- 5.0 de Google en el hero (aparece solo en móvil) ---- */
+/* ---- 4.9 de Google en el hero (aparece solo en móvil) ---- */
 .hero-rating{
   display:none;
   margin:0;font-weight:800;font-size:var(--step--1);
   color:var(--fg-muted);
 }
-/* el naranja profundo sobre el crema del hero daba 4.19: se profundiza
-   dentro de la misma familia hasta pasar AA en texto normal */
-.hero-rating .stars{color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))}
 
 /* ---- BARRA DE ACCIÓN FIJA (solo móvil) ---- */
 .actionbar{display:none}
@@ -697,7 +697,7 @@ section{position:relative}
   .nav .btn{font-size:var(--step--1);padding:0.6em 0.9em;min-height:0}
   .nav-toggle{display:inline-flex}
 
-  /* la barra superior se queda sin contenido propio: el 5.0 pasa al hero
+  /* la barra superior se queda sin contenido propio: el 4.9 pasa al hero
      y el teléfono a la barra de acción */
   .util{display:none}
   .hero-rating{display:block}
@@ -816,6 +816,7 @@ section{position:relative}
   background:var(--c-orange);border:var(--bd-hair);border-radius:2px;
 }
 .blk--cactus .ticks li,.blk--gold .ticks li{color:var(--fg)}
+.ticks--cactus li::before{background:var(--c-cactus)}
 
 /* STANDARDS: tres tarjetas con cabecera y viñetas */
 .stds{
@@ -837,23 +838,40 @@ section{position:relative}
 .figure-note span{font-size:var(--step--1);line-height:1.4;color:var(--fg-muted)}
 .blk--gold .figure-note span{color:var(--fg)}
 
-/* FOUNDER: el recorte sin fondo necesita una placa de color detras */
-.owner-plate{
-  background:var(--c-paper);
-  border:var(--bd-hard);border-radius:var(--r);
-  box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
-  padding:clamp(1rem,2vw,1.6rem) clamp(1rem,2vw,1.6rem) 0;
-  overflow:hidden;
-}
-.owner-plate img{
-  width:100%;margin-bottom:-1px;
-  filter:drop-shadow(-6px 6px 0 color-mix(in oklab, var(--c-ink) 16%, transparent));
-}
 .name-label{
   display:block;margin-top:0.55rem;
   font-weight:900;font-size:var(--step--2);
   letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
 }
+/* EQUIPO: dos fichas de persona, foto arriba y texto debajo */
+.team{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr));
+  gap:clamp(2rem,4vw,3.5rem);margin-top:clamp(2.25rem,4vw,3.25rem);
+  align-items:start;
+}
+.person{display:grid;gap:clamp(1.25rem,2.5vw,1.75rem);align-content:start}
+/* mismo encuadre en las dos fichas, para que el par se lea como una fila */
+.person-shot img{
+  display:block;width:100%;aspect-ratio:900/667;object-fit:cover;
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
+}
+.person-body{display:grid;gap:0.9rem;align-content:start}
+.person-body h3{font-size:var(--step-2);margin:0}
+.person-body .name-label{margin-top:-0.55rem}
+.person-body p{margin:0;color:var(--fg-muted);line-height:1.55}
+
+/* GUSTOS: dos filas etiquetadas bajo la bio */
+.traits{margin:0;display:grid;gap:0.5rem}
+.traits > div{
+  display:flex;flex-wrap:wrap;gap:0.3rem 0.7rem;align-items:baseline;
+  border-top:var(--bd-hair);padding-top:0.5rem;
+}
+.traits dt{
+  font-weight:900;font-size:var(--step--2);text-transform:uppercase;
+  letter-spacing:var(--tr-label);color:var(--c-orange-deep);flex:0 0 auto;
+}
+.traits dd{margin:0;font-size:var(--step--1);font-weight:600}
 .figcap{
   margin:0.85rem 0 0;font-size:var(--step--2);line-height:1.4;
   color:var(--fg-muted);max-width:44ch;
@@ -1106,7 +1124,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <div class="util">
   <div class="shell">
     <div class="util-right">
-      <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
       <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
       <a class="util-tel" href="tel:+16026006746">(602) 600-6746</a>
     </div>
@@ -1169,7 +1187,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <p style="margin:0"><span class="hero-kick">About Us</span></p>
       <h1>Answering the call to serve &amp; protect our community</h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">At Exclusive Pest Solutions, we don't believe in cookie-cutter spraying. Every property is different. Every pest profile is different. So every treatment we build is engineered specifically for you.</p>
-      <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</p>
+      <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
         <a class="btn btn--lg" href="index.html#process">Meet our approach</a>
         <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
@@ -1264,7 +1282,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <div class="prose">
         <p>We assess every property's unique entry points and pest profile before applying a single product.</p>
       </div>
-      <div class="blk blk--cactus">
+      <div class="blk blk--orange">
         <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Document &amp; Report</h3>
         <p style="font-size:var(--step--1);margin:0">We take the time to document our findings and provide images and suggestions to help keep your home pest free.</p>
       </div>
@@ -1330,18 +1348,14 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <article class="blk std reveal">
         <h3>Kids &amp; Pets First</h3>
         <p>Every treatment selected with your family and pets in mind.</p>
-        <ul class="ticks">
+        <ul class="ticks ticks--cactus">
           <li>Toys and bowls moved before treatment</li>
-          <li>Low-odor, garden-safe formulations</li>
+          <li>Carefully selected products</li>
         </ul>
       </article>
       <article class="blk blk--gold std reveal" style="--d:80ms">
-        <h3>Wildlife-Conscious</h3>
-        <p>Pesticides applied responsibly, the desert ecosystem fully respected.</p>
-        <ul class="ticks">
-          <li>Raptor-safe rodenticides only</li>
-          <li>Mechanical traps preferred over chemicals</li>
-        </ul>
+        <h3>Real Results</h3>
+        <p>From the products we use, to how we use them. This is the most thorough &amp; effective pest service you can find, guaranteed.</p>
       </article>
       <article class="blk std reveal" style="--d:160ms">
         <h3>Integrated Pest Management</h3>
@@ -1355,7 +1369,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="creds reveal">
       <span class="creds-lbl">Certified, Licensed, and Accountable. Always.</span>
       <span class="cred cred--gold">AZ Dept. of Ag #10150</span>
-      <span class="cred">QA Licensed</span>
+      <span class="cred">Licensed &amp; Insured</span>
       <span class="cred">IPM Certified</span>
       <span class="cred cred--cactus">Pet &amp; Garden Friendly</span>
       <span class="cred">Label-Compliant</span>
@@ -1366,25 +1380,49 @@ html:has(.olly-dialog[open]){overflow:hidden}
 
 <!-- ===================== EL FUNDADOR ===================== -->
 <section class="band band--2 pad">
-  <div class="shell split">
-    <div class="stack reveal" style="--s:1.4rem">
-      <div>
-        <span class="tag">The founder</span>
-        <h2 style="font-size:var(--step-3)">David Kaiser</h2>
-        <span class="name-label">Founder, Licensed QA Applicator</span>
-      </div>
-      <div class="prose">
-        <p>We charge a premium because we're responsible with the products. That means slower, more methodical work, and dramatically better, longer-lasting results.</p>
-      </div>
-      <blockquote class="blk blk--gold" style="margin:0;font-size:var(--step-1);line-height:1.4;font-weight:500">"I don't do cookie-cutter spraying. Slow, expert work, that's the standard."</blockquote>
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="tag">Who you'll meet</span>
+      <h2>The people at your door.</h2>
     </div>
-    <div class="split-media reveal" style="--d:120ms">
-      <div class="owner-plate">
-        <picture>
-          <source srcset="build-assets/owner-cutout.webp" type="image/webp">
-          <img src="build-assets/owner-cutout.png" alt="David Kaiser, founder of Exclusive Pest Solutions." width="900" height="667">
-        </picture>
-      </div>
+    <div class="team">
+
+      <article class="person reveal">
+        <div class="person-shot">
+          <picture>
+            <source srcset="build-assets/david-portrait.webp" type="image/webp">
+            <img src="build-assets/david-portrait.jpg" alt="David Kiser, founder of Exclusive Pest Solutions, in the desert at sunset." width="900" height="667">
+          </picture>
+        </div>
+        <div class="person-body">
+          <h3>David Kiser</h3>
+          <span class="name-label">Founder, Licensed QA Applicator</span>
+          <blockquote class="blk blk--gold" style="margin:0;font-size:var(--step-1);line-height:1.4;font-weight:500">"I am building this company to answer the call to serve our local communities and keep our neighbors, friends &amp; family safe — not to rapidly grow and sell for a profit. I sleep great at night knowing we take great care of our customers."</blockquote>
+          <dl class="traits">
+            <div><dt>Likes</dt><dd>Building race cars, Playing guitar, the outdoors</dd></div>
+            <div><dt>Dislikes</dt><dd>Pineapple on pizza</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="person reveal" style="--d:120ms">
+        <div class="person-shot">
+          <picture>
+            <source srcset="build-assets/shane-portrait.webp" type="image/webp">
+            <img src="build-assets/shane-portrait.jpg" alt="Shane, Sonoran pest specialist at Exclusive Pest Solutions, in the desert at sunset." width="900" height="667" loading="lazy">
+          </picture>
+        </div>
+        <div class="person-body">
+          <h3>Shane</h3>
+          <span class="name-label">Sonoran Pest Specialist</span>
+          <p>Shane takes pride in his work and brings over 10 years of experience to the table. He wields his passion for entomology &amp; nature to bring science-based and environmentally conscious results to our neighbors and local businesses.</p>
+          <dl class="traits">
+            <div><dt>Likes</dt><dd>Music production, Off-roading, Car culture, Hiking</dd></div>
+            <div><dt>Dislikes</dt><dd>Vegetables, Sweating, Bugs in your house</dd></div>
+          </dl>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -1410,7 +1448,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <div class="cta-fact"><span>Working hours</span><b>Mon to Sat, 7 AM to 6 PM</b></div>
       <div class="cta-fact"><span>Sunday</span><b>Emergency service</b></div>
       <div class="cta-fact"><span>AZ Dept. of Ag</span><b>License #10150</b></div>
-      <div class="cta-fact"><span>Google rating</span><b>5.0 ★★★★★</b></div>
+      <div class="cta-fact"><span>Google rating</span><b>4.9 <span class="stars" aria-hidden="true">★★★★★</span></b></div>
     </div>
   </div>
 </section>

@@ -29,6 +29,7 @@
   --c-orange:      oklch(71.5% 0.178 52);
   --c-orange-deep: oklch(57.5% 0.150 48);
   --c-gold:        oklch(84.5% 0.155 80);
+  --c-gold-deep:   oklch(62% 0.165 74);
   --c-gold-pale:   oklch(95.5% 0.062 84);
   --c-cactus:      oklch(71.5% 0.170 143);
   --c-cactus-deep: oklch(50.5% 0.130 146);
@@ -196,6 +197,7 @@ section{position:relative}
 }
 .blk--gold{background:var(--c-gold-pale)}
 .blk--cactus{background:var(--c-cactus)}
+.blk--orange{background:var(--c-orange)}
 
 /* ---- FRAMED PHOTO ---- */
 .shot{position:relative}
@@ -348,7 +350,8 @@ section{position:relative}
 .util a:hover{border-bottom-color:var(--c-gold)}
 .util-right{margin-left:auto;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;align-items:center}
 .util-tel{font-weight:900;color:var(--c-gold)}
-.stars{color:var(--c-gold);letter-spacing:0.06em}
+.stars{color:var(--c-gold-deep);letter-spacing:0.06em}
+.util .stars{color:var(--c-gold)}
 
 /* =========================================================
    NAV
@@ -362,15 +365,12 @@ section{position:relative}
 .nav-links a{text-decoration:none;padding:0.35em 0;border-bottom:3px solid transparent}
 .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
 
-/* ---- 5.0 de Google en el hero (aparece solo en móvil) ---- */
+/* ---- 4.9 de Google en el hero (aparece solo en móvil) ---- */
 .hero-rating{
   display:none;
   margin:0;font-weight:800;font-size:var(--step--1);
   color:var(--fg-muted);
 }
-/* el naranja profundo sobre el crema del hero daba 4.19: se profundiza
-   dentro de la misma familia hasta pasar AA en texto normal */
-.hero-rating .stars{color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))}
 
 /* ---- BARRA DE ACCIÓN FIJA (solo móvil) ---- */
 .actionbar{display:none}
@@ -682,7 +682,7 @@ section{position:relative}
   .nav .btn{font-size:var(--step--1);padding:0.6em 0.9em;min-height:0}
   .nav-toggle{display:inline-flex}
 
-  /* la barra superior se queda sin contenido propio: el 5.0 pasa al hero
+  /* la barra superior se queda sin contenido propio: el 4.9 pasa al hero
      y el teléfono a la barra de acción */
   .util{display:none}
   .hero-rating{display:block}
@@ -1328,7 +1328,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <div class="util">
   <div class="shell">
     <div class="util-right">
-      <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
       <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
       <a class="util-tel" href="tel:+16026006746">(602) 600-6746</a>
     </div>
@@ -1382,7 +1382,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <p style="margin:0"><span class="hero-kick">Arizona Bark Scorpion Specialists</span></p>
         <h1>Scorpion control in Phoenix, AZ. Targeted treatment that lasts.</h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">The Arizona bark scorpion is the most venomous scorpion in North America, and one of the most common uninvited guests in Phoenix Valley homes. We use a methodical, science-based approach that far exceeds the industry standard.</p>
-        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</p>
+        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
         <div class="hero-actions">
           <a class="btn btn--lg" href="#contact">Schedule my scorpion evaluation</a>
           <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
@@ -1577,7 +1577,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <div class="cta-fact"><span>Working hours</span><b>Mon to Sat, 7 AM to 6 PM</b></div>
       <div class="cta-fact"><span>Sunday</span><b>Emergency service</b></div>
       <div class="cta-fact"><span>AZ Dept. of Ag</span><b>License #10150</b></div>
-      <div class="cta-fact"><span>Google rating</span><b>5.0 ★★★★★</b></div>
+      <div class="cta-fact"><span>Google rating</span><b>4.9 <span class="stars" aria-hidden="true">★★★★★</span></b></div>
     </div>
   </div>
 </section>

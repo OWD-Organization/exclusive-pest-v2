@@ -3,7 +3,7 @@
 register: brand
 
 ## Product Purpose
-Premium residential pest control across the Phoenix Valley, AZ. Owner-operated by David Kaiser,
+Premium residential pest control across the Phoenix Valley, AZ. Owner-operated by David Kiser,
 Licensed QA Applicator, AZ Dept. of Agriculture License #10150. Bark scorpion specialists.
 The positioning is deliberately anti-volume: "we charge a premium because we're responsible with
 the products", slower and more methodical work, wildlife-conscious (raptor-safe rodenticides,

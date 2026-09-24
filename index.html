@@ -29,6 +29,7 @@
   --c-orange:      oklch(71.5% 0.178 52);
   --c-orange-deep: oklch(57.5% 0.150 48);
   --c-gold:        oklch(84.5% 0.155 80);
+  --c-gold-deep:   oklch(62% 0.165 74);
   --c-gold-pale:   oklch(95.5% 0.062 84);
   --c-cactus:      oklch(71.5% 0.170 143);
   --c-cactus-deep: oklch(50.5% 0.130 146);
@@ -196,6 +197,7 @@ section{position:relative}
 }
 .blk--gold{background:var(--c-gold-pale)}
 .blk--cactus{background:var(--c-cactus)}
+.blk--orange{background:var(--c-orange)}
 
 /* ---- FRAMED PHOTO ---- */
 .shot{position:relative}
@@ -348,7 +350,8 @@ section{position:relative}
 .util a:hover{border-bottom-color:var(--c-gold)}
 .util-right{margin-left:auto;display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;align-items:center}
 .util-tel{font-weight:900;color:var(--c-gold)}
-.stars{color:var(--c-gold);letter-spacing:0.06em}
+.stars{color:var(--c-gold-deep);letter-spacing:0.06em}
+.util .stars{color:var(--c-gold)}
 
 /* =========================================================
    NAV
@@ -362,15 +365,12 @@ section{position:relative}
 .nav-links a{text-decoration:none;padding:0.35em 0;border-bottom:3px solid transparent}
 .nav-links a:hover,.nav-links a[aria-current]{border-bottom-color:var(--c-orange)}
 
-/* ---- 5.0 de Google en el hero (aparece solo en móvil) ---- */
+/* ---- 4.9 de Google en el hero (aparece solo en móvil) ---- */
 .hero-rating{
   display:none;
   margin:0;font-weight:800;font-size:var(--step--1);
   color:var(--fg-muted);
 }
-/* el naranja profundo sobre el crema del hero daba 4.19: se profundiza
-   dentro de la misma familia hasta pasar AA en texto normal */
-.hero-rating .stars{color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))}
 
 /* ---- BARRA DE ACCIÓN FIJA (solo móvil) ---- */
 .actionbar{display:none}
@@ -662,7 +662,7 @@ section{position:relative}
   .nav .btn{font-size:var(--step--1);padding:0.6em 0.9em;min-height:0}
   .nav-toggle{display:inline-flex}
 
-  /* la barra superior se queda sin contenido propio: el 5.0 pasa al hero
+  /* la barra superior se queda sin contenido propio: el 4.9 pasa al hero
      y el teléfono a la barra de acción */
   .util{display:none}
   .hero-rating{display:block}
@@ -973,7 +973,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <div class="util">
   <div class="shell">
     <div class="util-right">
-      <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
       <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
       <a class="util-tel" href="tel:+16026006746">(602) 600-6746</a>
     </div>
@@ -1036,7 +1036,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
       <h1>The desert stays. <em>The scorpions don't.</em></h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home, not a spray-and-go route.</p>
-      <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</p>
+      <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
         <a class="btn btn--lg" href="#contact">Get my custom plan</a>
         <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
@@ -1091,8 +1091,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </article>
       <article class="svc reveal" style="--d:80ms">
         <picture>
-          <source srcset="build-assets/service-general.webp" type="image/webp">
-          <img src="build-assets/service-general.jpg" alt="General pest control, wire mesh exclusion in progress." width="600" height="450" loading="lazy">
+          <source srcset="build-assets/service-general-pests.webp" type="image/webp">
+          <img src="build-assets/service-general-pests.jpg" alt="A cricket, a cockroach and a trail of ants on a sunlit Arizona patio slab." width="800" height="600" loading="lazy">
         </picture>
         <div class="svc-body">
           <h3>General Pest Control</h3>
@@ -1103,11 +1103,11 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <article class="svc reveal" style="--d:160ms">
         <picture>
           <source srcset="build-assets/service-mosquito.webp" type="image/webp">
-          <img src="build-assets/service-mosquito.jpg" alt="Mosquito trap station placed in a Phoenix Valley desert yard." width="900" height="675" loading="lazy">
+          <img src="build-assets/service-mosquito.jpg" alt="An In2Care mosquito trap station set on desert gravel beside a prickly pear and a flowering shrub." width="800" height="600" loading="lazy">
         </picture>
         <div class="svc-body">
           <h3>Eco-Friendly Mosquito Control</h3>
-          <p>Targeted traps and treatments that cut Arizona mosquitoes at the source, before monsoon season peaks.</p>
+          <p>Larvicide trap stations that cut Arizona mosquitoes off at the source.</p>
           <a class="btn-link" href="general-pest-control.html">Learn more</a>
         </div>
       </article>
@@ -1126,7 +1126,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <picture>
         <source srcset="build-assets/owner-tall.webp" type="image/webp">
         <img src="build-assets/owner-tall.png"
-             alt="David Kaiser, founder and licensed QA applicator, in an Exclusive Pest Solutions cap and shirt."
+             alt="David Kiser, founder and licensed QA applicator, in an Exclusive Pest Solutions cap and shirt."
              width="760" height="1116" loading="lazy">
       </picture>
     </figure>
@@ -1163,7 +1163,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Bespoke Treatments</h3>
         <p style="color:var(--fg-muted);font-size:var(--step--1);margin:0">We assess every property's unique entry points and pest profile before applying a single product.</p>
       </div>
-      <div class="blk blk--cactus">
+      <div class="blk blk--orange">
         <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Document &amp; Report</h3>
         <p style="font-size:var(--step--1);margin:0">We take the time to document our findings and provide images and suggestions to help keep your home pest free.</p>
       </div>
@@ -1180,8 +1180,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <figure class="blk blk--gold" style="margin:0">
         <blockquote style="margin:0 0 1rem;font-size:var(--step-1);line-height:1.4;font-weight:500">"I don't do cookie-cutter spraying. Slow, expert work, that's the standard."</blockquote>
         <figcaption style="display:flex;gap:0.8rem;align-items:center;border-top:var(--bd-hair);padding-top:0.9rem">
-          <img src="build-assets/david-avatar.jpg" alt="David Kaiser" width="48" height="48" loading="lazy" style="width:3rem;border:var(--bd-hair);border-radius:var(--r-pill)">
-          <span style="font-weight:900;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.04em">David Kaiser, Founder, Licensed QA Applicator</span>
+          <img src="build-assets/david-avatar.jpg" alt="David Kiser" width="48" height="48" loading="lazy" style="width:3rem;border:var(--bd-hair);border-radius:var(--r-pill)">
+          <span style="font-weight:900;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.04em">David Kiser, Founder, Licensed QA Applicator</span>
         </figcaption>
       </figure>
     </div>
@@ -1206,7 +1206,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="creds reveal">
       <span class="creds-lbl">Certified, Licensed, and Accountable. Always.</span>
       <span class="cred cred--gold">AZ Dept. of Ag #10150</span>
-      <span class="cred">QA Licensed</span>
+      <span class="cred">Licensed &amp; Insured</span>
       <span class="cred">IPM Certified</span>
       <span class="cred cred--cactus">Pet &amp; Garden Friendly</span>
       <span class="cred">Label-Compliant</span>
@@ -1259,35 +1259,35 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="reviews">
       <a class="review review--sm reveal" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"We tried multiple different pest companies trying to get rid of our scorpion problem. These guys do &quot;scorpion dusting&quot; and we have not had a problem since they've been treating our house and yard. Highly recommend!!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Brittany Holm <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Brittany Holm <em>Google review</em></div>
       </a>
       <a class="review reveal" style="--d:70ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"On time. Prices fair. Pet and kid friendly product. Very thorough. Pays attention to detail. I will have him back anytime."</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Debra Wallace <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Debra Wallace <em>Google review</em></div>
       </a>
       <a class="review reveal" style="--d:140ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"The service was thorough, effective and affordable. David was punctual and polite. 10/10 would definitely recommend to anyone with pest needs."</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Johan <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Johan <em>Google review</em></div>
       </a>
       <a class="review reveal" style="--d:210ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"Super great service, fast and went the extra step to get rid of an ant hole we didn't know about. 10/10 service and communication!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Leslie Villa <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Leslie Villa <em>Google review</em></div>
       </a>
       <a class="review reveal" style="--d:280ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"David was referred to me from a friend, I highly recommend his services as he is honest, thorough and considerate!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Sydney Miller <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Sydney Miller <em>Google review</em></div>
       </a>
       <a class="review reveal" style="--d:350ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"David is super knowledgeable and informative and passionate about what he does! Highly recommend!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Kori Brede <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Kori Brede <em>Google review</em></div>
       </a>
       <a class="review review--sm reveal" style="--d:420ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"Ive used EPS for a while now after a bad scorpion problem. They were in my house, one climbed up my arm in the backyard, I'd HAD it. These guys have completely erradicated the issue to the point where I see zero pests and more importantly, just dead scorpions. They're my go to for the future!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> M Brandon <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> M Brandon <em>Google review</em></div>
       </a>
       <a class="review review--sm reveal" style="--d:490ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
         <blockquote>"If you're having issues with pests and are trying to find the right company, look no further! I have had Exclusive Pest Solutions out many times to take care of all sorts of critters that show face around my home, and will continue to do so. Their services work phenomenally and are very well priced! Do not hesitate to reach out, EPS will take care of you!"</blockquote>
-        <div class="review-cite"><span class="stars" style="color:color-mix(in oklab, var(--c-orange-deep) 72%, var(--c-ink))" aria-hidden="true">★★★★★</span> Ben Kocarnik <em>Google review</em></div>
+        <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Ben Kocarnik <em>Google review</em></div>
       </a>
     </div>
     <p class="reviews-more reveal">
@@ -1335,7 +1335,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <div class="cta-fact"><span>Working hours</span><b>Mon to Sat, 7 AM to 6 PM</b></div>
       <div class="cta-fact"><span>Sunday</span><b>Emergency service</b></div>
       <div class="cta-fact"><span>AZ Dept. of Ag</span><b>License #10150</b></div>
-      <div class="cta-fact"><span>Google rating</span><b>5.0 ★★★★★</b></div>
+      <div class="cta-fact"><span>Google rating</span><b>4.9 <span class="stars" aria-hidden="true">★★★★★</span></b></div>
     </div>
   </div>
 </section>

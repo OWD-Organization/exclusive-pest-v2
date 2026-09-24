@@ -33,7 +33,7 @@ def chrome_top(current=None):
 <div class="util">
   <div class="shell">
     <div class="util-right">
-      <span><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</span>
+      <span><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</span>
       <span class="util-hours">Mon to Sat: 7:00 AM to 6:00 PM</span>
       <a class="util-tel" href="tel:{TEL}">{TELD}</a>
     </div>
@@ -115,7 +115,7 @@ def cta(heading, body, facts=None, creds=False):
     facts = facts or [("Working hours", "Mon to Sat, 7 AM to 6 PM"),
                       ("Sunday", "Emergency service"),
                       ("AZ Dept. of Ag", "License #10150"),
-                      ("Google rating", "5.0 ★★★★★")]
+                      ("Google rating", '4.9 <span class="stars" aria-hidden="true">★★★★★</span>')]
     rows = "\n".join(f'      <div class="cta-fact"><span>{a}</span><b>{b}</b></div>' for a, b in facts)
     cr = ''
     return f'''
