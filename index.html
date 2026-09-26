@@ -198,6 +198,7 @@ section{position:relative}
 .blk--gold{background:var(--c-gold-pale)}
 .blk--cactus{background:var(--c-cactus)}
 .blk--orange{background:var(--c-orange)}
+.blk--yellow{background:var(--c-gold)}
 
 /* ---- FRAMED PHOTO ---- */
 .shot{position:relative}
@@ -747,6 +748,10 @@ section{position:relative}
   .cactus--hero{display:block;height:5.4rem;left:1.1rem;right:auto;bottom:0.95rem}
   .cactus--hero-b{display:block;height:3.3rem;left:4.55rem;right:auto;bottom:0.9rem}
 }
+/* mobile: no scroll-driven perch, it sank Olly behind the next section */
+@media (max-width:48rem){
+  .hero-owl{animation:none;translate:none;rotate:none}
+}
 @media (max-width:23rem){
   .cactus--hero{height:4.6rem;left:0.8rem;bottom:0.9rem}
   .cactus--hero-b{height:2.8rem;left:3.8rem;bottom:0.85rem}
@@ -1235,6 +1240,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Document &amp; Report</h3>
         <p style="font-size:var(--step--1);margin:0">We take the time to document our findings and provide images and suggestions to help keep your home pest free.</p>
       </div>
+      <div class="blk blk--yellow">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.45rem">Transforming Your Home</h3>
+        <p style="font-size:var(--step--1);margin:0">The goal is to transform your home into a pest-free sanctuary, with consistent and responsible pest management. Utilizing physical barriers, low risk products, and the best industry practices.</p>
+      </div>
     </div>
     <div class="split-media stack reveal" style="--d:120ms;--s:1.75rem">
       <div class="shot">
@@ -1265,10 +1274,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
     </div>
     <ul class="rules">
       <li class="rule reveal">Raptor-safe rodenticides only.</li>
-      <li class="rule reveal" style="--d:60ms">Traps before chemicals.</li>
-      <li class="rule reveal" style="--d:120ms">Your toys and bowls moved first.</li>
-      <li class="rule reveal" style="--d:180ms">Low-odor around your garden.</li>
-      <li class="rule reveal" style="--d:240ms">Licensed, QA and IPM certified.</li>
+      <li class="rule reveal" style="--d:60ms">Physical barriers before chemicals.</li>
+      <li class="rule reveal" style="--d:120ms">Forgot to move your toys and pet bowls? We got you.</li>
+      <li class="rule reveal" style="--d:180ms">Garden-friendly practices.</li>
+      <li class="rule reveal" style="--d:240ms">Leaving your house better than we found it.</li>
       <li class="rule reveal" style="--d:300ms">Label-compliant, every visit.</li>
     </ul>
     <div class="creds reveal">
