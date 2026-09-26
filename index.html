@@ -405,6 +405,8 @@ section{position:relative}
   position:relative;z-index:1;
 }
 .hero h1{font-size:clamp(2.4rem, 1rem + 7.9vw, 8.125rem);max-width:22ch}
+/* desktop: narrow enough that "The desert stays." breaks before it runs under the sun */
+@media (min-width:64.0625rem){.hero:not(.hero--page) h1{max-width:13ch}}
 .hero h1 em{font-style:normal;color:var(--c-orange-deep)}
 .hero-kick{
   display:inline-block;font-weight:900;
@@ -1107,7 +1109,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="stack reveal" style="--s:1.5rem">
       <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
-      <h1>The desert stays. <em>The scorpions don't.</em></h1>
+      <h1>The desert stays. <em>The pests don't.</em></h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home, not a spray-and-go route.</p>
       <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
@@ -1215,7 +1217,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <li class="step reveal"><span class="step-num" aria-hidden="true">01</span><div><h4>Inspection</h4><p>We walk your property and find how they're getting in.</p></div></li>
         <li class="step reveal" style="--d:70ms"><span class="step-num" aria-hidden="true">02</span><div><h4>Custom Plan</h4><p>You get a plan built from what we found, not a package.</p></div></li>
         <li class="step reveal" style="--d:140ms"><span class="step-num" aria-hidden="true">03</span><div><h4>Treatment</h4><p>We treat with your kids, dogs and garden in mind.</p></div></li>
-        <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><div><h4>Prevention</h4><p>We come back, watch it, and seal what opens up.</p></div></li>
+        <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><div><h4>Prevention</h4><p>Monthly or bi-monthly service, because pest control is a process, not a singular event.</p></div></li>
       </ol>
     </div>
   </div>
@@ -1255,7 +1257,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         </picture>
       </div>
       <figure class="blk blk--gold" style="margin:0">
-        <blockquote style="margin:0 0 1rem;font-size:var(--step-1);line-height:1.4;font-weight:500">"I don't do cookie-cutter spraying. Slow, expert work, that's the standard."</blockquote>
+        <blockquote style="margin:0 0 1rem;font-size:var(--step-1);line-height:1.4;font-weight:500">"We don't do cookie-cutter spraying. Slow, expert work, that's the standard."</blockquote>
         <figcaption style="display:flex;gap:0.8rem;align-items:center;border-top:var(--bd-hair);padding-top:0.9rem">
           <img src="build-assets/david-avatar.jpg" alt="David Kiser" width="48" height="48" loading="lazy" style="width:3rem;border:var(--bd-hair);border-radius:var(--r-pill)">
           <span style="font-weight:900;font-size:var(--step--1);text-transform:uppercase;letter-spacing:0.04em">David Kiser, Founder, Licensed QA Applicator</span>

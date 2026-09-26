@@ -69,7 +69,9 @@
 .cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
 
 /* ---- PHRASE PLATE: a one-liner the original uses as a closer ---- */
+/* sized to its text, not the full row: full width ran into the seam cactus */
 .slab{
+  width:fit-content;max-width:100%;
   margin-top:clamp(2rem,3.5vw,2.75rem);
   background:var(--c-ink);color:var(--c-sky);
   border:var(--bd-hard);border-radius:var(--r);
