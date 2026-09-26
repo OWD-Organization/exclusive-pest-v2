@@ -140,7 +140,7 @@ SUB = [("Scorpion Control", "scorpion-control.html", "scorpion"),
        ("General Pest Control", "general-pest-control.html", "general")]
 
 def nav_links(current=None, home_anchors=False):
-    """current: home|about|scorpion|ant|general|process|reviews|contact|None"""
+    """current: home|about|scorpion|ant|general|areas|process|reviews|contact|None"""
     pre = "" if home_anchors else "index.html"
     def h(frag): return f"{pre}#{frag}" if not home_anchors else f"#{frag}"
     cur = lambda k: ' aria-current="page"' if k == current else ""
@@ -162,6 +162,7 @@ def nav_links(current=None, home_anchors=False):
 {subs}
         </div>
       </div>
+      <a href="service-areas.html"{cur("areas")}>Service Areas</a>
       <a href="{h("process")}"{cur("process")}>Process</a>
       <a href="{h("reviews")}"{cur("reviews")}>Reviews</a>
       <a href="#contact"{cur("contact")}>Contact</a>

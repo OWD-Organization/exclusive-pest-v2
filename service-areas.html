@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <script>document.documentElement.className="js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ant Control Phoenix AZ | Targeted Solutions for Every Species</title>
-<meta name="description" content="Ant control across the Phoenix Valley. We identify the species, locate the nest and eliminate the colony at its source with species-specific baits. Licensed in Arizona.">
+<title>Service Areas | Pest Control in the Phoenix Valley | Exclusive Pest Solutions</title>
+<meta name="description" content="Exclusive Pest Solutions serves homes across the Phoenix Valley, Maricopa and Pinal County.">
+<!-- placeholder content: remove noindex once the final service area copy arrives -->
+<meta name="robots" content="noindex, follow">
 <link rel="icon" type="image/webp" href="build-assets/logo-v2.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -948,6 +950,22 @@ section{position:relative}
 /* NAV-FIT:CSS:END */
 
 
+/* SERVICE-AREAS:CSS:START */
+/* map placeholder in the hero: paper plate with Olly until the real map lands */
+.area-map{
+  display:grid;place-items:center;align-content:center;gap:1rem;aspect-ratio:1;max-width:26rem;
+  background:var(--c-paper);
+  border:var(--bd-hard);border-radius:var(--r);
+  box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
+  text-align:center;font-weight:900;font-size:var(--step--1);
+  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
+}
+.area-map img{width:34%;height:auto;filter:drop-shadow(-3px 3px 0 var(--c-ink))}
+/* closer: heading and button in one row */
+.area-next{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
+.area-next h2{max-width:24ch}
+/* SERVICE-AREAS:CSS:END */
+
 /* OLLY-FORM:CSS:START */
 /* =========================================================
    TELL OLLY , CTA button + form popup
@@ -1019,74 +1037,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
 }
 /* OLLY-FORM:CSS:END */
 
-/* OLLY-PROMO:CSS:START */
-/* =========================================================
-   OLLY PROMO , flies up when "Ready to start" comes into view
-   ========================================================= */
-.olly-promo{
-  position:fixed;z-index:80;
-  right:clamp(0.75rem,2.5vw,2rem);bottom:clamp(0.75rem,2.5vw,2rem);
-  width:min(22rem, calc(100vw - 1.5rem));
-  pointer-events:none;
-}
-.olly-promo[hidden]{display:none}
-.olly-promo-card{
-  display:flex;align-items:flex-end;gap:0.35rem;width:100%;
-  margin:0;padding:0;background:none;border:0;text-align:left;
-  font:inherit;color:inherit;cursor:pointer;pointer-events:auto;
-  opacity:0;translate:0 120%;rotate:5deg;
-  transition:translate 700ms cubic-bezier(0.34,1.45,0.64,1),
-             rotate 700ms cubic-bezier(0.34,1.45,0.64,1),
-             opacity 220ms linear;
-}
-.olly-promo.is-in .olly-promo-card{opacity:1;translate:0 0;rotate:0deg}
-.olly-promo-bubble{
-  position:relative;flex:1;margin-bottom:3.4rem;
-  padding:0.95rem 1.05rem;
-  background:var(--c-paper);color:var(--fg);
-  border:var(--bd-hard);border-radius:var(--r);
-  box-shadow:-5px 5px 0 var(--c-ink);
-  font-size:var(--step--1);line-height:1.42;
-}
-/* speech bubble tail pointing at Olly */
-.olly-promo-bubble::after{
-  content:"";position:absolute;right:-0.62rem;bottom:1.1rem;
-  width:1rem;height:1rem;background:var(--c-paper);
-  border-top:var(--bd-hard);border-right:var(--bd-hard);
-  rotate:45deg;
-}
-.olly-promo-bubble b{display:block;margin-bottom:0.3rem;font-family:var(--font-display);font-weight:400;font-size:var(--step-0);line-height:1.2}
-.olly-promo-cta{display:inline;font-weight:900;color:var(--c-orange-deep);border-bottom:2px solid currentColor}
-.olly-promo-card img{
-  flex:none;width:6.5rem;height:auto;
-  filter:drop-shadow(-3px 3px 0 var(--c-ink));
-  transform-origin:50% 90%;transition:rotate 260ms var(--ease-out-expo);
-}
-.olly-promo-card:hover img{rotate:-7deg}
-.olly-promo-card:focus-visible{outline:none}
-.olly-promo-card:focus-visible .olly-promo-bubble{outline:3px solid var(--c-orange-deep);outline-offset:3px}
-.olly-promo-x{
-  position:absolute;z-index:2;top:-0.85rem;left:-0.7rem;
-  width:2.1rem;height:2.1rem;display:grid;place-items:center;cursor:pointer;
-  background:var(--c-paper);color:var(--fg);
-  border:var(--bd-hard);border-radius:50%;
-  box-shadow:-2px 2px 0 var(--c-ink);
-  pointer-events:auto;opacity:0;transition:opacity 200ms linear 350ms;
-}
-.olly-promo.is-in .olly-promo-x{opacity:1}
-.olly-promo-x:hover{background:var(--c-gold-pale)}
-.olly-promo-x svg{width:0.85rem;height:0.85rem}
-@media (max-width:48rem){
-  /* above the sticky action bar */
-  .olly-promo{right:0.6rem;bottom:calc(5.6rem + env(safe-area-inset-bottom,0px))}
-  .olly-promo-card img{width:5.25rem}
-  .olly-promo-bubble{margin-bottom:2.6rem}
-}
-@media (prefers-reduced-motion:reduce){
-  .olly-promo-card{translate:none;rotate:none;transition:opacity 200ms linear}
-  .olly-promo-card img{transition:none}
-}
-/* OLLY-PROMO:CSS:END */
 
 
 
@@ -1395,14 +1345,14 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <div class="nav-sub-wrap">
-        <button class="nav-sub-toggle is-current" type="button" aria-expanded="false" aria-controls="nav-sub">
+        <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-sub">
           Services
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
         </button>
         <div class="nav-sub" id="nav-sub">
         <a href="scorpion-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
-        <a href="ant-control.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
+        <a href="ant-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
@@ -1411,7 +1361,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.4 21 7l-9 4.6L3 7l9-4.6Z"/><path d="M3 12.2l9 4.6 9-4.6"/><path d="M3 17.2l9 4.6 9-4.6"/></svg><span>General Pest Control</span></a>
         </div>
       </div>
-      <a href="service-areas.html">Service Areas</a>
+      <a href="service-areas.html" aria-current="page">Service Areas</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="#contact">Contact</a>
@@ -1424,23 +1374,22 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="hero-grid">
       <div class="stack reveal" style="--s:1.35rem">
-        <p style="margin:0"><span class="hero-kick">Ant Elimination &amp; Prevention</span></p>
-        <h1>Ant control in Phoenix, AZ. Targeted solutions for every species.</h1>
-      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Ants are among the most persistent pests in the Phoenix Valley, and one of the most mishandled. A generic spray may knock back the workers you see, but the colony behind your walls keeps growing.</p>
-        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
+        <p style="margin:0"><span class="hero-kick">Service areas</span></p>
+        <h1>Pest control across the Phoenix Valley.</h1>
+        <!-- PLACEHOLDER CONTENT: replace with the final intro copy -->
+        <p class="prose" style="font-size:var(--step-1);line-height:1.5">We serve homes throughout Maricopa and Pinal County. Find your city below to see how we protect homes in your neighborhood.</p>
         <div class="hero-actions">
-          <a class="btn btn--lg" href="#contact">Get my ant control quote</a>
+          <a class="btn btn--lg" href="#maricopa-county">Find your city</a>
           <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
         </div>
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
-        <div class="shot">
-          <picture>
-            <source srcset="build-assets/service-scorpion.webp" type="image/webp">
-            <img src="build-assets/service-scorpion.jpg" alt="Bait stations staged on a Phoenix Valley driveway before a perimeter treatment." width="600" height="600" loading="lazy">
-          </picture>
+        <!-- PLACEHOLDER: service area map goes here -->
+        <div class="area-map" role="img" aria-label="Service area map, coming soon">
+          <img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
+          <span>Service area map<br>coming soon</span>
         </div>
-        <p style="margin:0"><span class="hero-plate">Species identified on-site before any product is applied</span></p>
+        <p style="margin:0"><span class="hero-plate">Maricopa and Pinal County</span></p>
       </div>
     </div>
   </div>
@@ -1462,148 +1411,140 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <a class="btn btn--gold actionbar-cta" href="#contact">Sign me up!</a>
 </div>
 
-<!-- ===================== SPECIES ===================== -->
-<section class="band band--2 pad seam-host" id="species">
+<!-- ===================== MARICOPA COUNTY ===================== -->
+<section class="band band--2 pad" id="maricopa-county">
   <div class="shell">
     <div class="section-head reveal">
-      <span class="tag">Know your invader</span>
-      <h2>Common ant species in the Phoenix Valley</h2>
-      <p class="prose" style="margin-top:1.25rem">Each species requires a different strategy. Identification is step one.</p>
+      <span class="tag tag--cactus">Maricopa County</span>
+      <h2>Cities we serve in Maricopa County</h2>
+      <!-- PLACEHOLDER CONTENT: replace with the final county copy -->
+      <p class="prose" style="margin-top:1.25rem">Short intro about pest pressure and service in Maricopa County. Final copy coming soon.</p>
     </div>
-    <div class="cards">
-      <article class="card card--gold reveal">
-        <span class="card-tag card-tag--orange">Aggressive</span>
-        <h3>Fire Ants</h3>
-        <p>Territorial and capable of delivering a painful sting. Valley colonies can number in the hundreds of thousands and spread rapidly.</p>
+    <div class="cards cards--tight">
+      <article class="card reveal">
+        <h3>Phoenix</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Phoenix. Local details coming soon.</p>
       </article>
-      <article class="card reveal" style="--d:70ms">
-        <span class="card-tag">Structural</span>
-        <h3>Carpenter Ants</h3>
-        <p>Unlike most ants, they tunnel through wood to build their nests, causing structural damage over time. Often mistaken for termites.</p>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <h3>Scottsdale</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Scottsdale. Local details coming soon.</p>
       </article>
       <article class="card card--sky reveal" style="--d:140ms">
-        <span class="card-tag">Perimeter</span>
-        <h3>Pavement Ants</h3>
-        <p>Typically found along driveways, sidewalks, and foundations. Less aggressive but highly invasive inside the home.</p>
+        <h3>Mesa</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Mesa. Local details coming soon.</p>
       </article>
       <article class="card reveal" style="--d:210ms">
-        <span class="card-tag">Supercolony</span>
-        <h3>Argentine Ants</h3>
-        <p>One of the most common home-invading ants in Arizona. They form massive supercolonies and are highly resistant to generic treatments.</p>
+        <h3>Chandler</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Chandler. Local details coming soon.</p>
       </article>
-      <article class="card card--gold reveal" style="--d:280ms">
-        <span class="card-tag">Indoor trail</span>
-        <h3>Odorous House Ants</h3>
-        <p>Small, fast, and persistent. Emit a distinct odor when crushed. Often trail through kitchens and bathrooms in large numbers.</p>
+      <article class="card reveal">
+        <h3>Gilbert</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Gilbert. Local details coming soon.</p>
       </article>
-      <article class="card card--cactus reveal" style="--d:350ms">
-        <h3>Not sure which one?</h3>
-        <p>We identify the species on-site before any product is applied. Identification drives the treatment plan.</p>
-        <a class="btn-link" style="font-size:var(--step--1);justify-self:start;margin-top:0.3rem" href="#contact">Book an identification visit</a>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <h3>Glendale</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Glendale. Local details coming soon.</p>
+      </article>
+      <article class="card card--sky reveal" style="--d:140ms">
+        <h3>Peoria</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Peoria. Local details coming soon.</p>
+      </article>
+      <article class="card reveal" style="--d:210ms">
+        <h3>Surprise</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Surprise. Local details coming soon.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Tempe</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Tempe. Local details coming soon.</p>
+      </article>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <h3>Fountain Hills</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Fountain Hills. Local details coming soon.</p>
+      </article>
+      <article class="card card--sky reveal" style="--d:140ms">
+        <h3>Cave Creek</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Cave Creek. Local details coming soon.</p>
+      </article>
+      <article class="card reveal" style="--d:210ms">
+        <h3>Goodyear</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Goodyear. Local details coming soon.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Buckeye</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Buckeye. Local details coming soon.</p>
+      </article>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <h3>Queen Creek</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Queen Creek. Local details coming soon.</p>
       </article>
     </div>
-    <p class="slab reveal">We treat the colony, not the symptom.</p>
   </div>
-  <picture class="cactus cactus--seam">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
 </section>
 
-<!-- ===================== APPROACH ===================== -->
-<section class="band pad" id="method">
-  <div class="shell split">
-    <div class="stack reveal" style="--s:1.35rem">
-      <div>
-        <span class="tag tag--orange">Our approach</span>
-        <h2 style="font-size:var(--step-3)">Why generic spraying makes ant problems worse</h2>
-      </div>
-      <div class="prose">
-        <p>Over-the-counter sprays kill the workers you see but signal danger to the colony,
-        causing it to split and relocate. One ant problem becomes several.</p>
-        <p>Our process starts with inspection: species identification, trail mapping, entry point
-        assessment, and conditions analysis. From there, we apply species-specific baits,
-        perimeter barriers, and nest-directed products that eliminate the colony at the source.</p>
-      </div>
+<!-- ===================== PINAL COUNTY ===================== -->
+<section class="band pad" id="pinal-county">
+  <div class="shell">
+    <div class="section-head reveal">
+      <span class="tag tag--orange">Pinal County</span>
+      <h2>Cities we serve in Pinal County</h2>
+      <!-- PLACEHOLDER CONTENT: replace with the final county copy -->
+      <p class="prose" style="margin-top:1.25rem">Short intro about pest pressure and service in Pinal County. Final copy coming soon.</p>
     </div>
-    <div class="split-media reveal" style="--d:120ms">
-      <div class="blk">
-        <h3 style="font-size:var(--step-1);margin-bottom:0.3rem">What that looks like on site</h3>
-        <ul class="ticks">
-          <li><b>Species-specific baits</b>, chosen for the colony you actually have</li>
-          <li><b>Perimeter barriers</b>, stop the trail at the property line</li>
-          <li><b>Nest-directed products</b>, eliminate the colony, not just the surface</li>
-          <li><b>Environmental advisory</b>, what's attracting them and how to break the cycle</li>
-        </ul>
-      </div>
+    <div class="cards cards--tight">
+      <article class="card reveal">
+        <h3>San Tan Valley</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in San Tan Valley. Local details coming soon.</p>
+      </article>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <h3>Apache Junction</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Apache Junction. Local details coming soon.</p>
+      </article>
+      <article class="card card--sky reveal" style="--d:140ms">
+        <h3>Maricopa</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Maricopa. Local details coming soon.</p>
+      </article>
+      <article class="card reveal" style="--d:210ms">
+        <h3>Casa Grande</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Casa Grande. Local details coming soon.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Florence</h3>
+        <!-- PLACEHOLDER CONTENT -->
+        <p>Pest control in Florence. Local details coming soon.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ===================== SERVICE AREAS ===================== -->
+<!-- ===================== OTHER AREAS ===================== -->
 <section class="band band--paper pad">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag tag--cactus">Service areas</span>
-      <h2>Ant control across the Phoenix Valley</h2>
-      <p class="prose" style="margin-top:1.25rem">We provide ant elimination and prevention services throughout Maricopa and Pinal County.</p>
+  <div class="shell area-next reveal">
+    <div>
+      <span class="tag">Don't see your city?</span>
+      <h2 style="font-size:var(--step-3)">We may still cover your area.</h2>
+      <!-- PLACEHOLDER CONTENT -->
+      <p class="prose" style="margin-top:1rem">Reach out and we'll let you know if your home is in our service range.</p>
     </div>
-    <ul class="areas reveal">
-      <li>Phoenix</li>
-      <li>Scottsdale</li>
-      <li>Mesa</li>
-      <li>Chandler</li>
-      <li>Gilbert</li>
-      <li>Glendale</li>
-      <li>Tempe</li>
-      <li>Peoria</li>
-      <li>Surprise</li>
-      <li>Queen Creek</li>
-      <li>San Tan Valley</li>
-      <li>Fountain Hills</li>
-      <li>Cave Creek</li>
-      <li>Goodyear</li>
-      <li>Maricopa</li>
-    </ul>
+    <a class="btn btn--lg btn--gold olly-open" href="sms:+16026006746" data-olly-open><img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">Ask Olly</a>
   </div>
-</section>
-
-<!-- ===================== FAQ ===================== -->
-<section class="band pad faq-host">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag">FAQ</span>
-      <h2>Frequently asked questions</h2>
-      <p class="prose" style="margin-top:1.25rem">Everything Phoenix Valley homeowners ask about ant control.</p>
-    </div>
-    <div class="faq reveal">
-      <details>
-        <summary>Why do I suddenly have ants inside my home?</summary>
-        <div class="faq-a"><p>Ants typically enter homes in search of food, water, or shelter, often triggered by temperature changes, rainfall, or drought. In the Phoenix Valley, ant activity spikes in spring and after monsoon season. If you're seeing trails indoors, the colony has likely found a reliable food or water source nearby.</p></div>
-      </details>
-      <details>
-        <summary>Why did spraying ant killer make things worse?</summary>
-        <div class="faq-a"><p>Over-the-counter sprays kill the workers you see but signal danger to the colony, causing it to split and relocate, a process called budding. This can turn one ant problem into several. Professional treatments use species-specific baits and nest-directed products that eliminate the colony itself.</p></div>
-      </details>
-      <details>
-        <summary>How long does ant treatment take to work?</summary>
-        <div class="faq-a"><p>Bait-based treatments typically work within 1 to 2 weeks as workers carry the product back to the colony. Perimeter and barrier treatments provide more immediate protection. We'll set expectations based on the specific species and infestation level at your property.</p></div>
-      </details>
-      <details>
-        <summary>Are your ant treatments safe around food prep areas?</summary>
-        <div class="faq-a"><p>Yes. We use products appropriate for indoor use and will guide you on any precautions for kitchens and food storage areas before and after treatment.</p></div>
-      </details>
-      <details>
-        <summary>Do you treat fire ant mounds in the yard?</summary>
-        <div class="faq-a"><p>Yes, outdoor fire ant mounds are included in our property treatment. We address both interior trails and exterior colonies for complete coverage.</p></div>
-      </details>
-    </div>
-  </div>
-  <img class="faq-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" loading="lazy" aria-hidden="true">
-  <picture class="cactus faq-cactus">
-    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
-    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
-  </picture>
 </section>
 
 <!-- ===================== CTA ===================== -->
@@ -1612,10 +1553,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="stack reveal" style="--s:1.4rem">
       <div>
         <span class="tag tag--paper">Ready to start</span>
-        <h2>Stop the trail at your property line.</h2>
+        <h2>Serving your neighborhood. Let's talk.</h2>
       </div>
       <div class="prose" style="max-width:52ch">
-        <p>Every evaluation is on-site, no obligation, and tailored to the species invading your home.</p>
+        <p>Every evaluation is on-site, no obligation, and tailored to your home.</p>
       </div>
       <div class="hero-actions">
         <a class="btn btn--lg btn--paper" href="tel:+16026006746">Call (602) 600-6746</a>
@@ -1759,20 +1700,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
   });
 })();
 </script>
-<!-- OLLY-PROMO:HTML:START -->
-<aside class="olly-promo" id="olly-promo" aria-label="Offer from Olly" hidden>
-  <button type="button" class="olly-promo-x" aria-label="Dismiss offer">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
-  </button>
-  <button type="button" class="olly-promo-card" data-olly-open data-olly-promo>
-    <span class="olly-promo-bubble">
-      <b>Nice! You've really done your research.</b>
-      It's time to take your home back. <span class="olly-promo-cta"><span data-olly-tap>Click</span> here for 10% off your initial service.</span> Our treat.
-    </span>
-    <img src="build-assets/owl-mark.png" alt="" width="448" height="425">
-  </button>
-</aside>
-<!-- OLLY-PROMO:HTML:END -->
 
 <!-- OLLY-FORM:HTML:START -->
 <dialog class="olly-dialog" id="olly-dialog" aria-labelledby="olly-title">
@@ -1878,38 +1805,5 @@ html:has(.olly-dialog[open]){overflow:hidden}
 })();
 </script>
 
-<script data-olly-promo="1">
-/* Olly flies up every time "Ready to start" enters the viewport, on every
-   pest page. If dismissed, he stays away until the section leaves and comes
-   back into view. Without JS he doesn't appear. */
-(function(){
-  var box = document.getElementById('olly-promo');
-  var cta = document.getElementById('contact');
-  if (!box || !cta || !('IntersectionObserver' in window)) return;
-  var dismissed = false;
-  if (window.matchMedia('(hover: none)').matches){
-    box.querySelectorAll('[data-olly-tap]').forEach(function(s){ s.textContent = 'Tap'; });
-  }
-  var t;
-  function enter(){
-    clearTimeout(t); box.hidden = false;
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ box.classList.add('is-in'); }); });
-  }
-  function leave(){
-    box.classList.remove('is-in');
-    clearTimeout(t); t = setTimeout(function(){ box.hidden = true; }, 700);
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting){ if (!dismissed) enter(); }
-      else { dismissed = false; leave(); }
-    });
-  }, { threshold: 0.2 });
-  io.observe(cta);
-  function done(){ dismissed = true; leave(); }
-  box.querySelector('.olly-promo-x').addEventListener('click', done);
-  box.querySelector('[data-olly-promo]').addEventListener('click', done);
-})();
-</script>
 </body>
 </html>
