@@ -90,7 +90,7 @@ f'''
       <article class="card"><h3>Child-safe</h3><p>Toys moved before treatment.</p></article>
       <article class="card card--gold"><h3>Pet-safe</h3><p>Bowls removed before product is applied.</p></article>
       <article class="card card--sky"><h3>Garden-safe</h3><p>Vegetable beds and landscaping protected.</p></article>
-      <article class="card"><h3>Wildlife-Conscious</h3><p>Raptor-safe rodenticides only.</p></article>
+      <article class="card"><h3>Wildlife-Conscious</h3><p>Raptor-conscious rodenticides only.</p></article>
       </div>
     </div>
   </div>
