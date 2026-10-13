@@ -1,5 +1,5 @@
 #!/bin/bash
-# uso: shot.sh archivo.html ancho alto etiqueta
+# usage: shot.sh file.html width height label
 cd "/home/jusevelez/Work/OWD/design-exploration/exclusive pest"
 S=/tmp/claude-1000/-home-jusevelez-Work-OWD-design-exploration/0d057a6c-97fd-4e44-acbe-de2e5bf58043/scratchpad
 python3 -c "
