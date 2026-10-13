@@ -88,7 +88,7 @@ def hero(kick, h1, paras, cta_label, plate, img, alt, w, h):
 '''
 
 def page(fn, title, desc, crumb, body, current="services"):
-    out = (C.head(title, desc, INNER)
+    out = (C.head(title, desc, INNER, fn)
            + C.chrome_top(current)
            + body
            + C.FOOTER + "\n" + C.scripts())

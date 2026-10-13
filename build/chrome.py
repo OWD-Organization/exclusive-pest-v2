@@ -7,15 +7,31 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEL   = "+16026006746"
 TELD  = "(602) 600-6746"
 MAIL  = "hello@exclusivepest.co"
+# Absolute base for og:url and og:image. Social crawlers reject relative
+# paths, so this has to be a real host. Swap it when the site moves to its
+# production domain, and the whole site's link previews follow.
+SITE   = "https://exclusive-pest-v2.vercel.app"
+SUFFIX = " | Exclusive Pest Solutions"
 
-def head(title, desc, extra_css=""):
+def head(title, desc, extra_css="", page=None):
     """Reuses the home page's stylesheet verbatim and appends the inner-page
-    one, so the system can't drift apart."""
+    one, so the system can't drift apart. `page` is this file's own name,
+    used for og:url; without it the page would inherit the home page's."""
     src = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     h = src[:src.index("</head>")]
     h = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", h, count=1, flags=re.S)
     h = re.sub(r'(<meta name="description" content=")[^"]*(">)',
                lambda m: m.group(1) + desc + m.group(2), h, count=1)
+    # the Open Graph block is copied from index.html with the home page's own
+    # values: each one has to be rewritten, or every preview claims to be the home
+    og_title = title[:-len(SUFFIX)] if title.endswith(SUFFIX) else title
+    h = re.sub(r'(<meta property="og:title" content=")[^"]*(">)',
+               lambda m: m.group(1) + og_title + m.group(2), h, count=1)
+    h = re.sub(r'(<meta property="og:description" content=")[^"]*(">)',
+               lambda m: m.group(1) + desc + m.group(2), h, count=1)
+    if page:
+        h = re.sub(r'(<meta property="og:url" content=")[^"]*(">)',
+                   lambda m: m.group(1) + f"{SITE}/{page}" + m.group(2), h, count=1)
     h = h.replace('EXCLUSIVE PEST SOLUTIONS , about page', 'EXCLUSIVE PEST SOLUTIONS')
     h = h.replace('EXCLUSIVE PEST SOLUTIONS , home, v2 "desert daylight"',
                   'EXCLUSIVE PEST SOLUTIONS\n   System inherited from home v2 "desert daylight".')

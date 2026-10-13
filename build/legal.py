@@ -134,7 +134,7 @@ def build(src, fn, title, meta_desc, h1, kick, intro, dates, note, crumb):
             "Call us or send an email and a real person at Exclusive Pest Solutions will answer. "
             "Phoenix Valley, Maricopa and Pinal County.",
             creds=False)
-    out = (C.head(title, meta_desc, INNER)
+    out = (C.head(title, meta_desc, INNER, fn)
            + C.chrome_top(None)
            + body + C.FOOTER + "\n" + C.scripts())
     out = C.nodash(out)
