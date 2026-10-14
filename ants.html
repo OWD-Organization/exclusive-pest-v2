@@ -1073,6 +1073,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
 
 /* ---- subpage hero: without the home page's giant headline ---- */
 .hero--page h1{font-size:var(--step-4);max-width:26ch;line-height:1.18}
+/* second line is a darkened brand gold: the light gold fails on sand */
+.hero--page h1 .hero-rest{display:block;margin-top:0.12em;color:#a67c00}
 /* more room below the sticky nav: the H1 used to start flush against the edge */
 .hero--page{margin-top:clamp(1.75rem,4vw,3.25rem)}
 .hero--page .shell{padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem)}
@@ -1406,7 +1408,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="hero-grid">
       <div class="stack reveal" style="--s:1.35rem">
         <p style="margin:0"><span class="hero-kick">Bug guide</span></p>
-        <h1>Ants: know what you're dealing with.</h1>
+        <h1>Ants<span class="hero-rest">know what you're dealing with.</span></h1>
         <!-- PLACEHOLDER CONTENT: replace with David's copy -->
         <p class="prose" style="font-size:var(--step-1);line-height:1.5">Ants are one of the most common pests in Phoenix Valley homes. A single trail in the kitchen usually means a colony is nesting nearby, in the yard, under the slab or inside a wall. Here is how they get in, what attracts them, and what you can do about it.</p>
         <div class="hero-actions">
