@@ -607,7 +607,7 @@ section{position:relative}
    ========================================================= */
 .cta{background:var(--c-orange);border-bottom:var(--bd-hard);position:relative;overflow:hidden}
 .cta .shell{position:relative;z-index:1}
-.cta h2{font-size:var(--step-4);max-width:24ch}
+.cta h2{font-size:var(--step-4);max-width:24ch;line-height:1.18}
 .cta .prose{color:color-mix(in oklab, var(--c-ink) 80%, transparent)}
 .cta-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);
           gap:clamp(2rem,4vw,4rem);align-items:center}
@@ -975,8 +975,8 @@ section{position:relative}
 }
 .bug-plate img{width:62%;height:auto}
 /* closer: heading and button in one row */
-.bug-next{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
-.bug-next h2{max-width:24ch}
+.bug-next{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:1.75rem 3rem}
+.bug-next h2{max-width:24ch;line-height:1.22}
 /* square-bullet lists, same as on About */
 .ticks{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:0.55rem}
 .ticks li{
@@ -1071,7 +1071,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
    ========================================================= */
 
 /* ---- subpage hero: without the home page's giant headline ---- */
-.hero--page h1{font-size:var(--step-4);max-width:26ch}
+.hero--page h1{font-size:var(--step-4);max-width:26ch;line-height:1.18}
 /* more room below the sticky nav: the H1 used to start flush against the edge */
 .hero--page{margin-top:clamp(1.75rem,4vw,3.25rem)}
 .hero--page .shell{padding-block:clamp(1.5rem,3vw,2.5rem) clamp(1.25rem,2.5vw,2.25rem)}
@@ -1269,6 +1269,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
   .legal-grid{grid-template-columns:1fr}
   .toc{position:static}
   .toc ol{grid-template-columns:repeat(auto-fit,minmax(min(13rem,100%),1fr));gap:0 1rem}
+  /* wrapped slab titles were colliding; stack the closer so the button sits under the heading */
+  .hero--page h1,.cta h2{line-height:1.2}
+  .bug-next{flex-direction:column;align-items:flex-start;gap:1.35rem}
+  .bug-next h2{max-width:16em;line-height:1.24}
 }
 @media (max-width:48rem){
   .hero--page h1{font-size:var(--step-3);max-width:none}
@@ -1403,7 +1407,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <p style="margin:0"><span class="hero-kick">Bug guide</span></p>
         <h1>Black widows: know what you're dealing with.</h1>
         <!-- PLACEHOLDER CONTENT: replace with David's copy -->
-        <p class="prose" style="font-size:var(--step-1);line-height:1.5">Black widows are one of the most common spiders around Phoenix Valley homes. They are shy and rarely bite, but they build webs in exactly the places people reach into: garages, block walls, patio furniture and storage. Here is how they get in, what attracts them, and what you can do about it.</p>
+        <p class="prose" style="font-size:var(--step-1);line-height:1.5">Black widows are one of the most common spiders around Phoenix Valley homes. They are shy and rarely bite, but they build their webs in areas we are likely to reach into: between items in the garage, in cracks on the block wall and on patio furniture or items stored against the house. Here is how they get in, what attracts them, and what you can do about it.</p>
         <div class="hero-actions">
           <a class="btn btn--lg" href="#q1">Read the guide</a>
           <a class="btn-link" href="general-pest-control.html">Our General Pest Control service</a>
