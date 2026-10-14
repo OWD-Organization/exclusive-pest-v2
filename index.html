@@ -421,6 +421,13 @@ section{position:relative}
 /* desktop: narrow enough that "Your home stays." breaks before it runs under the sun */
 @media (min-width:64.0625rem){.hero:not(.hero--page) h1{max-width:13ch}}
 .hero h1 em{display:block;font-style:normal;color:var(--c-orange-deep)}
+/* Home slogan: the three lines off the truck, each in its own colour. The
+   vehicle wrap sits on a dark panel, so its gold and green are lightened
+   there; on the cream hero the deep variants are what stay legible. */
+.hero h1.slogan span{display:block}
+.hero h1.slogan .slogan-a{color:var(--c-gold-deep)}
+.hero h1.slogan .slogan-b{color:var(--c-orange-deep)}
+.hero h1.slogan .slogan-c{color:var(--c-cactus-deep)}
 .hero-kick{
   display:inline-block;font-weight:900;
   font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase;
@@ -1132,7 +1139,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="stack reveal" style="--s:1.5rem">
       <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
-      <h1>Your home stays. <em>The pests don't.</em></h1>
+      <h1 class="slogan"><span class="slogan-a">Comfort.</span><span class="slogan-b">Starts.</span><span class="slogan-c">Here.</span></h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home. Not your average pest service.</p>
       <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
@@ -1200,8 +1207,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </article>
       <article class="svc reveal" style="--d:160ms">
         <picture>
-          <source srcset="build-assets/service-mosquito.webp" type="image/webp">
-          <img src="build-assets/service-mosquito.jpg" alt="An In2Care mosquito trap station set on desert gravel beside a prickly pear and a flowering shrub." width="800" height="600" loading="lazy">
+          <source srcset="build-assets/service-mosquito-stations.webp" type="image/webp">
+          <img src="build-assets/service-mosquito-stations.jpg" alt="Three mosquito larvicide stations set on gravel in a Phoenix Valley desert garden." width="800" height="600" loading="lazy">
         </picture>
         <div class="svc-body">
           <h3>Eco-Friendly Mosquito Control</h3>
