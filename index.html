@@ -439,8 +439,8 @@ section{position:relative}
 }
 
 /* ---- SCROLL-DRIVEN: the owl lags and tilts as the hero scrolls past ----
-   Pure CSS, no JS. Progressive enhancement: if the browser doesn't support
-   animation-timeline, the owl simply stays still. ---- */
+   CSS where animation-timeline exists. Older Safari gets the same motion
+   from the small script at the bottom of the page. ---- */
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     .hero-owl{
@@ -451,6 +451,14 @@ section{position:relative}
     @keyframes owl-perch{
       from{translate:0 0;rotate:0deg}
       to  {translate:-1.6rem 3rem;rotate:-3.5deg}
+    }
+    /* phones: drift up along the dune. A downward shift sank him behind the next band. */
+    @media (max-width:48rem){
+      .hero-owl{animation-name:owl-bob;animation-range:0 65vh}
+    }
+    @keyframes owl-bob{
+      from{translate:0 0;rotate:0deg}
+      to  {translate:0 -1.15rem;rotate:-2deg}
     }
   }
 }
@@ -527,6 +535,10 @@ section{position:relative}
 /* brand-yellow highlight in headings: gold alone lacks contrast on the light bands,
    so it gets the logo treatment, an ink outline plus a hard ink shadow */
 .hl-gold{color:var(--c-gold);-webkit-text-stroke:0.035em var(--c-ink);paint-order:stroke fill;text-shadow:-0.05em 0.05em 0 var(--c-ink)}
+.section-head .hl-gold{margin-left:0.35em}
+@media (max-width:48rem){
+  .section-head .hl-gold{display:block;margin:0.2em 0 0}
+}
 /* the whole card is clickable: the heading link stretches over it */
 .pest{position:relative}
 .pest-link{color:inherit;text-decoration:none}
@@ -764,10 +776,6 @@ section{position:relative}
 @media (max-width:48rem){
   .cactus--hero{display:block;height:5.4rem;left:1.1rem;right:auto;bottom:0.95rem}
   .cactus--hero-b{display:block;height:3.3rem;left:4.55rem;right:auto;bottom:0.9rem}
-}
-/* mobile: no scroll-driven perch, it sank Olly behind the next section */
-@media (max-width:48rem){
-  .hero-owl{animation:none;translate:none;rotate:none}
 }
 @media (max-width:23rem){
   .cactus--hero{height:4.6rem;left:0.8rem;bottom:0.9rem}
@@ -1125,7 +1133,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="stack reveal" style="--s:1.5rem">
       <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
       <h1>The desert stays. <em>The pests don't.</em></h1>
-      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home, not a spray-and-go route.</p>
+      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home. Not your average pest service.</p>
       <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
         <a class="btn btn--lg" href="#contact">Get my custom plan</a>
@@ -1165,7 +1173,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="section-head reveal">
       <span class="tag tag--cactus">What we do</span>
-      <h2>Premium Pest Control, <span class="hl-gold">no fluff</span></h2>
+      <h2>Premium Pest Control <span class="hl-gold">no fluff</span></h2>
     </div>
     <div class="svcs">
       <article class="svc reveal">
@@ -1487,6 +1495,37 @@ html:has(.olly-dialog[open]){overflow:hidden}
   </div>
 </footer>
 
+<script>
+/* Olly rides the scroll in browsers without CSS scroll timelines (Safari 18). */
+(function(){
+  var owl = document.querySelector('.hero-owl');
+  if (!owl) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.CSS && CSS.supports && CSS.supports('animation-timeline: scroll()')) return;
+  var phone = window.matchMedia('(max-width: 48rem)');
+  var ticking = false;
+  function place(){
+    ticking = false;
+    var span = Math.max(window.innerHeight * (phone.matches ? 0.65 : 0.9), 1);
+    var p = Math.max(0, Math.min(1, window.scrollY / span));
+    if (phone.matches){
+      owl.style.translate = '0 ' + (-1.15 * p).toFixed(3) + 'rem';
+      owl.style.rotate = (-2 * p).toFixed(2) + 'deg';
+    } else {
+      owl.style.translate = (-1.6 * p).toFixed(3) + 'rem ' + (3 * p).toFixed(3) + 'rem';
+      owl.style.rotate = (-3.5 * p).toFixed(2) + 'deg';
+    }
+  }
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(place);
+  }
+  place();
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+})();
+</script>
 <script>
 /* mobile menu: progressive enhancement, without JS the links stay visible */
 (function(){
