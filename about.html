@@ -844,7 +844,7 @@ section{position:relative}
 .std > p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
 .std.blk--cactus > p,.std.blk--gold > p{color:var(--fg)}
 
-/* NUMERAL highlighted inside a block (the 20+) */
+/* NUMERAL highlighted inside a block (the 13+) */
 .figure-note{display:flex;gap:1.1rem;align-items:center}
 .figure-note b{
   font-family:var(--font-display);font-weight:400;
@@ -859,14 +859,15 @@ section{position:relative}
   font-weight:900;font-size:var(--step--2);
   letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
 }
-/* TEAM: two person cards, photo on top and text below */
+/* TEAM: one person card, photo on top and text below */
 .team{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(20rem,100%),1fr));
+  display:grid;grid-template-columns:minmax(0,1fr);
+  max-width:40rem;
   gap:clamp(2rem,4vw,3.5rem);margin-top:clamp(2.25rem,4vw,3.25rem);
   align-items:start;
 }
 .person{display:grid;gap:clamp(1.25rem,2.5vw,1.75rem);align-content:start}
-/* same framing on both cards, so the pair reads as one row */
+/* photo framing matches the rest of the portrait shots */
 .person-shot img{
   display:block;width:100%;aspect-ratio:900/667;object-fit:cover;
   border:var(--bd-hard);border-radius:var(--r);
@@ -1309,8 +1310,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </div>
       <div class="blk blk--gold">
         <p class="figure-note" style="margin:0">
-          <b>20+</b>
-          <span>Over 2 decades of Phoenix Valley expertise, from bark scorpions to backyard ecosystems.</span>
+          <b>13+</b>
+          <span>years of Phoenix Valley expertise, from bark scorpions to backyard ecosystems.</span>
         </p>
       </div>
     </div>
@@ -1461,24 +1462,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
           <dl class="traits">
             <div><dt>Likes</dt><dd>Building race cars, Playing guitar, the outdoors</dd></div>
             <div><dt>Dislikes</dt><dd>Pineapple on pizza</dd></div>
-          </dl>
-        </div>
-      </article>
-
-      <article class="person reveal" style="--d:120ms">
-        <div class="person-shot">
-          <picture>
-            <source srcset="build-assets/shane-portrait.webp" type="image/webp">
-            <img src="build-assets/shane-portrait.jpg" alt="Shane, Sonoran pest specialist at Exclusive Pest Solutions, in the desert at sunset." width="900" height="667" loading="lazy">
-          </picture>
-        </div>
-        <div class="person-body">
-          <h3>Shane</h3>
-          <span class="name-label">Sonoran Pest Specialist</span>
-          <p>Shane takes pride in his work and brings over 10 years of experience to the table. He wields his passion for entomology &amp; nature to bring science-based and environmentally conscious results to our neighbors and local businesses.</p>
-          <dl class="traits">
-            <div><dt>Likes</dt><dd>Music production, Off-roading, Car culture, Hiking</dd></div>
-            <div><dt>Dislikes</dt><dd>Vegetables, Sweating, Bugs in your house</dd></div>
           </dl>
         </div>
       </article>
