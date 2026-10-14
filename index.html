@@ -418,9 +418,9 @@ section{position:relative}
   position:relative;z-index:1;
 }
 .hero h1{font-size:clamp(2.4rem, 1rem + 7.9vw, 8.125rem);max-width:22ch}
-/* desktop: narrow enough that "The desert stays." breaks before it runs under the sun */
+/* desktop: narrow enough that "Your home stays." breaks before it runs under the sun */
 @media (min-width:64.0625rem){.hero:not(.hero--page) h1{max-width:13ch}}
-.hero h1 em{font-style:normal;color:var(--c-orange-deep)}
+.hero h1 em{display:block;font-style:normal;color:var(--c-orange-deep)}
 .hero-kick{
   display:inline-block;font-weight:900;
   font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase;
@@ -1132,7 +1132,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="stack reveal" style="--s:1.5rem">
       <p style="margin:0"><span class="hero-kick">Phoenix Valley's Premier Pest Control</span></p>
-      <h1>The desert stays. <em>The pests don't.</em></h1>
+      <h1>Your home stays. <em>The pests don't.</em></h1>
       <p class="prose" style="font-size:var(--step-1);line-height:1.5">Premium pest control across the Phoenix Valley. Licensed, wildlife-conscious, and built around your home. Not your average pest service.</p>
       <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
