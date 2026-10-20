@@ -1344,6 +1344,11 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .olly-open,
 .olly-note,
 .olly-promo{display:none !important}
+/* and the footer newsletter: the whole column goes, heading and blurb
+   included, so no copy is left pointing at a form that is not there. The
+   footer top then runs as a single column instead of leaving a gap. */
+.foot-top > div:has(.foot-news){display:none !important}
+.foot-top{grid-template-columns:1fr !important}
 </style>
 </head>
 <body>
