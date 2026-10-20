@@ -1276,6 +1276,13 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .contact-card b{display:block;margin-top:0.2rem;font-weight:800;font-size:var(--step-0);line-height:1.35}
 .contact-card a{text-decoration:none;border-bottom:3px solid var(--c-orange)}
 .contact-card a:hover{color:var(--c-orange-deep)}
+
+/* TEMPORARY, remove to restore: the Olly popup triggers are hidden while the
+   form is reconfigured. The button and its note are still in the markup, and
+   so is the promo card, so deleting this one rule brings all of them back. */
+.olly-open,
+.olly-note,
+.olly-promo{display:none !important}
 </style>
 </head>
 <body>

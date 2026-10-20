@@ -1319,6 +1319,13 @@ html:has(.olly-dialog[open]){overflow:hidden}
   .faq-owl{width:clamp(5.5rem,17vw,7rem);right:0.85rem;bottom:0}
   .faq-cactus{height:clamp(6.5rem,19vw,8.5rem);left:-1.25rem}
 }
+
+/* TEMPORARY, remove to restore: the Olly popup triggers are hidden while the
+   form is reconfigured. The button and its note are still in the markup, and
+   so is the promo card, so deleting this one rule brings all of them back. */
+.olly-open,
+.olly-note,
+.olly-promo{display:none !important}
 </style>
 </head>
 <body>
