@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "exclusive-pest-v2.vercel.app"
+        }
+      ],
+      "destination": "https://www.exclusivepest.co/:path*",
+      "permanent": true
+    }
+  ]
+}
