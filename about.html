@@ -1229,9 +1229,18 @@ html:has(.olly-dialog[open]){overflow:hidden}
   .olly-bubble,.olly-bubble img{transition:none}
 }
 /* the submit button already spanned both columns, but justify-self:start
-   shrank it to its label. Stretching it is what the narrow breakpoint
-   already did, so the two now match. */
-.olly-form .btn[type="submit"]{justify-self:stretch;justify-content:center}
+   shrank it to its label. It stretches now, which the narrow breakpoint
+   already did, and carries two stacked lines: the name people know and a
+   plain description of what the button does. */
+.olly-form .btn[type="submit"]{
+  justify-self:stretch;justify-content:center;
+  flex-direction:column;gap:0.1em;line-height:1.15;
+}
+.olly-send-sub{
+  font-size:var(--step--2);font-weight:800;
+  letter-spacing:var(--tr-label);text-transform:none;
+  opacity:0.85;
+}
 /* OLLY-BUBBLE:CSS:END */
 
 
@@ -1765,7 +1774,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <input type="hidden" name="promo" value="">
         <p class="olly-promo-note" data-promo-only hidden>Your 10% off the initial service is saved with this request.</p>
         <p class="olly-error" role="alert" hidden></p>
-        <button class="btn btn--lg" type="submit">Send to Olly</button>
+        <button class="btn btn--lg" type="submit"><span class="olly-send-main">Tell Olly</span><span class="olly-send-sub">Send us a message</span></button>
         <p class="olly-fine">By sending this form you agree to be contacted by text or phone about your request. Message and data rates may apply; reply STOP to opt out of texts and HELP for help. Consent is not a condition of purchase. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-service.html">Terms of Service</a>.</p>
       </form>
     </div>
