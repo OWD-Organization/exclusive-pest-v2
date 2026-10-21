@@ -1064,6 +1064,44 @@ html:has(.olly-dialog[open]){overflow:hidden}
 }
 /* OLLY-FORM:CSS:END */
 
+/* OLLY-BUBBLE:CSS:START */
+/* Standing contact bubble. It steps aside while the contact section is on
+   screen: the form is already there, and on the pest pages that is exactly
+   where Olly flies up with the offer, so the two never fight for the corner. */
+.olly-bubble{
+  position:fixed;z-index:60;
+  right:clamp(0.9rem,2vw,1.6rem);bottom:clamp(0.9rem,2vw,1.6rem);
+  display:flex;align-items:center;gap:0.55rem;
+  padding:0.45rem 1rem 0.45rem 0.6rem;
+  background:var(--c-paper);color:var(--fg);text-decoration:none;
+  border:var(--bd-hard);border-radius:var(--r-pill);
+  box-shadow:-4px 4px 0 var(--c-ink);
+  font-weight:900;font-size:var(--step--1);letter-spacing:var(--tr-label);
+  text-transform:uppercase;white-space:nowrap;cursor:pointer;
+  transition:translate 160ms var(--ease-out-expo), box-shadow 160ms var(--ease-out-expo);
+}
+.olly-bubble img{width:2.5rem;height:auto;flex:none;transform-origin:50% 90%;
+                 transition:rotate 260ms var(--ease-out-expo)}
+.olly-bubble:hover{translate:1px -2px;box-shadow:-6px 6px 0 var(--c-ink)}
+.olly-bubble:hover img{rotate:-7deg}
+.olly-bubble:active{translate:-2px 2px;box-shadow:-2px 2px 0 var(--c-ink)}
+.olly-bubble[hidden]{display:none}
+@media (max-width:48rem){
+  /* clear of the sticky action bar */
+  .olly-bubble{bottom:calc(5.3rem + env(safe-area-inset-bottom,0px));right:0.7rem;
+               font-size:var(--step--2);padding:0.4rem 0.8rem 0.4rem 0.5rem}
+  .olly-bubble img{width:2.1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .olly-bubble,.olly-bubble img{transition:none}
+}
+/* the submit button already spanned both columns, but justify-self:start
+   shrank it to its label. Stretching it is what the narrow breakpoint
+   already did, so the two now match. */
+.olly-form .btn[type="submit"]{justify-self:stretch;justify-content:center}
+/* OLLY-BUBBLE:CSS:END */
+
+
 
 /* =========================================================
    INNER PAGES, shared components
@@ -1795,6 +1833,13 @@ html:has(.olly-dialog[open]){overflow:hidden}
   });
 })();
 </script>
+<!-- OLLY-BUBBLE:HTML:START -->
+<a class="olly-bubble" id="olly-bubble" href="sms:+16026006746" data-olly-open>
+  <img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
+  <span>Contact us</span>
+</a>
+<!-- OLLY-BUBBLE:HTML:END -->
+
 <!-- OLLY-FORM:HTML:START -->
 <dialog class="olly-dialog" id="olly-dialog" aria-labelledby="olly-title">
   <img class="olly-dialog-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
@@ -1902,6 +1947,18 @@ html:has(.olly-dialog[open]){overflow:hidden}
       err.hidden = false;
     }).then(function(){ submit.disabled = false; });
   });
+})();
+</script>
+<script data-olly-bubble="1">
+/* The bubble hides while the contact section is in view. Without JS it stays
+   put and still works, because it falls back to an SMS link. */
+(function(){
+  var b = document.getElementById('olly-bubble');
+  var cta = document.getElementById('contact');
+  if (!b || !cta || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ b.hidden = e.isIntersecting; });
+  }, { threshold: 0.2 }).observe(cta);
 })();
 </script>
 </body>
