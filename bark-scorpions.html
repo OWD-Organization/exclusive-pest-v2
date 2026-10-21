@@ -1027,6 +1027,10 @@ section{position:relative}
    TELL OLLY , CTA button + form popup
    ========================================================= */
 .olly-open img{width:2.9rem;height:auto;margin:-1rem 0 -0.85rem -1.25rem} /* grows without enlarging the button: negative margins absorb the extra size */
+/* the CTA button carries the same two lines as the form submit: the name
+   beside the owl, and what pressing it does underneath */
+.olly-open .olly-open-lines{display:flex;flex-direction:column;align-items:flex-start;
+                            gap:0.1em;line-height:1.15}
 .olly-note{margin-bottom:0;font-weight:700;font-size:var(--step--1);line-height:1.45;max-width:46ch;color:var(--c-ink)}
 
 html:has(.olly-dialog[open]){overflow:hidden}
@@ -1619,7 +1623,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </div>
       <div class="hero-actions">
         <a class="btn btn--lg btn--paper" href="tel:+16026006746">Call (602) 600-6746</a>
-        <a class="btn btn--lg btn--gold olly-open" href="sms:+16026006746" data-olly-open><img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">Tell Olly</a>
+        <a class="btn btn--lg btn--gold olly-open" href="sms:+16026006746" data-olly-open><img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true"><span class="olly-open-lines"><span class="olly-send-main">Tell Olly</span><span class="olly-send-sub">Send us a message</span></span></a>
       </div>
       <p class="olly-note">No time for a phone call? Tell Olly, and we'll get back to you ASAP via text.</p>
     </div>
