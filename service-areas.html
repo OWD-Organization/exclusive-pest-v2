@@ -1349,15 +1349,10 @@ html:has(.olly-dialog[open]){overflow:hidden}
   .faq-cactus{height:clamp(6.5rem,19vw,8.5rem);left:-1.25rem}
 }
 
-/* TEMPORARY, remove to restore: the Olly popup triggers are hidden while the
-   form is reconfigured. The button and its note are still in the markup, and
-   so is the promo card, so deleting this one rule brings all of them back. */
-.olly-open,
-.olly-note,
-.olly-promo{display:none !important}
-/* and the footer newsletter: the whole column goes, heading and blurb
-   included, so no copy is left pointing at a form that is not there. The
-   footer top then runs as a single column instead of leaving a gap. */
+/* TEMPORARY, remove to restore: the footer newsletter column is hidden,
+   heading and blurb included, so no copy is left pointing at a form that has
+   nowhere to post. The form is still in the markup; the footer top runs as a
+   single column meanwhile, instead of leaving a gap. */
 .foot-top > div:has(.foot-news){display:none !important}
 .foot-top{grid-template-columns:1fr !important}
 </style>
@@ -1754,8 +1749,9 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <span class="tag tag--cactus">Quick request</span>
       <h2 id="olly-title" tabindex="-1" autofocus>Tell Olly what's bugging you.</h2>
       <p>No time for a phone call? Leave Olly a note and we'll get back to you ASAP via text.</p>
-      <!-- data-endpoint: URL that receives the POST (GorillaDesk or other). Empty = demo mode, nothing is sent. -->
-      <form class="olly-form" data-endpoint="">
+      <!-- data-endpoint: the GHL inbound webhook that receives the lead as JSON.
+           Empty = demo mode, nothing is sent. -->
+      <form class="olly-form" data-endpoint="https://services.leadconnectorhq.com/hooks/KCmBOjUkZa5LiCujjaS1/webhook-trigger/FU3DYIr59YlaGC7tjqF1">
         <div class="olly-field">
           <label for="olly-first">First name</label>
           <input id="olly-first" name="first_name" type="text" autocomplete="given-name" required>
@@ -1832,8 +1828,13 @@ html:has(.olly-dialog[open]){overflow:hidden}
     if (form.website.value) return; /* honeypot: bots */
     var endpoint = form.getAttribute('data-endpoint');
     err.hidden = true; submit.disabled = true;
+    /* GHL reads the lead as JSON, so the fields go as an object rather than
+       multipart. The honeypot is dropped: it is a bot check, not lead data. */
+    var data = {};
+    new FormData(form).forEach(function(v, k){ if (k !== 'website') data[k] = v; });
     var send = endpoint
-      ? fetch(endpoint, { method:'POST', body:new FormData(form), headers:{ Accept:'application/json' } })
+      ? fetch(endpoint, { method:'POST', body:JSON.stringify(data),
+                          headers:{ 'Content-Type':'application/json', Accept:'application/json' } })
           .then(function(r){ if (!r.ok) throw new Error(r.status); })
       : (console.warn('Tell Olly: no data-endpoint set, the form does not send data (demo mode).'), Promise.resolve());
     send.then(function(){
