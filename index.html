@@ -732,11 +732,7 @@ section{position:relative}
   .brand{min-width:0;flex:1 1 auto;display:flex;align-items:center}
   .brand img{width:auto;height:auto;max-width:100%;max-height:clamp(1.45rem,7.2vw,2.15rem);object-fit:contain;object-position:left center}
   .nav .btn.nav-call{
-    order:1;margin-left:0;flex:0 0 auto;
-    min-height:2.75rem;
-    padding:0.4em 0.55em;
-    font-size:clamp(0.64rem, 3.05vw, 0.84rem);
-    gap:0.35em;
+    display:none;
   }
   .nav-toggle{
     order:2;margin-left:0;flex:0 0 auto;
@@ -1224,7 +1220,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       <div class="hero-actions">
         <a class="btn btn--lg" href="#contact" data-olly-open>Get my custom plan</a>
-        <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
       </div>
     </div>
   </div>
@@ -1311,9 +1306,9 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </div>
       <ol class="steps steps--stack">
         <li class="step reveal"><span class="step-num" aria-hidden="true">01</span><div><h3>Tell us what's happening</h3><p>Reach out and tell us what you saw and where.</p></div></li>
-        <li class="step reveal" style="--d:70ms"><span class="step-num" aria-hidden="true">02</span><div><h3>Custom Plan</h3><p>You get a plan built from what we found, not a package.</p></div></li>
-        <li class="step reveal" style="--d:140ms"><span class="step-num" aria-hidden="true">03</span><div><h3>Treatment</h3><p>We treat with your kids, dogs and garden in mind.</p></div></li>
-        <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><div><h3>Prevention</h3><p>Monthly or bi-monthly service, because pest control is a process, not a singular event.</p></div></li>
+        <li class="step reveal" style="--d:70ms"><span class="step-num" aria-hidden="true">02</span><div><h3>Custom Plan</h3><p>We build a service plan based on what you need and get you scheduled asap.</p></div></li>
+        <li class="step reveal" style="--d:140ms"><span class="step-num" aria-hidden="true">03</span><div><h3>Treatment</h3><p>Say goodbye to your pest problem with our comprehensive initial treatment performed with your kids, dogs and garden in mind.</p></div></li>
+        <li class="step reveal" style="--d:210ms"><span class="step-num" aria-hidden="true">04</span><div><h3>Prevention</h3><p>Meticulously thorough ongoing service every 30-60 days to keep your home a pest-free sanctuary.</p></div></li>
       </ol>
     </div>
   </div>
@@ -1432,41 +1427,41 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <h2>What your neighbors say.</h2>
     </div>
     <div class="reviews">
-      <a class="review review--sm reveal" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review review--sm reveal" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"We tried multiple different pest companies trying to get rid of our scorpion problem. These guys do &quot;scorpion dusting&quot; and we have not had a problem since they've been treating our house and yard. Highly recommend!!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Brittany Holm <em>Google review</em></div>
       </a>
-      <a class="review reveal" style="--d:70ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review reveal" style="--d:70ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"On time. Prices fair. Pet and kid friendly product. Very thorough. Pays attention to detail. I will have him back anytime."</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Debra Wallace <em>Google review</em></div>
       </a>
-      <a class="review reveal" style="--d:140ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review reveal" style="--d:140ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"The service was thorough, effective and affordable. David was punctual and polite. 10/10 would definitely recommend to anyone with pest needs."</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Johan <em>Google review</em></div>
       </a>
-      <a class="review reveal" style="--d:210ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review reveal" style="--d:210ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"Super great service, fast and went the extra step to get rid of an ant hole we didn't know about. 10/10 service and communication!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Leslie Villa <em>Google review</em></div>
       </a>
-      <a class="review reveal" style="--d:280ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review reveal" style="--d:280ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"David was referred to me from a friend, I highly recommend his services as he is honest, thorough and considerate!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Sydney Miller <em>Google review</em></div>
       </a>
-      <a class="review reveal" style="--d:350ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review reveal" style="--d:350ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"David is super knowledgeable and informative and passionate about what he does! Highly recommend!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Kori Brede <em>Google review</em></div>
       </a>
-      <a class="review review--sm reveal" style="--d:420ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review review--sm reveal" style="--d:420ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"Ive used EPS for a while now after a bad scorpion problem. They were in my house, one climbed up my arm in the backyard, I'd HAD it. These guys have completely erradicated the issue to the point where I see zero pests and more importantly, just dead scorpions. They're my go to for the future!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> M Brandon <em>Google review</em></div>
       </a>
-      <a class="review review--sm reveal" style="--d:490ms" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">
+      <a class="review review--sm reveal" style="--d:490ms" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">
         <blockquote>"If you're having issues with pests and are trying to find the right company, look no further! I have had Exclusive Pest Solutions out many times to take care of all sorts of critters that show face around my home, and will continue to do so. Their services work phenomenally and are very well priced! Do not hesitate to reach out, EPS will take care of you!"</blockquote>
         <div class="review-cite"><span class="stars" aria-hidden="true">★★★★★</span> Ben Kocarnik <em>Google review</em></div>
       </a>
     </div>
     <p class="reviews-more reveal">
-      <a class="btn btn--gold" href="https://www.google.com/search?q=exclusive+pest+solutions+arizona" target="_blank" rel="noopener noreferrer">More reviews on Google</a>
+      <a class="btn btn--gold" href="https://maps.app.goo.gl/NsgcvtAzftH9UzZN9" target="_blank" rel="noopener noreferrer">More reviews on Google</a>
     </p>
   </div>
 </section>
