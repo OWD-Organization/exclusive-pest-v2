@@ -995,12 +995,15 @@ section{position:relative}
 /* service area map in the hero: the client's Google My Maps, embedded.
    vercel.json allows the frame through frame-src. */
 .area-map{margin:0}
-.map-frame{
-  display:block;width:100%;aspect-ratio:1;height:auto;
+/* the frame is taller than its window and pulled up, so Google's title
+   bar (map name and owner profile) stays out of view */
+.map-window{
+  aspect-ratio:1;overflow:hidden;
   background:var(--c-paper);
   border:var(--bd-hard);border-radius:var(--r);
   box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
 }
+.map-frame{display:block;width:100%;height:calc(100% + 70px);margin-top:-70px;border:0}
 .map-legend{
   display:flex;flex-wrap:wrap;gap:0.5rem 1.4rem;margin-top:1.35rem;
   font-weight:800;font-size:var(--step--1);
@@ -1501,7 +1504,9 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
         <figure class="area-map">
-          <iframe class="map-frame" src="https://www.google.com/maps/d/embed?mid=1NHnYrMuNVvdVb16tq7_qO_AMH6fbrME&amp;ehbc=2D1C10" title="Google map of the Exclusive Pest Solutions service area, with a pin for each of the 21 communities." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <div class="map-window">
+            <iframe class="map-frame" src="https://www.google.com/maps/d/embed?mid=1NHnYrMuNVvdVb16tq7_qO_AMH6fbrME&amp;ehbc=2D1C10" title="Google map of the Exclusive Pest Solutions service area, with a pin for each of the 21 communities." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
           <figcaption class="map-legend">
             <a href="#maricopa-county"><i style="--pin:var(--c-cactus)"></i>Maricopa County</a>
             <a href="#desert-living"><i style="--pin:var(--c-orange)"></i>Desert Living</a>
