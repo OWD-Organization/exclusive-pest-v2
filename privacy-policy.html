@@ -10,8 +10,8 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Exclusive Pest Solutions">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://www.exclusivepest.co/privacy-policy.html">
-<meta property="og:url" content="https://www.exclusivepest.co/privacy-policy.html">
+<link rel="canonical" href="https://www.exclusivepest.co/privacy-policy">
+<meta property="og:url" content="https://www.exclusivepest.co/privacy-policy">
 <meta property="og:title" content="Privacy Policy">
 <meta property="og:description" content="How Exclusive Pest Solutions collects, uses, shares and protects your information when you request an estimate or receive service in the Phoenix Valley.">
 <meta property="og:image" content="https://www.exclusivepest.co/build-assets/og-olly.jpg">
@@ -19,6 +19,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Olly, the Exclusive Pest Solutions owl, above the company wordmark on a Sonoran dune.">
 <meta name="twitter:card" content="summary_large_image">
+<!-- ANALYTICS: /analytics.js is the single include for a future GA4 or GTM snippet. It stays empty until a measurement ID is provided. -->
+<script src="/analytics.js"></script>
 
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -666,6 +668,8 @@ section{position:relative}
   box-shadow:-4px 4px 0 var(--c-gold);
 }
 .foot-news input::placeholder{color:var(--fg-muted)}
+.foot-news{position:relative}
+.foot-news .nl-error{margin:0;font-weight:800;color:var(--c-gold)}
 .foot-legal{
   border-top:1.5px solid color-mix(in oklab, var(--c-sky) 22%, transparent);
   margin-top:clamp(2.75rem,5vw,4.25rem); /* same air as the divider above .foot-grid */
@@ -1354,13 +1358,127 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .contact-card a{text-decoration:none;border-bottom:3px solid var(--c-orange)}
 .contact-card a:hover{color:var(--c-orange-deep)}
 
-/* TEMPORARY, remove to restore: the footer newsletter column is hidden,
-   heading and blurb included, so no copy is left pointing at a form that has
-   nowhere to post. The form is still in the markup; the footer top runs as a
-   single column meanwhile, instead of leaving a gap. */
-.foot-top > div:has(.foot-news){display:none !important}
-.foot-top{grid-template-columns:1fr !important}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "PestControl",
+    "LocalBusiness"
+  ],
+  "name": "Exclusive Pest Solutions",
+  "url": "https://www.exclusivepest.co/",
+  "telephone": "+1-602-600-6746",
+  "description": "Phoenix Valley pest control. Arizona Department of Agriculture license #10150.",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Arizona Department of Agriculture license",
+    "value": "10150"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Gilbert"
+    },
+    {
+      "@type": "City",
+      "name": "Chandler"
+    },
+    {
+      "@type": "City",
+      "name": "Mesa"
+    },
+    {
+      "@type": "City",
+      "name": "Tempe"
+    },
+    {
+      "@type": "City",
+      "name": "Queen Creek"
+    },
+    {
+      "@type": "City",
+      "name": "Glendale"
+    },
+    {
+      "@type": "City",
+      "name": "Peoria"
+    },
+    {
+      "@type": "City",
+      "name": "Surprise"
+    },
+    {
+      "@type": "City",
+      "name": "Goodyear"
+    },
+    {
+      "@type": "City",
+      "name": "Buckeye"
+    },
+    {
+      "@type": "City",
+      "name": "Gold Canyon"
+    },
+    {
+      "@type": "City",
+      "name": "Scottsdale"
+    },
+    {
+      "@type": "City",
+      "name": "Cave Creek"
+    },
+    {
+      "@type": "City",
+      "name": "Fountain Hills"
+    },
+    {
+      "@type": "City",
+      "name": "Sun Lakes"
+    },
+    {
+      "@type": "City",
+      "name": "San Tan Valley"
+    },
+    {
+      "@type": "City",
+      "name": "Apache Junction"
+    },
+    {
+      "@type": "City",
+      "name": "Maricopa"
+    },
+    {
+      "@type": "City",
+      "name": "Casa Grande"
+    },
+    {
+      "@type": "City",
+      "name": "Florence"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.exclusivepest.co/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy",
+      "item": "https://www.exclusivepest.co/privacy-policy"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -1378,7 +1496,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="shell">
-    <a class="brand" href="index.html" aria-label="Exclusive Pest Solutions, home">
+    <a class="brand" href="/" aria-label="Exclusive Pest Solutions, home">
       <picture>
         <source media="(max-width: 48rem)" srcset="build-assets/logo-word-dark.webp" type="image/webp">
         <source srcset="build-assets/logo-word.webp" type="image/webp">
@@ -1390,8 +1508,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <span class="nav-toggle-label">Menu</span>
     </button>
     <nav class="nav-links" id="nav-links" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
       <div class="nav-sub-wrap">
         <button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="nav-sub">
           Services
@@ -1399,19 +1517,19 @@ html:has(.olly-dialog[open]){overflow:hidden}
                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg>
         </button>
         <div class="nav-sub" id="nav-sub">
-        <a href="scorpion-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
-        <a href="ant-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M8.3 13.2h7.4M8.4 16.8h7.2"/><path d="M9.5 9.5C7 5.5 3.8 5.8 4 8.3s3.3 3 5.1 2.2"/><path d="M14.5 9.5c2.5-4 5.7-3.7 5.5-1.2s-3.3 3-5.1 2.2"/></svg><span>Wasp Removal</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.5 4.3v8.6L12 20l-7.5-4.3V7.1Z"/><path d="M12 8.6l3 1.7v3.4l-3 1.7-3-1.7v-3.4Z"/></svg><span>Bee Removal</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.4 21 7l-9 4.6L3 7l9-4.6Z"/><path d="M3 12.2l9 4.6 9-4.6"/><path d="M3 17.2l9 4.6 9-4.6"/></svg><span>General Pest Control</span></a>
+        <a href="/scorpion-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
+        <a href="/ant-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
+        <a href="/rodent-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
+        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
+        <a href="/mosquito-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
+        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M8.3 13.2h7.4M8.4 16.8h7.2"/><path d="M9.5 9.5C7 5.5 3.8 5.8 4 8.3s3.3 3 5.1 2.2"/><path d="M14.5 9.5c2.5-4 5.7-3.7 5.5-1.2s-3.3 3-5.1 2.2"/></svg><span>Wasp Removal</span></a>
+        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.5 4.3v8.6L12 20l-7.5-4.3V7.1Z"/><path d="M12 8.6l3 1.7v3.4l-3 1.7-3-1.7v-3.4Z"/></svg><span>Bee Removal</span></a>
+        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.4 21 7l-9 4.6L3 7l9-4.6Z"/><path d="M3 12.2l9 4.6 9-4.6"/><path d="M3 17.2l9 4.6 9-4.6"/></svg><span>General Pest Control</span></a>
         </div>
       </div>
-      <a href="service-areas.html">Service Areas</a>
-      <a href="index.html#process">Process</a>
-      <a href="index.html#reviews">Reviews</a>
+      <a href="/service-areas">Service Areas</a>
+      <a href="/#process">Process</a>
+      <a href="/#reviews">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="btn nav-call" href="tel:+16026006746" aria-label="Call (602) 600-6746"><svg class="nav-call-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg><span class="nav-call-word">Call </span>(602) 600-6746</a>
@@ -1656,32 +1774,40 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div>
       <h3>Valley Pest Alerts</h3>
       <p>Get seasonal tips for Phoenix Valley homes.</p>
-      <form class="foot-news" onsubmit="return false">
+      <form class="foot-news" method="post" data-endpoint="https://services.leadconnectorhq.com/hooks/KCmBOjUkZa5LiCujjaS1/webhook-trigger/FU3DYIr59YlaGC7tjqF1">
         <label for="nl" style="font-weight:900;font-size:var(--step--2);letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--c-sky)">Email</label>
         <input id="nl" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <div class="olly-hp" aria-hidden="true">
+          <label for="nl-web">Website</label>
+          <input id="nl-web" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="nl-error" role="alert" hidden></p>
         <button class="btn btn--gold" type="submit">Subscribe</button>
       </form>
+      <noscript><p>JavaScript is required to subscribe. Call (602) 600-6746.</p></noscript>
     </div>
   </div>
   <div class="shell foot-grid">
     <div>
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#process">Our Process</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#process">Our Process</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div>
       <h3>Our Services</h3>
       <ul>
-        <li><a href="scorpion-control.html">Scorpion Control</a></li>
-        <li><a href="general-pest-control.html">General Pest Control</a></li>
-        <li><a href="ant-control.html">Ant Control</a></li>
-        <li><a href="general-pest-control.html#safe">Garden-Friendly Treatments</a></li>
-        <li><a href="general-pest-control.html#method">IPM Programs</a></li>
+        <li><a href="/scorpion-control">Scorpion Control</a></li>
+        <li><a href="/general-pest-control">General Pest Control</a></li>
+        <li><a href="/mosquito-control">Mosquito Control</a></li>
+        <li><a href="/rodent-control">Rodent Control</a></li>
+        <li><a href="/ant-control">Ant Control</a></li>
+        <li><a href="/general-pest-control#safe">Garden-Friendly Treatments</a></li>
+        <li><a href="/general-pest-control#method">IPM Programs</a></li>
       </ul>
     </div>
     <div>
@@ -1701,8 +1827,8 @@ html:has(.olly-dialog[open]){overflow:hidden}
   </div>
   <div class="shell foot-legal">
     <span>© 2026 Exclusive Pest Solutions. All Rights Reserved.</span>
-    <span class="sep"><a href="privacy-policy.html">Privacy Policy</a></span>
-    <span><a href="terms-of-service.html">Terms of Service</a></span>
+    <span class="sep"><a href="/privacy-policy">Privacy Policy</a></span>
+    <span><a href="/terms-of-service">Terms of Service</a></span>
     <span>Made by <a href="https://outworkemdigital.com/" target="_blank" rel="noopener noreferrer">Outwork'em Digital</a></span>
   </div>
 </footer>
@@ -1822,7 +1948,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <p class="olly-promo-note" data-promo-only hidden>Your 10% off the initial service is saved with this request.</p>
         <p class="olly-error" role="alert" hidden></p>
         <button class="btn btn--lg" type="submit"><span class="olly-send-main">Tell Olly</span><span class="olly-send-sub">Send us a message</span></button>
-        <p class="olly-fine">By sending this form you agree to be contacted by text or phone about your request. Message and data rates may apply; reply STOP to opt out of texts and HELP for help. Consent is not a condition of purchase. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-service.html">Terms of Service</a>.</p>
+        <p class="olly-fine">By sending this form you agree to be contacted by text or phone about your request. Message and data rates may apply; reply STOP to opt out of texts and HELP for help. Consent is not a condition of purchase. See our <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-of-service">Terms of Service</a>.</p>
       </form>
     </div>
     <div class="olly-view olly-view--done" data-olly-view="done" hidden>
@@ -1880,8 +2006,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
           .then(function(r){ if (!r.ok) throw new Error(r.status); })
       : (console.warn('Tell Olly: no data-endpoint set, the form does not send data (demo mode).'), Promise.resolve());
     send.then(function(){
-      show('done');
-      dlg.querySelector('[data-olly-view="done"] h2').focus();
+      window.location.assign('/thank-you');
     }).catch(function(){
       err.textContent = "Olly couldn't send that. Please call or text us at (602) 600-6746.";
       err.hidden = false;
@@ -1901,5 +2026,41 @@ html:has(.olly-dialog[open]){overflow:hidden}
   }, { threshold: 0.2 }).observe(cta);
 })();
 </script>
+<script data-newsletter="1">
+/* Valley Pest Alerts uses the same GoHighLevel inbound webhook as the Tell Olly form. */
+(function(){
+  var form = document.querySelector('form.foot-news');
+  if (!form) return;
+  var err = form.querySelector('.nl-error');
+  var submit = form.querySelector('[type="submit"]');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (form.website && form.website.value) return;
+    var endpoint = form.getAttribute('data-endpoint');
+    if (err) err.hidden = true;
+    submit.disabled = true;
+    var data = {
+      email: form.email.value,
+      message: 'Valley Pest Alerts signup',
+      source: 'Valley Pest Alerts'
+    };
+    var send = endpoint
+      ? fetch(endpoint, { method:'POST', body:JSON.stringify(data),
+          headers:{ 'Content-Type':'application/json', Accept:'application/json' } })
+          .then(function(r){ if (!r.ok) throw new Error(r.status); })
+      : Promise.reject(new Error('missing endpoint'));
+    send.then(function(){
+      window.location.assign('/thank-you');
+    }).catch(function(){
+      if (err) {
+        err.textContent = "That didn't send. Please call or text us at (602) 600-6746.";
+        err.hidden = false;
+      }
+      submit.disabled = false;
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
