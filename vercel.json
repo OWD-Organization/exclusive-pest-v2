@@ -21,6 +21,271 @@
       ],
       "destination": "https://www.exclusivepest.co/:path*",
       "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "statusCode": 301
+    },
+    {
+      "source": "/scorpion-control.html",
+      "destination": "/scorpion-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/ant-control.html",
+      "destination": "/ant-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/general-pest-control.html",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/mosquito-control.html",
+      "destination": "/mosquito-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/rodent-control.html",
+      "destination": "/rodent-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas.html",
+      "destination": "/service-areas",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/terms-of-service",
+      "statusCode": 301
+    },
+    {
+      "source": "/bark-scorpions.html",
+      "destination": "/bark-scorpions",
+      "statusCode": 301
+    },
+    {
+      "source": "/black-widows.html",
+      "destination": "/black-widows",
+      "statusCode": 301
+    },
+    {
+      "source": "/cockroaches.html",
+      "destination": "/cockroaches",
+      "statusCode": 301
+    },
+    {
+      "source": "/ants.html",
+      "destination": "/ants",
+      "statusCode": 301
+    },
+    {
+      "source": "/thank-you.html",
+      "destination": "/thank-you",
+      "statusCode": 301
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/home.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "statusCode": 301
+    },
+    {
+      "source": "/services.html",
+      "destination": "/#services",
+      "statusCode": 301
+    },
+    {
+      "source": "/quote",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/get-a-quote",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-area",
+      "destination": "/service-areas",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-area.html",
+      "destination": "/service-areas",
+      "statusCode": 301
+    },
+    {
+      "source": "/areas",
+      "destination": "/service-areas",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-of-service",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms-of-service",
+      "statusCode": 301
+    },
+    {
+      "source": "/black-widow-control",
+      "destination": "/black-widows",
+      "statusCode": 301
+    },
+    {
+      "source": "/black-widow-control.html",
+      "destination": "/black-widows",
+      "statusCode": 301
+    },
+    {
+      "source": "/cockroach-control",
+      "destination": "/cockroaches",
+      "statusCode": 301
+    },
+    {
+      "source": "/cockroach-control.html",
+      "destination": "/cockroaches",
+      "statusCode": 301
+    },
+    {
+      "source": "/mosquito",
+      "destination": "/mosquito-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/mosquito.html",
+      "destination": "/mosquito-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/mosquitoes",
+      "destination": "/mosquito-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/rats",
+      "destination": "/rodent-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/mice",
+      "destination": "/rodent-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/rodents",
+      "destination": "/rodent-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/rats-mice",
+      "destination": "/rodent-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/gopher-control",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/gopher-control.html",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/wasp-removal",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/wasp-control",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/bee-removal",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/bee-control",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/scorpion",
+      "destination": "/scorpion-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/scorpions",
+      "destination": "/scorpion-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/ant",
+      "destination": "/ant-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/pest-control",
+      "destination": "/general-pest-control",
+      "statusCode": 301
+    },
+    {
+      "source": "/pest-control.html",
+      "destination": "/general-pest-control",
+      "statusCode": 301
     }
   ],
   "headers": [
@@ -45,9 +310,11 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://services.leadconnectorhq.com; form-action 'self'; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://services.leadconnectorhq.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.googletagmanager.com; form-action 'self'; upgrade-insecure-requests"
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
