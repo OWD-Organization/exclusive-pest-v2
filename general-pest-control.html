@@ -1251,6 +1251,20 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .card-icon{width:clamp(3.25rem,5vw,4.25rem);aspect-ratio:1;justify-self:start}
 .cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
 
+/* ---- CLICKABLE CARD: the heading link stretches over the whole card ---- */
+.card-link{text-decoration:none}
+.card-link::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.card-link:focus-visible{outline:none}
+.card--link:has(.card-link:focus-visible){outline:3px solid var(--c-orange-deep);outline-offset:3px}
+/* transform, not translate: the entrance animation already owns translate */
+.card--link.reveal.in{transition:opacity 620ms var(--ease-out-expo), translate 620ms var(--ease-out-expo),
+  transform 140ms var(--ease-out-expo), box-shadow 140ms var(--ease-out-expo)}
+.card--link:hover{transform:translate(1px,-2px);box-shadow:calc(var(--sh-x) - 2px) calc(var(--sh-y) + 2px) 0 var(--c-ink)}
+.card--link:hover .card-link{color:var(--c-orange-deep)}
+.card--link:active{transform:translate(-3px,3px);box-shadow:-1px 1px 0 var(--c-ink)}
+#method{scroll-margin-top:4.5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
 /* ---- PHRASE PLATE: a one-liner the original uses as a closer ---- */
 /* sized to its text, not the full row: full width ran into the seam cactus */
 .slab{
@@ -1558,46 +1572,46 @@ html:has(.olly-dialog[open]){overflow:hidden}
       <p class="prose" style="margin-top:1.25rem">Every common pest in the Phoenix Valley, handled under one custom plan.</p>
     </div>
     <div class="cards cards--tight">
-      <article class="card card--gold reveal">
+      <article class="card card--link card--gold reveal">
         <span class="card-tag card-tag--orange">Featured</span>
-        <h3>Scorpions</h3>
+        <h3><a class="card-link" href="scorpion-control.html">Scorpions</a></h3>
         <p>Arizona bark scorpion elimination and prevention.</p>
       </article>
-      <article class="card card--gold reveal" style="--d:70ms">
+      <article class="card card--link card--gold reveal" style="--d:70ms">
         <span class="card-tag card-tag--orange">Featured</span>
-        <h3>Ants</h3>
+        <h3><a class="card-link" href="ant-control.html">Ants</a></h3>
         <p>Fire, carpenter, Argentine, odorous house ants.</p>
       </article>
-      <article class="card reveal" style="--d:140ms">
-        <h3>Spiders</h3>
+      <article class="card card--link reveal" style="--d:140ms">
+        <h3><a class="card-link" href="#method">Spiders</a></h3>
         <p>Black widow, brown recluse, common house spiders.</p>
       </article>
-      <article class="card reveal" style="--d:210ms">
-        <h3>Cockroaches</h3>
+      <article class="card card--link reveal" style="--d:210ms">
+        <h3><a class="card-link" href="cockroaches.html">Cockroaches</a></h3>
         <p>German, American, and Turkestan cockroaches.</p>
       </article>
-      <article class="card card--sky reveal" style="--d:280ms">
-        <h3>Crickets</h3>
+      <article class="card card--link card--sky reveal" style="--d:280ms">
+        <h3><a class="card-link" href="#method">Crickets</a></h3>
         <p>Perimeter and interior cricket management.</p>
       </article>
-      <article class="card reveal" style="--d:350ms">
-        <h3>Silverfish</h3>
+      <article class="card card--link reveal" style="--d:350ms">
+        <h3><a class="card-link" href="#method">Silverfish</a></h3>
         <p>Targeted treatments for moisture-driven infestations.</p>
       </article>
-      <article class="card card--sky reveal" style="--d:420ms">
-        <h3>Earwigs</h3>
+      <article class="card card--link card--sky reveal" style="--d:420ms">
+        <h3><a class="card-link" href="#method">Earwigs</a></h3>
         <p>Harborage treatment and entry point exclusion.</p>
       </article>
-      <article class="card reveal" style="--d:490ms">
-        <h3>Mosquitoes</h3>
+      <article class="card card--link reveal" style="--d:490ms">
+        <h3><a class="card-link" href="mosquito-control.html">Mosquitoes</a></h3>
         <p>Breeding site treatment and adult population control.</p>
       </article>
-      <article class="card card--sky reveal" style="--d:560ms">
-        <h3>Bees &amp; Wasps</h3>
+      <article class="card card--link card--sky reveal" style="--d:560ms">
+        <h3><a class="card-link" href="#method">Bees &amp; Wasps</a></h3>
         <p>Hive and nest removal, cavity treatment.</p>
       </article>
-      <article class="card reveal" style="--d:630ms">
-        <h3>And more</h3>
+      <article class="card card--link reveal" style="--d:630ms">
+        <h3><a class="card-link" href="#method">And more</a></h3>
         <p>If it's in the Phoenix Valley, we've treated it.</p>
       </article>
     </div>
