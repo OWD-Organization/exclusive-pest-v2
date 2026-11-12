@@ -992,23 +992,14 @@ section{position:relative}
 
 
 /* SERVICE-AREAS:CSS:START */
-/* service area map in the hero: drawn in the page so the labels stay sharp
-   and every community name sits beside its pin */
+/* service area map in the hero: the client's Google My Maps, embedded.
+   vercel.json allows the frame through frame-src. */
 .area-map{margin:0}
-.area-map svg{
-  display:block;width:100%;height:auto;
-  border-radius:var(--r);
+.map-frame{
+  display:block;width:100%;aspect-ratio:1;height:auto;
+  background:var(--c-paper);
+  border:var(--bd-hard);border-radius:var(--r);
   box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
-}
-.map-bg{fill:var(--c-paper);stroke:var(--c-ink);stroke-width:3}
-.map-pin circle{stroke:var(--c-ink);stroke-width:3}
-.map-pin--m circle{fill:var(--c-cactus)}
-.map-pin--d circle{fill:var(--c-orange)}
-.map-pin--p circle{fill:var(--c-gold)}
-.map-pin .map-eye{fill:var(--c-paper);stroke:none}
-.map-pin text{
-  font-family:var(--font-body);font-weight:800;font-size:27px;fill:var(--c-ink);
-  paint-order:stroke;stroke:var(--c-paper);stroke-width:7px;stroke-linejoin:round;
 }
 .map-legend{
   display:flex;flex-wrap:wrap;gap:0.5rem 1.4rem;margin-top:1.35rem;
@@ -1510,30 +1501,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
         <figure class="area-map">
-          <svg viewBox="0 0 1040 950" role="img" aria-label="Map of the Exclusive Pest Solutions service area around Phoenix, with a labeled pin for each of the 21 communities, color-coded by region.">
-            <rect class="map-bg" x="1.5" y="1.5" width="1037" height="947" rx="9"/>
-            <g class="map-pin map-pin--m"><circle cx="449" cy="397" r="12"/><circle class="map-eye" cx="449" cy="397" r="4"/><text x="428" y="406" text-anchor="end">Phoenix</text></g>
-            <g class="map-pin map-pin--m"><circle cx="644" cy="475" r="12"/><circle class="map-eye" cx="644" cy="475" r="4"/><text x="665" y="484" text-anchor="start">Gilbert</text></g>
-            <g class="map-pin map-pin--m"><circle cx="608" cy="513" r="12"/><circle class="map-eye" cx="608" cy="513" r="4"/><text x="587" y="522" text-anchor="end">Chandler</text></g>
-            <g class="map-pin map-pin--m"><circle cx="615" cy="424" r="12"/><circle class="map-eye" cx="615" cy="424" r="4"/><text x="636" y="433" text-anchor="start">Mesa</text></g>
-            <g class="map-pin map-pin--m"><circle cx="540" cy="415" r="12"/><circle class="map-eye" cx="540" cy="415" r="4"/><text x="540" y="458" text-anchor="middle">Tempe</text></g>
-            <g class="map-pin map-pin--m"><circle cx="750" cy="560" r="12"/><circle class="map-eye" cx="750" cy="560" r="4"/><text x="771" y="569" text-anchor="start">Queen Creek</text></g>
-            <g class="map-pin map-pin--m"><circle cx="372" cy="323" r="12"/><circle class="map-eye" cx="372" cy="323" r="4"/><text x="393" y="332" text-anchor="start">Glendale</text></g>
-            <g class="map-pin map-pin--m"><circle cx="337" cy="288" r="12"/><circle class="map-eye" cx="337" cy="288" r="4"/><text x="358" y="297" text-anchor="start">Peoria</text></g>
-            <g class="map-pin map-pin--m"><circle cx="247" cy="248" r="12"/><circle class="map-eye" cx="247" cy="248" r="4"/><text x="226" y="257" text-anchor="end">Surprise</text></g>
-            <g class="map-pin map-pin--m"><circle cx="254" cy="407" r="12"/><circle class="map-eye" cx="254" cy="407" r="4"/><text x="233" y="416" text-anchor="end">Goodyear</text></g>
-            <g class="map-pin map-pin--m"><circle cx="100" cy="461" r="12"/><circle class="map-eye" cx="100" cy="461" r="4"/><text x="121" y="470" text-anchor="start">Buckeye</text></g>
-            <g class="map-pin map-pin--d"><circle cx="885" cy="460" r="12"/><circle class="map-eye" cx="885" cy="460" r="4"/><text x="885" y="503" text-anchor="middle">Gold Canyon</text></g>
-            <g class="map-pin map-pin--d"><circle cx="550" cy="359" r="12"/><circle class="map-eye" cx="550" cy="359" r="4"/><text x="571" y="368" text-anchor="start">Scottsdale</text></g>
-            <g class="map-pin map-pin--d"><circle cx="533" cy="81" r="12"/><circle class="map-eye" cx="533" cy="81" r="4"/><text x="554" y="90" text-anchor="start">Cave Creek</text></g>
-            <g class="map-pin map-pin--d"><circle cx="693" cy="263" r="12"/><circle class="map-eye" cx="693" cy="263" r="4"/><text x="714" y="272" text-anchor="start">Fountain Hills</text></g>
-            <g class="map-pin map-pin--d"><circle cx="585" cy="591" r="12"/><circle class="map-eye" cx="585" cy="591" r="4"/><text x="564" y="600" text-anchor="end">Sun Lakes</text></g>
-            <g class="map-pin map-pin--p"><circle cx="822" cy="608" r="12"/><circle class="map-eye" cx="822" cy="608" r="4"/><text x="822" y="651" text-anchor="middle">San Tan Valley</text></g>
-            <g class="map-pin map-pin--p"><circle cx="808" cy="424" r="12"/><circle class="map-eye" cx="808" cy="424" r="4"/><text x="808" y="401" text-anchor="middle">Apache Junction</text></g>
-            <g class="map-pin map-pin--p"><circle cx="467" cy="717" r="12"/><circle class="map-eye" cx="467" cy="717" r="4"/><text x="488" y="726" text-anchor="start">Maricopa</text></g>
-            <g class="map-pin map-pin--p"><circle cx="665" cy="863" r="12"/><circle class="map-eye" cx="665" cy="863" r="4"/><text x="686" y="872" text-anchor="start">Casa Grande</text></g>
-            <g class="map-pin map-pin--p"><circle cx="919" cy="739" r="12"/><circle class="map-eye" cx="919" cy="739" r="4"/><text x="898" y="748" text-anchor="end">Florence</text></g>
-          </svg>
+          <iframe class="map-frame" src="https://www.google.com/maps/d/embed?mid=1NHnYrMuNVvdVb16tq7_qO_AMH6fbrME&amp;ehbc=2D1C10" title="Google map of the Exclusive Pest Solutions service area, with a pin for each of the 21 communities." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           <figcaption class="map-legend">
             <a href="#maricopa-county"><i style="--pin:var(--c-cactus)"></i>Maricopa County</a>
             <a href="#desert-living"><i style="--pin:var(--c-orange)"></i>Desert Living</a>
