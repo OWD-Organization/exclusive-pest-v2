@@ -992,16 +992,32 @@ section{position:relative}
 
 
 /* SERVICE-AREAS:CSS:START */
-/* map placeholder in the hero: paper plate with Olly until the real map lands */
-.area-map{
-  display:grid;place-items:center;align-content:center;gap:1rem;aspect-ratio:1;max-width:26rem;
-  background:var(--c-paper);
+/* service area map in the hero: framed like the site's photos */
+.area-map{display:block;margin:0}
+.area-map img{
+  width:100%;height:auto;aspect-ratio:1;
   border:var(--bd-hard);border-radius:var(--r);
   box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
-  text-align:center;font-weight:900;font-size:var(--step--1);
-  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
 }
-.area-map img{width:34%;height:auto;filter:drop-shadow(-3px 3px 0 var(--c-ink))}
+/* the map leads the hero on this page: it gets the wider column */
+.hero-grid--map{grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr)}
+@media (max-width:64rem){.hero-grid--map{grid-template-columns:1fr}}
+/* region blocks: copy on the left, community list on the right.
+   The dot on each pill repeats that region's pin colour on the map. */
+.region{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        gap:clamp(1.75rem,4vw,4rem);align-items:start}
+.region .section-head h2{font-size:var(--step-4)}
+.region .prose p{font-size:var(--step-1);line-height:1.5}
+.region .areas{margin-top:0.4rem}
+.region .areas li{
+  display:inline-flex;align-items:center;gap:0.55em;
+  font-size:var(--step-0);padding:0.55em 1.05em;
+}
+.region .areas li::before{
+  content:"";flex:0 0 auto;width:0.8em;height:0.8em;border-radius:50%;
+  background:var(--pin,var(--c-cactus));border:var(--bd-hair);
+}
+@media (max-width:64rem){.region{grid-template-columns:1fr}}
 /* closer: heading and button in one row */
 .area-next{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
 .area-next h2{max-width:24ch}
@@ -1463,24 +1479,21 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- ===================== HERO ===================== -->
 <section class="hero hero--page" id="top">
   <div class="shell">
-    <div class="hero-grid">
+    <div class="hero-grid hero-grid--map">
       <div class="stack reveal" style="--s:1.35rem">
         <p style="margin:0"><span class="hero-kick">Service areas</span></p>
         <h1>Pest control across the Phoenix Valley.</h1>
-        <!-- PLACEHOLDER CONTENT: replace with the final intro copy -->
-        <p class="prose" style="font-size:var(--step-1);line-height:1.5">We serve homes throughout Maricopa and Pinal County. Find your city below to see how we protect homes in your neighborhood.</p>
+        <p class="prose" style="font-size:var(--step-1);line-height:1.5">We serve homes throughout Maricopa and Pinal County. Find your community on the map or in the lists below.</p>
         <div class="hero-actions">
           <a class="btn btn--lg" href="#maricopa-county">Find your city</a>
           <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
         </div>
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
-        <!-- PLACEHOLDER: service area map goes here -->
-        <div class="area-map" role="img" aria-label="Service area map, coming soon">
-          <img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
-          <span>Service area map<br>coming soon</span>
-        </div>
-        <p style="margin:0"><span class="hero-plate">Maricopa and Pinal County</span></p>
+        <picture class="area-map">
+          <source srcset="build-assets/service-area-map.webp" type="image/webp">
+          <img src="build-assets/service-area-map.jpg" width="1400" height="1400" alt="Map of the Exclusive Pest Solutions service area around Phoenix, with pins for each community: Maricopa County in green, Desert Living in orange and Pinal County in gold.">
+        </picture>
       </div>
     </div>
   </div>
@@ -1498,123 +1511,72 @@ html:has(.olly-dialog[open]){overflow:hidden}
 
 <!-- ===================== MARICOPA COUNTY ===================== -->
 <section class="band band--2 pad" id="maricopa-county">
-  <div class="shell">
+  <div class="shell region">
     <div class="section-head reveal">
-      <span class="tag tag--cactus">Maricopa County</span>
-      <h2>Cities we serve in Maricopa County</h2>
-      <!-- PLACEHOLDER CONTENT: replace with the final county copy -->
-      <p class="prose" style="margin-top:1.25rem">Short intro about pest pressure and service in Maricopa County. Final copy coming soon.</p>
+      <span class="tag tag--cactus">10 communities</span>
+      <h2>Maricopa County</h2>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>From busy Valley neighborhoods to quiet foothill communities, your home deserves thoughtful protection against Maricopa County’s most notorious pests. We specialize in eliminating Arizona bark scorpions.</p>
+      </div>
     </div>
-    <div class="cards cards--tight">
-      <article class="card reveal">
-        <h3>Phoenix</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Phoenix. Local details coming soon.</p>
-      </article>
-      <article class="card card--gold reveal" style="--d:70ms">
-        <h3>Scottsdale</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Scottsdale. Local details coming soon.</p>
-      </article>
-      <article class="card card--sky reveal" style="--d:140ms">
-        <h3>Mesa</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Mesa. Local details coming soon.</p>
-      </article>
-      <article class="card reveal" style="--d:210ms">
-        <h3>Chandler</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Chandler. Local details coming soon.</p>
-      </article>
-      <article class="card reveal">
-        <h3>Gilbert</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Gilbert. Local details coming soon.</p>
-      </article>
-      <article class="card card--gold reveal" style="--d:70ms">
-        <h3>Glendale</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Glendale. Local details coming soon.</p>
-      </article>
-      <article class="card card--sky reveal" style="--d:140ms">
-        <h3>Peoria</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Peoria. Local details coming soon.</p>
-      </article>
-      <article class="card reveal" style="--d:210ms">
-        <h3>Surprise</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Surprise. Local details coming soon.</p>
-      </article>
-      <article class="card reveal">
-        <h3>Tempe</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Tempe. Local details coming soon.</p>
-      </article>
-      <article class="card card--gold reveal" style="--d:70ms">
-        <h3>Fountain Hills</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Fountain Hills. Local details coming soon.</p>
-      </article>
-      <article class="card card--sky reveal" style="--d:140ms">
-        <h3>Cave Creek</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Cave Creek. Local details coming soon.</p>
-      </article>
-      <article class="card reveal" style="--d:210ms">
-        <h3>Goodyear</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Goodyear. Local details coming soon.</p>
-      </article>
-      <article class="card reveal">
-        <h3>Buckeye</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Buckeye. Local details coming soon.</p>
-      </article>
-      <article class="card card--gold reveal" style="--d:70ms">
-        <h3>Queen Creek</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Queen Creek. Local details coming soon.</p>
-      </article>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-cactus)" aria-label="Maricopa County communities">
+        <li>Gilbert</li>
+        <li>Chandler</li>
+        <li>Mesa</li>
+        <li>Tempe</li>
+        <li>Queen Creek</li>
+        <li>Glendale</li>
+        <li>Peoria</li>
+        <li>Surprise</li>
+        <li>Goodyear</li>
+        <li>Buckeye</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DESERT LIVING ===================== -->
+<section class="band pad" id="desert-living">
+  <div class="shell region">
+    <div class="section-head reveal">
+      <span class="tag tag--orange">5 communities</span>
+      <h2>Desert Living</h2>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>Desert living calls for a more detailed approach, with nearby wildlife in mind.</p>
+          <p>We provide targeted, responsible pest-protection around your home, entertaining areas and property line. You should be able to enjoy your desert views comfortably, <strong>WITHOUT</strong> the giant spiders and scorpions.</p>
+      </div>
+    </div>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-orange)" aria-label="Desert Living communities">
+        <li>Gold Canyon</li>
+        <li>Scottsdale</li>
+        <li>Cave Creek</li>
+        <li>Fountain Hills</li>
+        <li>Sun Lakes</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- ===================== PINAL COUNTY ===================== -->
-<section class="band pad" id="pinal-county">
-  <div class="shell">
+<section class="band band--2 pad" id="pinal-county">
+  <div class="shell region">
     <div class="section-head reveal">
-      <span class="tag tag--orange">Pinal County</span>
-      <h2>Cities we serve in Pinal County</h2>
-      <!-- PLACEHOLDER CONTENT: replace with the final county copy -->
-      <p class="prose" style="margin-top:1.25rem">Short intro about pest pressure and service in Pinal County. Final copy coming soon.</p>
+      <span class="tag">5 communities</span>
+      <h2>Pinal County</h2>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>Your home should be a comfortable retreat, whether you’re in an established neighborhood or surrounded by open desert. We bring thoughtful pest protection and reliable service to our Pinal County communities, including black widow removal and treatment.</p>
+      </div>
     </div>
-    <div class="cards cards--tight">
-      <article class="card reveal">
-        <h3>San Tan Valley</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in San Tan Valley. Local details coming soon.</p>
-      </article>
-      <article class="card card--gold reveal" style="--d:70ms">
-        <h3>Apache Junction</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Apache Junction. Local details coming soon.</p>
-      </article>
-      <article class="card card--sky reveal" style="--d:140ms">
-        <h3>Maricopa</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Maricopa. Local details coming soon.</p>
-      </article>
-      <article class="card reveal" style="--d:210ms">
-        <h3>Casa Grande</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Casa Grande. Local details coming soon.</p>
-      </article>
-      <article class="card reveal">
-        <h3>Florence</h3>
-        <!-- PLACEHOLDER CONTENT -->
-        <p>Pest control in Florence. Local details coming soon.</p>
-      </article>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-gold)" aria-label="Pinal County communities">
+        <li>San Tan Valley</li>
+        <li>Apache Junction</li>
+        <li>Maricopa</li>
+        <li>Casa Grande</li>
+        <li>Florence</li>
+      </ul>
     </div>
   </div>
 </section>
