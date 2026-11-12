@@ -510,6 +510,17 @@ section{position:relative}
 .svc h3{font-size:var(--step-1)}
 .svc p{color:var(--fg-muted);font-size:var(--step--1);margin:0}
 .svc .btn-link{font-size:var(--step--1);justify-self:start;margin-top:0.4rem}
+/* the whole card is the link: "Learn more" stretches over it */
+.svc{position:relative}
+.svc .btn-link::after{content:"";position:absolute;inset:0}
+.svc .btn-link:focus-visible{outline:none}
+.svc:has(.btn-link:focus-visible){outline:3px solid var(--c-orange-deep);outline-offset:3px}
+/* transform, not translate: the entrance animation already owns translate */
+.svc.reveal.in{transition:opacity 620ms var(--ease-out-expo), translate 620ms var(--ease-out-expo),
+  transform 140ms var(--ease-out-expo), box-shadow 140ms var(--ease-out-expo)}
+.svc:hover{transform:translate(1px,-2px);box-shadow:calc(var(--sh-x) - 2px) calc(var(--sh-y) + 2px) 0 var(--c-ink)}
+.svc:hover .btn-link{color:var(--c-orange-deep)}
+.svc:active{transform:translate(-3px,3px);box-shadow:-1px 1px 0 var(--c-ink)}
 
 /* =========================================================
    CREDS
