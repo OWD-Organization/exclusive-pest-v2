@@ -1455,6 +1455,20 @@ html:has(.olly-dialog[open]){overflow:hidden}
    single column meanwhile, instead of leaving a gap. */
 .foot-top > div:has(.foot-news){display:none !important}
 .foot-top{grid-template-columns:1fr !important}
+/* RODENT-HERO:CSS:START */
+/* The headline leads: no badge above it, one button, the rating under it */
+.hero--lean .hero-quote{justify-content:center;white-space:nowrap}
+.hero--lean .stack > .hero-rating{margin-top:1.1rem}
+@media (max-width:48rem){
+  /* less air under the nav, so the headline is the first thing read */
+  .hero--lean{margin-top:0}
+  .hero--lean .shell{padding-top:1.6rem}
+  /* sized so the headline lands on two lines on an iPhone */
+  .hero--lean h1{font-size:clamp(1.5rem, 7.6vw, 2.4rem);line-height:1.08}
+  .hero--lean .hero-actions{display:block}
+  .hero--lean .hero-quote{width:100%;font-size:var(--step-0);padding:0.7em 1em;min-height:0}
+}
+/* RODENT-HERO:CSS:END */
 </style>
 </head>
 <body>
@@ -1497,7 +1511,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a href="scorpion-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
         <a href="ant-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
         <a href="rodent-control.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
-        <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
+        <a href="rodent-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
         <a href="mosquito-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M8.3 13.2h7.4M8.4 16.8h7.2"/><path d="M9.5 9.5C7 5.5 3.8 5.8 4 8.3s3.3 3 5.1 2.2"/><path d="M14.5 9.5c2.5-4 5.7-3.7 5.5-1.2s-3.3 3-5.1 2.2"/></svg><span>Wasp Removal</span></a>
         <a href="general-pest-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.5 4.3v8.6L12 20l-7.5-4.3V7.1Z"/><path d="M12 8.6l3 1.7v3.4l-3 1.7-3-1.7v-3.4Z"/></svg><span>Bee Removal</span></a>
@@ -1513,19 +1527,16 @@ html:has(.olly-dialog[open]){overflow:hidden}
   </div>
 </header>
 <!-- ===================== HERO ===================== -->
-<section class="hero hero--page" id="top">
+<section class="hero hero--page hero--lean" id="top">
   <div class="shell">
     <div class="hero-grid">
       <div class="stack reveal" style="--s:1.35rem">
-        <p style="margin:0"><span class="hero-kick">Rodent Removal &amp; Exclusion</span></p>
-        <h1>Rodent control in Phoenix, AZ. Rats and mice out, and kept out.</h1>
-        <!-- PLACEHOLDER CONTENT: generic copy on this page, replace with the final copy -->
-      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Roof rats, pack rats and house mice are active in the Phoenix Valley all year. Trapping only removes the ones already inside. We find how they are getting in and close it off.</p>
-        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
+        <h1>Rodent Control in the Phoenix Valley</h1>
+      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Hearing scratching in the attic or finding droppings in the garage? Seeing mounds or holes in the yard? We start with an in-depth inspection, determine what we're dealing with and then provide a strategy to keep them out FOR GOOD.</p>
         <div class="hero-actions">
-          <a class="btn btn--lg" href="#contact" data-olly-open>Get my rodent control quote</a>
-          <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
+          <a class="btn btn--lg hero-quote" href="#contact" data-olly-open>Get a Quote</a>
         </div>
+        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
         <div class="shot">
@@ -1534,7 +1545,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
             <img src="build-assets/service-general.jpg" alt="Wire mesh exclusion fitted over a wall opening to keep rodents out." width="600" height="600" loading="lazy">
           </picture>
         </div>
-        <p style="margin:0"><span class="hero-plate">Raptor-conscious rodenticides only</span></p>
+        <p style="margin:0"><span class="hero-plate">High quality exclusion prevents rats from getting back inside</span></p>
       </div>
     </div>
   </div>
@@ -1556,13 +1567,13 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div class="section-head reveal">
       <span class="tag">Know your invader</span>
       <h2>Common rodents in the Phoenix Valley</h2>
-      <p class="prose" style="margin-top:1.25rem">Each one behaves differently, so the plan starts with knowing which one you have.</p>
+      <p class="prose" style="margin-top:1.25rem">Each rodent behaves differently and requires a unique approach, it all starts with identification.</p>
     </div>
     <div class="cards">
       <article class="card reveal">
         <span class="card-tag card-tag--orange">Climbers</span>
         <h3>Roof Rats</h3>
-        <p>Agile climbers that travel along fences, power lines and tree branches. They often nest in attics and are drawn to citrus and other fruit trees.</p>
+        <p>Agile climbers that travel along the top of block walls, power lines and tree branches. They often nest in attics and are drawn to citrus and other fruit trees.</p>
       </article>
       <article class="card card--gold reveal" style="--d:70ms">
         <span class="card-tag">Nest builders</span>
@@ -1590,7 +1601,6 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a class="btn-link" style="font-size:var(--step--1);justify-self:start;margin-top:0.3rem" href="#contact" data-olly-open>Book an inspection</a>
       </article>
     </div>
-    <p class="slab reveal">We close the entry, not just set the trap.</p>
   </div>
 
   <picture class="cactus cactus--seam">
@@ -2012,15 +2022,19 @@ html:has(.olly-dialog[open]){overflow:hidden}
 })();
 </script>
 <script data-olly-bubble="1">
-/* The bubble hides while the contact section is in view. Without JS it stays
-   put and still works, because it falls back to an SMS link. */
+/* The bubble waits until the hero has scrolled away, so it never sits over
+   the hero photo, and it hides again while the contact section is in view.
+   Without JS it stays put and still works, as an SMS link. */
 (function(){
   var b = document.getElementById('olly-bubble');
+  var hero = document.querySelector('section.hero');
   var cta = document.getElementById('contact');
-  if (!b || !cta || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ b.hidden = e.isIntersecting; });
-  }, { threshold: 0.2 }).observe(cta);
+  if (!b || !('IntersectionObserver' in window)) return;
+  var inHero = !!hero, inCta = false;
+  function sync(){ b.hidden = inHero || inCta; }
+  sync();
+  if (hero) new IntersectionObserver(function(e){ inHero = e[0].isIntersecting; sync(); }).observe(hero);
+  if (cta) new IntersectionObserver(function(e){ inCta = e[0].isIntersecting; sync(); }, { threshold: 0.2 }).observe(cta);
 })();
 </script>
 </body>
