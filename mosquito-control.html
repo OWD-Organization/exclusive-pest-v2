@@ -1256,9 +1256,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
 .cards-note{margin-top:clamp(1.75rem,3vw,2.5rem);color:var(--fg-muted);max-width:62ch}
 
 /* ---- PHRASE PLATE: a one-liner the original uses as a closer ---- */
-/* sized to its text, not the full row: full width ran into the seam cactus */
 .slab{
-  width:fit-content;max-width:100%;
   margin-top:clamp(2rem,3.5vw,2.75rem);
   background:var(--c-ink);color:var(--c-sky);
   border:var(--bd-hard);border-radius:var(--r);
@@ -1574,6 +1572,15 @@ html:has(.olly-dialog[open]){overflow:hidden}
   ]
 }
 </script>
+<!-- FEEDBUCKET: client feedback widget. It loads only on the staging review
+     domain (exclusive-pest-staging.vercel.app), so production never runs it. -->
+<script>
+if (location.hostname === 'exclusive-pest-staging.vercel.app') (function(k){
+  var s=document.createElement('script');s.defer=true;
+  s.src='https://cdn.feedbucket.app/assets/feedbucket.js';
+  s.dataset.feedbucket=k;document.head.appendChild(s);
+})('20PvJkeWqlf1rj3O9UoV');
+</script>
 </head>
 <body>
 
@@ -1615,7 +1622,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a href="/scorpion-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
         <a href="/ant-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
         <a href="/rodent-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
-        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
+        <a href="/rodent-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
         <a href="/mosquito-control" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
         <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M8.3 13.2h7.4M8.4 16.8h7.2"/><path d="M9.5 9.5C7 5.5 3.8 5.8 4 8.3s3.3 3 5.1 2.2"/><path d="M14.5 9.5c2.5-4 5.7-3.7 5.5-1.2s-3.3 3-5.1 2.2"/></svg><span>Wasp Removal</span></a>
         <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.5 4.3v8.6L12 20l-7.5-4.3V7.1Z"/><path d="M12 8.6l3 1.7v3.4l-3 1.7-3-1.7v-3.4Z"/></svg><span>Bee Removal</span></a>
@@ -1635,22 +1642,24 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="hero-grid">
       <div class="stack reveal" style="--s:1.35rem">
-        <p style="margin:0"><span class="hero-kick">Mosquito control</span></p>
-        <h1>Mosquito control in the Phoenix Valley.</h1>
-        <p class="prose" style="font-size:var(--step-1);line-height:1.5">Mosquitoes need standing water to develop. Around Phoenix Valley homes, that water often comes from irrigation, monsoon rain, plant saucers, clogged gutters, and containers that stay wet for several days. Adults then rest in shade, shrubs, and covered patios.</p>
+        <p style="margin:0"><span class="hero-kick">Eco-Friendly Mosquito Control</span></p>
+        <h1>Mosquito control in Phoenix, AZ. Stopped at the source.</h1>
+        <!-- PLACEHOLDER CONTENT: generic copy on this page, replace with the final copy -->
+      <p class="prose" style="font-size:var(--step-1);line-height:1.5">Mosquitoes need very little standing water to breed, and monsoon season gives them plenty. Our larvicide trap stations target the next generation before it ever takes flight.</p>
+        <p class="hero-rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google</p>
         <div class="hero-actions">
-          <a class="btn btn--lg" href="#contact" data-olly-open>Book a visit</a>
+          <a class="btn btn--lg" href="#contact" data-olly-open>Get my mosquito control quote</a>
           <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
         </div>
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
         <div class="shot">
           <picture>
-            <source srcset="build-assets/service-mosquito-stations.webp" type="image/webp">
-            <img src="build-assets/service-mosquito-stations.jpg" alt="Three mosquito larvicide stations set on gravel in a Phoenix Valley desert garden." width="600" height="600" loading="lazy">
+            <source srcset="build-assets/service-mosquito.webp" type="image/webp">
+            <img src="build-assets/service-mosquito.jpg" alt="A mosquito larvicide station set on gravel in a Phoenix Valley desert garden." width="800" height="600" loading="lazy">
           </picture>
         </div>
-        <p style="margin:0"><span class="hero-plate">Find the water, then treat the resting spots.</span></p>
+        <p style="margin:0"><span class="hero-plate">Larvicide trap stations that cut mosquitoes off at the source</span></p>
       </div>
     </div>
   </div>
@@ -1666,83 +1675,107 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <a class="btn actionbar-cta" href="tel:+16026006746"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg>Call (602) 600-6746</a>
 </div>
 
-<!-- ===================== PEST ===================== -->
-<section class="band band--2 pad" id="pest">
+<!-- ===================== SOURCES ===================== -->
+<section class="band band--2 pad seam-host" id="sources">
   <div class="shell">
     <div class="section-head reveal">
-      <span class="tag">The pest</span>
-      <h2>Standing water, then the adults</h2>
-      <div class="prose" style="margin-top:1.25rem">
-        <p>A mosquito lays eggs on or near water. The larvae stay in that water until they emerge as adults. In the Phoenix Valley, summer heat speeds that up, and monsoon storms plus irrigation can create new water that was not there a week earlier.</p>
-        <p>You will usually notice the adults at dawn and dusk, in the shade, and on patios that stay damp. Treating only the insects you can see leaves the next hatch in the water.</p>
+      <span class="tag">Know the source</span>
+      <h2>Where mosquitoes breed around Valley homes</h2>
+      <p class="prose" style="margin-top:1.25rem">Most mosquitoes in a yard were hatched close by. Finding the source is step one.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <span class="card-tag card-tag--orange">Most common</span>
+        <h3>Standing Water</h3>
+        <p>Plant saucers, buckets, toys, clogged gutters and anything else that holds water for more than a few days.</p>
+      </article>
+      <article class="card card--gold reveal" style="--d:70ms">
+        <span class="card-tag">Hidden</span>
+        <h3>Irrigation and Drainage</h3>
+        <p>Overwatered lawns, leaking drip lines, valve boxes and low spots that stay wet after watering.</p>
+      </article>
+      <article class="card card--sky reveal" style="--d:140ms">
+        <span class="card-tag">Backyard</span>
+        <h3>Pools and Water Features</h3>
+        <p>Neglected pools, fountains, bird baths and ponds without circulation give larvae a place to develop.</p>
+      </article>
+      <article class="card reveal" style="--d:210ms">
+        <span class="card-tag">Resting spots</span>
+        <h3>Shade and Dense Plants</h3>
+        <p>Adult mosquitoes rest in cool, shaded vegetation during the day and come out when you do, in the evening.</p>
+      </article>
+      <article class="card card--gold reveal" style="--d:280ms">
+        <span class="card-tag">Seasonal</span>
+        <h3>Monsoon Season</h3>
+        <p>Summer storms leave water behind across the Valley, and mosquito activity climbs in the weeks that follow.</p>
+      </article>
+      <article class="card card--cactus reveal" style="--d:350ms">
+        <h3>Not sure where they come from?</h3>
+        <p>We inspect the property and point out the breeding sites before any station is placed.</p>
+        <a class="btn-link" style="font-size:var(--step--1);justify-self:start;margin-top:0.3rem" href="#contact" data-olly-open>Book an inspection</a>
+      </article>
+    </div>
+    <p class="slab reveal">We break the cycle, not just the swarm.</p>
+  </div>
+
+  <picture class="cactus cactus--seam">
+    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
+    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
+  </picture>
+</section>
+
+<!-- ===================== APPROACH ===================== -->
+<section class="band pad" id="method">
+  <div class="shell split">
+    <div class="stack reveal" style="--s:1.35rem">
+      <div>
+        <span class="tag tag--orange">Our approach</span>
+        <h2 style="font-size:var(--step-3)">Why spraying alone does not last</h2>
+      </div>
+      <div class="prose">
+        <p>A spray can knock down the adult mosquitoes in your yard today. It does not touch the larvae developing in water nearby, so a new generation replaces them within days.</p>
+        <p>Our process starts with an inspection to find where mosquitoes are breeding and resting. From there we place larvicide trap stations around the property and show you which water sources to remove, so fewer mosquitoes reach adulthood in the first place.</p>
+      </div>
+    </div>
+    <div class="split-media reveal" style="--d:120ms">
+      <div class="blk">
+        <h3 style="font-size:var(--step-1);margin-bottom:0.3rem">What that looks like on site</h3>
+        <ul class="ticks">
+          <li><b>Property inspection</b>, breeding and resting sites identified</li>
+          <li><b>Larvicide trap stations</b>, placed around the yard to interrupt the life cycle</li>
+          <li><b>Source reduction</b>, standing water found and pointed out</li>
+          <li><b>Ongoing service</b>, stations checked and maintained through the season</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== VISIT ===================== -->
-<section class="band pad" id="visit">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag tag--orange">The visit</span>
-      <h2>How a mosquito visit generally works</h2>
-      <p class="prose" style="margin-top:1.25rem">A visit is a walk of the yard. The steps below are the usual order. What happens on a property depends on the water and resting spots that are actually there.</p>
-    </div>
-    <ol class="steps">
-      <li class="step reveal">
-        <span class="step-num" aria-hidden="true">01</span>
-        <h3>Find the water</h3>
-        <p>Saucers, low spots, gutters, drip trays, unused containers, and irrigation that keeps a puddle wet.</p>
-      </li>
-      <li class="step reveal" style="--d:70ms">
-        <span class="step-num" aria-hidden="true">02</span>
-        <h3>Empty what can be emptied</h3>
-        <p>Water that does not need to stay is dumped or drained. Water that has to stay, such as a fountain, is noted.</p>
-      </li>
-      <li class="step reveal" style="--d:140ms">
-        <span class="step-num" aria-hidden="true">03</span>
-        <h3>Treat the places that keep producing mosquitoes</h3>
-        <p>Breeding sites that cannot be emptied can be treated. That can include larvicide stations in the yard, the same kind of station shown on our home page. Adults resting in vegetation and covered areas can be treated on the same visit.</p>
-      </li>
-      <li class="step reveal" style="--d:210ms">
-        <span class="step-num" aria-hidden="true">04</span>
-        <h3>Tell you what to watch</h3>
-        <p>You should leave knowing which spots were treated and which water sources are worth checking after the next rain or irrigation cycle.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ===================== EXTRA ===================== -->
-<section class="band band--paper pad" id="prepare">
-  <div class="shell">
-    <div class="section-head reveal">
-      <span class="tag tag--cactus">Before you call</span>
-      <h2 style="font-size:var(--step-3)">What helps before a visit</h2>
-    </div>
-    <div class="reveal" style="margin-top:1.25rem">
-
-    <ul class="prose" style="margin-top:0.25rem;padding-left:1.25rem">
-      <li>Empty plant saucers and buckets</li>
-      <li>Clear a clogged gutter if you can do it safely</li>
-      <li>Cover a rain barrel</li>
-      <li>Run or cover a pool that is not in use</li>
-      <li>Fix irrigation that puddles against the house</li>
-    </ul>
-    <p class="prose" style="margin-top:1.25rem">These steps do not replace a visit when mosquitoes are already active. They give the next hatch fewer places to start.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== SERVICE AREAS ===================== -->
-<section class="band band--2 pad">
+<section class="band band--paper pad">
   <div class="shell">
     <div class="section-head reveal">
-      <span class="tag">Service areas</span>
-      <h2>Phoenix Valley cities we list</h2>
-      <p class="prose" style="margin-top:1.25rem">Mosquito visits follow the cities on our service areas page: Maricopa County, desert communities, and Pinal County.</p>
-      <p style="margin-top:1.25rem"><a class="btn-link" href="/service-areas">See service areas</a></p>
+      <span class="tag tag--cactus">Service areas</span>
+      <h2>Mosquito control across the Phoenix Valley</h2>
+      <p class="prose" style="margin-top:1.25rem">We provide eco-friendly mosquito control services throughout Maricopa and Pinal County.</p>
     </div>
+    <ul class="areas reveal">
+      <li>Phoenix</li>
+      <li>Scottsdale</li>
+      <li>Mesa</li>
+      <li>Chandler</li>
+      <li>Gilbert</li>
+      <li>Glendale</li>
+      <li>Tempe</li>
+      <li>Peoria</li>
+      <li>Surprise</li>
+      <li>Queen Creek</li>
+      <li>San Tan Valley</li>
+      <li>Fountain Hills</li>
+      <li>Cave Creek</li>
+      <li>Goodyear</li>
+      <li>Maricopa</li>
+    </ul>
   </div>
 </section>
 
@@ -1751,24 +1784,37 @@ html:has(.olly-dialog[open]){overflow:hidden}
   <div class="shell">
     <div class="section-head reveal">
       <span class="tag">FAQ</span>
-      <h2>Questions people ask</h2>
+      <h2>Frequently asked questions</h2>
+      <p class="prose" style="margin-top:1.25rem">Everything Phoenix Valley homeowners ask about mosquito control.</p>
     </div>
     <div class="faq reveal">
       <details>
-        <summary>Why do mosquitoes get worse after a storm?</summary>
-        <div class="faq-a"><p>Rain and irrigation leave water sitting in places that were dry. That water is where the next adults develop. A visit looks for those spots, not only the mosquitoes already flying.</p></div>
+        <summary>Why are there mosquitoes in the desert?</summary>
+        <div class="faq-a"><p>Mosquitoes only need a small amount of standing water. Irrigation, pools, water features and monsoon rains give them plenty of places to breed in the Phoenix Valley, even in dry months.</p></div>
       </details>
       <details>
-        <summary>Will one visit remove every mosquito?</summary>
-        <div class="faq-a"><p>No visit can promise that. Mosquitoes fly in from nearby water, and new water shows up after rain. The visit treats the water and resting areas on your property and points out what to keep empty.</p></div>
+        <summary>When is mosquito season in Phoenix?</summary>
+        <div class="faq-a"><p>Activity usually rises as temperatures warm in spring and peaks during and after monsoon season. In mild years, mosquitoes can stay active well into the fall.</p></div>
       </details>
       <details>
-        <summary>What should I tell you when I call?</summary>
-        <div class="faq-a"><p>Where you notice them, the time of day, and whether you have a pool, fountain, or irrigation. Call (602) 600-6746 or send a message with the form on this page.</p></div>
+        <summary>How do larvicide trap stations work?</summary>
+        <div class="faq-a"><p>The stations attract egg-laying mosquitoes and target the larvae, which interrupts the life cycle at the source. That means fewer adult mosquitoes over time, rather than a short break after a spray.</p></div>
+      </details>
+      <details>
+        <summary>Is the treatment safe around kids, pets and gardens?</summary>
+        <div class="faq-a"><p>We choose targeted methods so less product is used across your yard, and we will walk you through any precautions for your family, pets and plants before service begins.</p></div>
+      </details>
+      <details>
+        <summary>How soon will I notice a difference?</summary>
+        <div class="faq-a"><p>Because the stations work on the next generation, results build over the following weeks. We will set expectations based on your property and the time of year.</p></div>
       </details>
     </div>
   </div>
   <img class="faq-owl" src="build-assets/owl-mark.png" alt="" width="448" height="425" loading="lazy" aria-hidden="true">
+  <picture class="cactus faq-cactus">
+    <source srcset="build-assets/cactus-mark2.webp" type="image/webp">
+    <img src="build-assets/cactus-mark2.png" alt="" width="520" height="737" loading="lazy" aria-hidden="true">
+  </picture>
 </section>
 
 <!-- ===================== CTA ===================== -->
@@ -2097,15 +2143,19 @@ html:has(.olly-dialog[open]){overflow:hidden}
 })();
 </script>
 <script data-olly-bubble="1">
-/* The bubble hides while the contact section is in view. Without JS it stays
-   put and still works, because it falls back to an SMS link. */
+/* The bubble waits until the hero has scrolled away, so it never sits over
+   the hero photo, and it hides again while the contact section is in view.
+   Without JS it stays put and still works, as an SMS link. */
 (function(){
   var b = document.getElementById('olly-bubble');
+  var hero = document.querySelector('section.hero');
   var cta = document.getElementById('contact');
-  if (!b || !cta || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ b.hidden = e.isIntersecting; });
-  }, { threshold: 0.2 }).observe(cta);
+  if (!b || !('IntersectionObserver' in window)) return;
+  var inHero = !!hero, inCta = false;
+  function sync(){ b.hidden = inHero || inCta; }
+  sync();
+  if (hero) new IntersectionObserver(function(e){ inHero = e[0].isIntersecting; sync(); }).observe(hero);
+  if (cta) new IntersectionObserver(function(e){ inCta = e[0].isIntersecting; sync(); }, { threshold: 0.2 }).observe(cta);
 })();
 </script>
 <script data-newsletter="1">

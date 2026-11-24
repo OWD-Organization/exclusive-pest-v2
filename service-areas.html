@@ -994,16 +994,45 @@ section{position:relative}
 
 
 /* SERVICE-AREAS:CSS:START */
-/* hero plate: Olly plus the three service-area groups. Not a geographic map. */
-.area-map{
-  display:grid;place-items:center;align-content:center;gap:1rem;aspect-ratio:1;max-width:26rem;
+/* service area map in the hero: the client's Google My Maps, embedded.
+   vercel.json allows the frame through frame-src. */
+.area-map{margin:0}
+/* the frame is taller than its window and pulled up, so Google's title
+   bar (map name and owner profile) stays out of view */
+.map-window{
+  aspect-ratio:1;overflow:hidden;
   background:var(--c-paper);
   border:var(--bd-hard);border-radius:var(--r);
   box-shadow:calc(var(--sh-x)*1.5) calc(var(--sh-y)*1.5) 0 var(--c-ink);
-  text-align:center;font-weight:900;font-size:var(--step--1);
-  letter-spacing:var(--tr-label);text-transform:uppercase;color:var(--fg-muted);
 }
-.area-map img{width:34%;height:auto;filter:drop-shadow(-3px 3px 0 var(--c-ink))}
+.map-frame{display:block;width:100%;height:calc(100% + 70px);margin-top:-70px;border:0}
+.map-legend{
+  display:flex;flex-wrap:wrap;gap:0.5rem 1.4rem;margin-top:1.35rem;
+  font-weight:800;font-size:var(--step--1);
+}
+.map-legend a{display:inline-flex;align-items:center;gap:0.5em;text-decoration:none;
+              border-bottom:2px solid transparent}
+.map-legend a:hover{border-bottom-color:var(--c-orange)}
+.map-legend i{width:0.9em;height:0.9em;border-radius:50%;background:var(--pin);border:var(--bd-hair)}
+/* the map leads the hero on this page: it gets the wider column */
+.hero-grid--map{grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr)}
+@media (max-width:64rem){.hero-grid--map{grid-template-columns:1fr}}
+/* region blocks: copy on the left, community list on the right.
+   The dot on each pill repeats that region's pin colour on the map. */
+.region{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        gap:clamp(1.75rem,4vw,4rem);align-items:start}
+.region .section-head h2{font-size:var(--step-4)}
+.region .prose p{font-size:var(--step-1);line-height:1.5}
+.region .areas{margin-top:0.4rem}
+.region .areas li{
+  display:inline-flex;align-items:center;gap:0.55em;
+  font-size:var(--step-0);padding:0.55em 1.05em;
+}
+.region .areas li::before{
+  content:"";flex:0 0 auto;width:0.8em;height:0.8em;border-radius:50%;
+  background:var(--pin,var(--c-cactus));border:var(--bd-hair);
+}
+@media (max-width:64rem){.region{grid-template-columns:1fr}}
 /* closer: heading and button in one row */
 .area-next{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem 3rem}
 .area-next h2{max-width:24ch}
@@ -1520,6 +1549,15 @@ html:has(.olly-dialog[open]){overflow:hidden}
   ]
 }
 </script>
+<!-- FEEDBUCKET: client feedback widget. It loads only on the staging review
+     domain (exclusive-pest-staging.vercel.app), so production never runs it. -->
+<script>
+if (location.hostname === 'exclusive-pest-staging.vercel.app') (function(k){
+  var s=document.createElement('script');s.defer=true;
+  s.src='https://cdn.feedbucket.app/assets/feedbucket.js';
+  s.dataset.feedbucket=k;document.head.appendChild(s);
+})('20PvJkeWqlf1rj3O9UoV');
+</script>
 </head>
 <body>
 
@@ -1561,7 +1599,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
         <a href="/scorpion-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 1.6v2.4M12 20v2.4M1.6 12h2.4M20 12h2.4"/></svg><span>Scorpion Control</span></a>
         <a href="/ant-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.4"/><circle cx="6" cy="18.5" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M6 7.9v8.2M8.2 6.8l7.6 3.9M8.2 17.2l7.6-3.9"/></svg><span>Ant Control</span></a>
         <a href="/rodent-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.5" cy="7" r="3"/><circle cx="17.5" cy="7" r="3"/><path d="M5 14.5C5 11 8 9.5 12 9.5s7 1.5 7 5a7 5.5 0 0 1-14 0Z"/><path d="M12 17v.01"/></svg><span>Rats/Mice</span></a>
-        <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
+        <a href="/rodent-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 20.5h19"/><path d="M4.5 20.5c0-5.2 3.4-9 7.5-9s7.5 3.8 7.5 9"/><path d="M9.5 20.5a2.5 2.5 0 0 1 5 0"/><path d="M12 4v3M8 5.5l1.2 2.4M16 5.5l-1.2 2.4"/></svg><span>Gopher Control</span></a>
         <a href="/mosquito-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v10"/><path d="M12 10C9.5 6 5 5.5 4 7.5s2.8 3.8 8 3.5"/><path d="M12 10c2.5-4 7-4.5 8-2.5s-2.8 3.8-8 3.5"/><path d="M12 14.5l-4 5M12 14.5l4 5M12 7V3"/></svg><span>Mosquito Control</span></a>
         <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="15" rx="4" ry="6"/><path d="M8.3 13.2h7.4M8.4 16.8h7.2"/><path d="M9.5 9.5C7 5.5 3.8 5.8 4 8.3s3.3 3 5.1 2.2"/><path d="M14.5 9.5c2.5-4 5.7-3.7 5.5-1.2s-3.3 3-5.1 2.2"/></svg><span>Wasp Removal</span></a>
         <a href="/general-pest-control"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8l7.5 4.3v8.6L12 20l-7.5-4.3V7.1Z"/><path d="M12 8.6l3 1.7v3.4l-3 1.7-3-1.7v-3.4Z"/></svg><span>Bee Removal</span></a>
@@ -1579,23 +1617,27 @@ html:has(.olly-dialog[open]){overflow:hidden}
 <!-- ===================== HERO ===================== -->
 <section class="hero hero--page" id="top">
   <div class="shell">
-    <div class="hero-grid">
+    <div class="hero-grid hero-grid--map">
       <div class="stack reveal" style="--s:1.35rem">
         <p style="margin:0"><span class="hero-kick">Service areas</span></p>
-        <h1>Pest control service areas across the Phoenix Valley.</h1>
-        <p class="prose" style="font-size:var(--step-1);line-height:1.5">Find your city below. The lists are grouped into Maricopa County, desert living, and Pinal County.</p>
+        <h1>Pest control across the Phoenix Valley.</h1>
+        <p class="prose" style="font-size:var(--step-1);line-height:1.5">We serve homes throughout Maricopa and Pinal County. Find your community on the map or in the lists below.</p>
         <div class="hero-actions">
           <a class="btn btn--lg" href="#maricopa-county">Find your city</a>
           <a class="btn-link" href="tel:+16026006746">Call (602) 600-6746</a>
         </div>
       </div>
       <div class="stack reveal" style="--d:120ms;--s:1.25rem">
-        <!-- PLACEHOLDER: service area map goes here -->
-        <div class="area-map" role="img" aria-label="Phoenix Valley service areas: Maricopa County, desert communities, and Pinal County">
-          <img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true">
-          <span>Maricopa County<br>Desert communities<br>Pinal County</span>
-        </div>
-        <p style="margin:0"><span class="hero-plate">Maricopa County, desert communities, and Pinal County</span></p>
+        <figure class="area-map">
+          <div class="map-window">
+            <iframe class="map-frame" src="https://www.google.com/maps/d/embed?mid=1NHnYrMuNVvdVb16tq7_qO_AMH6fbrME&amp;ehbc=2D1C10" title="Google map of the Exclusive Pest Solutions service area, with a pin for each of the 21 communities." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <figcaption class="map-legend">
+            <a href="#maricopa-county"><i style="--pin:var(--c-cactus)"></i>Maricopa County</a>
+            <a href="#desert-living"><i style="--pin:var(--c-orange)"></i>Desert Living</a>
+            <a href="#pinal-county"><i style="--pin:var(--c-gold)"></i>Pinal County</a>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </div>
@@ -1613,60 +1655,74 @@ html:has(.olly-dialog[open]){overflow:hidden}
 
 <!-- ===================== MARICOPA COUNTY ===================== -->
 <section class="band band--2 pad" id="maricopa-county">
-  <div class="shell">
+  <div class="shell region">
     <div class="section-head reveal">
-      <span class="tag tag--cactus">Maricopa County</span>
+      <span class="tag tag--cactus">11 communities</span>
       <h2>Maricopa County</h2>
-      <p class="prose" style="margin-top:1.25rem">From busy Valley neighborhoods to quiet foothill communities, your home deserves thoughtful protection against Maricopa County's most notorious pests and we specialize in eliminating Arizona bark scorpions.</p>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>From busy Valley neighborhoods to quiet foothill communities, your home deserves thoughtful protection against Maricopa County’s most notorious pests. We specialize in eliminating Arizona bark scorpions.</p>
+      </div>
     </div>
-    <ul class="areas reveal">
-      <li>Gilbert</li>
-      <li>Chandler</li>
-      <li>Mesa</li>
-      <li>Tempe</li>
-      <li>Queen Creek</li>
-      <li>Glendale</li>
-      <li>Peoria</li>
-      <li>Surprise</li>
-      <li>Goodyear</li>
-      <li>Buckeye</li>
-    </ul>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-cactus)" aria-label="Maricopa County communities">
+        <li>Phoenix</li>
+        <li>Gilbert</li>
+        <li>Chandler</li>
+        <li>Mesa</li>
+        <li>Tempe</li>
+        <li>Queen Creek</li>
+        <li>Glendale</li>
+        <li>Peoria</li>
+        <li>Surprise</li>
+        <li>Goodyear</li>
+        <li>Buckeye</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- ===================== DESERT LIVING ===================== -->
 <section class="band pad" id="desert-living">
-  <div class="shell">
+  <div class="shell region">
     <div class="section-head reveal">
-      <span class="tag">Desert living</span>
-      <h2>Desert living</h2>
-      <p class="prose" style="margin-top:1.25rem">Desert living calls for a more detailed approach, with nearby wildlife in mind. We provide targeted, responsible pest-protection around your home, entertaining areas and property line. You should be able to enjoy your desert views comfortably, WITHOUT the giant spiders and scorpions.</p>
+      <span class="tag tag--orange">5 communities</span>
+      <h2>Desert Living</h2>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>Desert living calls for a more detailed approach, with nearby wildlife in mind.</p>
+          <p>We provide targeted, responsible pest-protection around your home, entertaining areas and property line. You should be able to enjoy your desert views comfortably, <strong>WITHOUT</strong> the giant spiders and scorpions.</p>
+      </div>
     </div>
-    <ul class="areas reveal">
-      <li>Gold Canyon</li>
-      <li>Scottsdale</li>
-      <li>Cave Creek</li>
-      <li>Fountain Hills</li>
-      <li>Sun Lakes</li>
-    </ul>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-orange)" aria-label="Desert Living communities">
+        <li>Gold Canyon</li>
+        <li>Scottsdale</li>
+        <li>Cave Creek</li>
+        <li>Fountain Hills</li>
+        <li>Sun Lakes</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- ===================== PINAL COUNTY ===================== -->
-<section class="band band--paper pad" id="pinal-county">
-  <div class="shell">
+<section class="band band--2 pad" id="pinal-county">
+  <div class="shell region">
     <div class="section-head reveal">
-      <span class="tag tag--orange">Pinal County</span>
+      <span class="tag">5 communities</span>
       <h2>Pinal County</h2>
-      <p class="prose" style="margin-top:1.25rem">Your home should be a comfortable retreat, whether you're in an established neighborhood or surrounded by open desert. We bring thoughtful pest protection and reliable service to our Pinal County communities, including black widow removal and treatment.</p>
+      <div class="prose" style="margin-top:1.25rem">
+          <p>Your home should be a comfortable retreat, whether you’re in an established neighborhood or surrounded by open desert. We bring thoughtful pest protection and reliable service to our Pinal County communities, including black widow removal and treatment.</p>
+      </div>
     </div>
-    <ul class="areas reveal">
-      <li>San Tan Valley</li>
-      <li>Apache Junction</li>
-      <li>Maricopa</li>
-      <li>Casa Grande</li>
-      <li>Florence</li>
-    </ul>
+    <div class="reveal" style="--d:120ms">
+      <ul class="areas" style="--pin:var(--c-gold)" aria-label="Pinal County communities">
+        <li>San Tan Valley</li>
+        <li>Apache Junction</li>
+        <li>Maricopa</li>
+        <li>Casa Grande</li>
+        <li>Florence</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -1676,6 +1732,7 @@ html:has(.olly-dialog[open]){overflow:hidden}
     <div>
       <span class="tag">Don't see your city?</span>
       <h2 style="font-size:var(--step-3)">We may still cover your area.</h2>
+      <!-- PLACEHOLDER CONTENT -->
       <p class="prose" style="margin-top:1rem">Reach out and we'll let you know if your home is in our service range.</p>
     </div>
     <a class="btn btn--lg btn--gold olly-open" href="sms:+16026006746" data-olly-open><img src="build-assets/owl-mark.png" alt="" width="448" height="425" aria-hidden="true"><span class="olly-open-lines"><span class="olly-send-main">Ask Olly</span><span class="olly-send-sub">Send us a message</span></span></a>
@@ -1961,15 +2018,19 @@ html:has(.olly-dialog[open]){overflow:hidden}
 </script>
 
 <script data-olly-bubble="1">
-/* The bubble hides while the contact section is in view. Without JS it stays
-   put and still works, because it falls back to an SMS link. */
+/* The bubble waits until the hero has scrolled away, so it never sits over
+   the hero photo, and it hides again while the contact section is in view.
+   Without JS it stays put and still works, as an SMS link. */
 (function(){
   var b = document.getElementById('olly-bubble');
+  var hero = document.querySelector('section.hero');
   var cta = document.getElementById('contact');
-  if (!b || !cta || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ b.hidden = e.isIntersecting; });
-  }, { threshold: 0.2 }).observe(cta);
+  if (!b || !('IntersectionObserver' in window)) return;
+  var inHero = !!hero, inCta = false;
+  function sync(){ b.hidden = inHero || inCta; }
+  sync();
+  if (hero) new IntersectionObserver(function(e){ inHero = e[0].isIntersecting; sync(); }).observe(hero);
+  if (cta) new IntersectionObserver(function(e){ inCta = e[0].isIntersecting; sync(); }, { threshold: 0.2 }).observe(cta);
 })();
 </script>
 <script data-newsletter="1">
