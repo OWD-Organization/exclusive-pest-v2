@@ -316,7 +316,7 @@
       "missing": [
         {
           "type": "host",
-          "value": "staging.exclusivepest.co"
+          "value": "exclusive-pest-staging.vercel.app"
         }
       ]
     },
@@ -351,7 +351,7 @@
       "has": [
         {
           "type": "host",
-          "value": "staging.exclusivepest.co"
+          "value": "exclusive-pest-staging.vercel.app"
         }
       ]
     }
