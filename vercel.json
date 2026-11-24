@@ -1,28 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "exclusive-pest-v2.vercel.app"
-        }
-      ],
-      "destination": "https://www.exclusivepest.co/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "exclusive-pest-v2.vercel.app"
-        }
-      ],
-      "destination": "https://www.exclusivepest.co/:path*",
-      "permanent": true
-    },
-    {
       "source": "/about.html",
       "destination": "/about",
       "statusCode": 301
@@ -316,7 +294,7 @@
       "missing": [
         {
           "type": "host",
-          "value": "exclusive-pest-staging.vercel.app"
+          "value": "exclusive-pest-v2.vercel.app"
         }
       ]
     },
@@ -351,7 +329,7 @@
       "has": [
         {
           "type": "host",
-          "value": "exclusive-pest-staging.vercel.app"
+          "value": "exclusive-pest-v2.vercel.app"
         }
       ]
     }
