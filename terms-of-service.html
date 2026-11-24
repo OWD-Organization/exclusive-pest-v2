@@ -1479,6 +1479,15 @@ html:has(.olly-dialog[open]){overflow:hidden}
   ]
 }
 </script>
+<!-- FEEDBUCKET: client feedback widget. It loads only on the staging review
+     domain (staging.exclusivepest.co), so production never runs it. -->
+<script>
+if (location.hostname === 'staging.exclusivepest.co') (function(k){
+  var s=document.createElement('script');s.defer=true;
+  s.src='https://cdn.feedbucket.app/assets/feedbucket.js';
+  s.dataset.feedbucket=k;document.head.appendChild(s);
+})('20PvJkeWqlf1rj3O9UoV');
+</script>
 </head>
 <body>
 
